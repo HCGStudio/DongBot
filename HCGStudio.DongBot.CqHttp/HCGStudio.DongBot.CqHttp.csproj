@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Description>CQHttp support for DongBot.</Description>
+    <PackageProjectUrl>https://github.com/HCGStudio/DongBot</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HCGStudio/DongBot</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="cqhttp.Cyan" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HCGStudio.DongBot.Core\HCGStudio.DongBot.Core.csproj" />
+  </ItemGroup>
+
+</Project>
