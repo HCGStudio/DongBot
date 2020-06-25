@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace HCGStudio.DongBot.Core.Message
+namespace HCGStudio.DongBot.Core.Messages
 {
     public interface IPictureMessage
     {

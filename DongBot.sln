@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCGStudio.DongBot.Core", "H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCGStudio.DongBot.CqHttp", "HCGStudio.DongBot.CqHttp\HCGStudio.DongBot.CqHttp.csproj", "{3ABF50D4-7DA3-4825-9B6C-BE2D1C29343E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCGStudio.DongBot.App", "HCGStudio.DongBot.App\HCGStudio.DongBot.App.csproj", "{4DD2B4D2-9168-4016-A831-77A350D77D0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3ABF50D4-7DA3-4825-9B6C-BE2D1C29343E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ABF50D4-7DA3-4825-9B6C-BE2D1C29343E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ABF50D4-7DA3-4825-9B6C-BE2D1C29343E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD2B4D2-9168-4016-A831-77A350D77D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD2B4D2-9168-4016-A831-77A350D77D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD2B4D2-9168-4016-A831-77A350D77D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD2B4D2-9168-4016-A831-77A350D77D0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

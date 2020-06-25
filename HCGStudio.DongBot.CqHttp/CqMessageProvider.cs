@@ -1,20 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 using cqhttp.Cyan.Clients;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
 using cqhttp.Cyan.Events.CQResponses;
 using cqhttp.Cyan.Events.MetaEvents;
-using HCGStudio.DongBot.Core.Message;
+using HCGStudio.DongBot.Core.Messages;
 using HCGStudio.DongBot.Core.Service;
 
 namespace HCGStudio.DongBot.CqHttp
 {
-    public class CqMessageProvider : IMessageProvider
+    internal class CqMessageProvider : IMessageProvider
     {
+        public CqMessageProvider(CQApiClient client)
+        {
+            Client = client;
+        }
+
         protected CQApiClient Client { get; set; }
+
         public void SubscribePrivateMessage(Action<Message, long> action)
         {
             Client.OnEvent += (client, e) =>
@@ -28,12 +31,8 @@ namespace HCGStudio.DongBot.CqHttp
                     case PrivateMessageEvent privateMessageEvent:
                         var builder = new MessageBuilder();
                         foreach (var element in privateMessageEvent.message.data)
-                        {
                             if (element.type == "text")
-                            {
                                 builder.Append(new SimpleMessage(element.data["text"]));
-                            }
-                        }
 
                         action(builder.ToMessage(), privateMessageEvent.sender_id);
                         break;
@@ -85,7 +84,6 @@ namespace HCGStudio.DongBot.CqHttp
                         var builder = new MessageBuilder();
                         var atMe = false;
                         foreach (var element in groupMessageEvent.message.data)
-                        {
                             if (element.type == "text")
                             {
                                 builder.Append(new SimpleMessage(element.data["text"]));
@@ -98,7 +96,7 @@ namespace HCGStudio.DongBot.CqHttp
                                 if (account == client.self_id.ToString())
                                     atMe = true;
                             }
-                        }
+
                         action(builder.ToMessage(), groupMessageEvent.group_id,
                             groupMessageEvent.isAnonymous ? 0 : groupMessageEvent.sender.user_id, atMe);
                         break;

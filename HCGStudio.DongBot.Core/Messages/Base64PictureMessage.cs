@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace HCGStudio.DongBot.Core.Message
+namespace HCGStudio.DongBot.Core.Messages
 {
     public class Base64PictureMessage : Message, IPictureMessage
     {
-        public Uri? Url => null;
-        private string? Base64 { get; }
-        private Uri? BaseUri { get; }
-
         public Base64PictureMessage(Uri url)
         {
             BaseUri = url;
@@ -22,6 +16,10 @@ namespace HCGStudio.DongBot.Core.Message
         {
             Base64 = base64Content;
         }
+
+        private string? Base64 { get; }
+        private Uri? BaseUri { get; }
+        public Uri? Url => null;
 
         public async Task<string> ToBase64StringAsync()
         {
@@ -34,6 +32,7 @@ namespace HCGStudio.DongBot.Core.Message
                 var bytes = await File.ReadAllBytesAsync(Url.AbsolutePath).ConfigureAwait(false);
                 return Convert.ToBase64String(bytes);
             }
+
             using var http = new HttpClient();
             var file = await http.GetAsync(Url.AbsoluteUri).ConfigureAwait(false);
             return Convert.ToBase64String(await file.Content.ReadAsByteArrayAsync().ConfigureAwait(false));

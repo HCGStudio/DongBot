@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Mime;
-using System.Text;
-
-namespace HCGStudio.DongBot.Core.Message
+﻿namespace HCGStudio.DongBot.Core.Messages
 {
-    public class SimpleMessage :Message, ISimpleMessage
+    public class SimpleMessage : Message, ISimpleMessage
     {
-        public string Content { get; }
         public SimpleMessage(string content)
         {
             Content = content;
         }
+
+        public string Content { get; }
 
         public static SimpleMessage FromString(string message)
         {

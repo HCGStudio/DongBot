@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace HCGStudio.DongBot.Core.Message
+namespace HCGStudio.DongBot.Core.Messages
 {
     public class MessageBuilder
     {
-        private List<Message> _messages;
+        private readonly List<Message> _messages;
 
         public MessageBuilder(int capacity = 8)
         {

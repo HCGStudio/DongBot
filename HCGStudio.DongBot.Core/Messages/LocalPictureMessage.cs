@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
-using System.Net.Mime;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace HCGStudio.DongBot.Core.Message
+namespace HCGStudio.DongBot.Core.Messages
 {
-    public class LocalPictureMessage :Message, IPictureMessage
+    public class LocalPictureMessage : Message, IPictureMessage
     {
-        public Uri? Url { get; }
-
         public LocalPictureMessage(string url)
         {
             Url = new Uri(url);
@@ -22,6 +17,8 @@ namespace HCGStudio.DongBot.Core.Message
             Url = url;
         }
 
+        public Uri? Url { get; }
+
         public async Task<string> ToBase64StringAsync()
         {
             if (Url == null)
@@ -31,6 +28,7 @@ namespace HCGStudio.DongBot.Core.Message
                 var bytes = await File.ReadAllBytesAsync(Url.AbsolutePath).ConfigureAwait(false);
                 return Convert.ToBase64String(bytes);
             }
+
             using var http = new HttpClient();
             var file = await http.GetAsync(Url.AbsoluteUri).ConfigureAwait(false);
             return Convert.ToBase64String(await file.Content.ReadAsByteArrayAsync().ConfigureAwait(false));
