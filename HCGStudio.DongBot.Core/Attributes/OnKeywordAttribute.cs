@@ -13,7 +13,7 @@ namespace HCGStudio.DongBot.Core.Attributes
 
         public List<string> Keywords { get; }
         public KeywordPolicy KeywordPolicy { get; set; } = KeywordPolicy.Trim;
-        public InvokePolicy InvokePolicy { get; set; } = InvokePolicy.Private;
+        public InvokePolicies InvokePolicies { get; set; } = InvokePolicies.Private;
     }
 
     public enum KeywordPolicy
@@ -27,10 +27,11 @@ namespace HCGStudio.DongBot.Core.Attributes
         ToLower
     }
 
-    public enum InvokePolicy
+    [Flags]
+    public enum InvokePolicies
     {
-        Group,
-        GroupAt,
-        Private
+        Group = 1 << 0,
+        GroupAt = 1 << 1,
+        Private = 1 << 2
     }
 }

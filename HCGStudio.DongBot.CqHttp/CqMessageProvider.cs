@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using cqhttp.Cyan.ApiCall.Requests;
+using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.Clients;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
@@ -136,6 +141,12 @@ namespace HCGStudio.DongBot.CqHttp
 
                 return new EmptyResponse();
             };
+        }
+
+        public async Task<List<long>> GetAllGroupsAsync()
+        {
+            var result = await Client.SendRequestAsync(new GetGroupListRequest());
+            return result.raw_data.Select(token => Convert.ToInt64(token["group_id"])).ToList();
         }
     }
 }

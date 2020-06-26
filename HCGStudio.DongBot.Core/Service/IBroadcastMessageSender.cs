@@ -3,7 +3,7 @@ using HCGStudio.DongBot.Core.Messages;
 
 namespace HCGStudio.DongBot.Core.Service
 {
-    public interface IBroadcastService
+    public interface IBroadcastMessageSender
     {
         Task BroadcastAllEnabled(Message message, int interval = 100);
     }

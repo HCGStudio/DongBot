@@ -18,7 +18,6 @@ namespace HCGStudio.DongBot.App
         public string AccessUrl { get; set; }
         public string AccessToken { get; set; }
         public int ListenPort { get; set; }
-        public string Secret { get; set; }
         public string EventUrl { get; set; }
         public string ApiPath { get; set; }
         public string EventPath { get; set; }

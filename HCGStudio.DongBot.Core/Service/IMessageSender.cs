@@ -5,7 +5,7 @@ namespace HCGStudio.DongBot.Core.Service
 {
     public interface IMessageSender
     {
-        Task<bool> SendGroupAsync(int groupId, Message message);
-        Task<bool> SendPrivateAsync(int userId, Message message);
+        Task<bool> SendGroupAsync(long groupId, Message message);
+        Task<bool> SendPrivateAsync(long userId, Message message);
     }
 }

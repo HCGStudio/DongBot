@@ -17,14 +17,14 @@ namespace HCGStudio.DongBot.CqHttp
 
         protected CQApiClient Client { get; set; }
 
-        public async Task<bool> SendGroupAsync(int groupId, Message message)
+        public async Task<bool> SendGroupAsync(long groupId, Message message)
         {
             var result =
                 await Client.SendMessageAsync((MessageType.group_, groupId), await MessageToCqMessage(message));
             return result.raw_data["status"]?.ToString() == "ok";
         }
 
-        public async Task<bool> SendPrivateAsync(int userId, Message message)
+        public async Task<bool> SendPrivateAsync(long userId, Message message)
         {
             var result =
                 await Client.SendMessageAsync((MessageType.private_, userId), await MessageToCqMessage(message));
