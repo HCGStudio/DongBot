@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Autofac;
 using HCGStudio.DongBot.App.Models;
@@ -98,16 +100,16 @@ namespace HCGStudio.DongBot.App
 
                     //Create instance
                     object instance = null;
-                    var constructor = type.GetConstructor(new[] {typeof(IMessageSender)});
+                    var constructor = type.GetConstructor(new[] { typeof(IMessageSender) });
                     if (constructor != null)
                     {
-                        instance = constructor.Invoke(new object[] {messageSender});
+                        instance = constructor.Invoke(new object[] { messageSender });
                     }
                     else
                     {
                         constructor = type.GetConstructor(new Type[] { });
                         if (constructor != null)
-                            instance = constructor.Invoke(new object[]{messageSender});
+                            instance = constructor.Invoke(new object[] { messageSender });
                     }
 
                     if (instance == null)
@@ -140,7 +142,40 @@ namespace HCGStudio.DongBot.App
 
                     foreach (var (instance, methodInfo) in PrivateMethodList)
                     {
-                        if (methodInfo.GetParameters().Length == 0)
+                        var attribute = methodInfo.GetCustomAttribute<OnKeywordAttribute>();
+                        if(attribute == null)
+                            continue;
+                        switch (attribute.KeywordPolicy)
+                        {
+                            case KeywordPolicy.AllMatch:
+                                if(!attribute.Keywords.Contains(pureText))
+                                    continue;
+                                break;
+                            case KeywordPolicy.Trim:
+                                if (!attribute.Keywords.Contains(pureText.Trim()))
+                                    continue;
+                                break;
+                            case KeywordPolicy.Contains:
+                                if (!attribute.Keywords.Any(k => pureText.Contains(k)))
+                                    continue;
+                                break;
+                            case KeywordPolicy.Begin:
+                                if (!attribute.Keywords.Any(k => pureText.StartsWith(k)))
+                                    continue;
+                                break;
+                            case KeywordPolicy.AcceptAll:
+                                break;
+                            case KeywordPolicy.Regex:
+                                var regexs = from s in attribute.Keywords select new Regex(s);
+                                if(!regexs.Any(r => r.IsMatch(pureText)))
+                                    continue;
+                                break;
+                            default:
+                                continue;
+                        }
+
+                        var parameters = methodInfo.GetParameters();
+                        if (parameters.Length == 0)
                         {
                             if (methodInfo.ReturnType == typeof(Task))
                                 // ReSharper disable once PossibleNullReferenceException
@@ -148,13 +183,14 @@ namespace HCGStudio.DongBot.App
                             else
                                 methodInfo.Invoke(instance, null);
                         }
-                        else if (methodInfo.GetParameters()[0].ParameterType == typeof(long))
+                        else if (parameters[0].ParameterType == typeof(long))
                         {
+
                             if (methodInfo.ReturnType == typeof(Task))
                                 // ReSharper disable once PossibleNullReferenceException
-                                await (Task)methodInfo.Invoke(instance, new object[userId]);
+                                await (Task)methodInfo.Invoke(instance, new object[] { userId });
                             else
-                                methodInfo.Invoke(instance, new object[userId]);
+                                methodInfo.Invoke(instance, new object[] { userId });
                         }
                         else
                             Logger.Error(

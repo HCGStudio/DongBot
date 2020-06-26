@@ -10,7 +10,7 @@ using HCGStudio.DongBot.Core.Service;
 namespace HCGStudio.DongBot.App.SystemService
 {
     [Service("Core", AutoEnable = true)]
-    internal class VersionService
+    public class VersionService
     {
         private readonly IMessageSender _messageSender;
 
@@ -22,7 +22,7 @@ namespace HCGStudio.DongBot.App.SystemService
         [OnKeyword("版本", "Version", InvokePolicies = InvokePolicies.Private, KeywordPolicy = KeywordPolicy.Trim)]
         public async Task VersionQuery(long senderUserId)
         {
-            await _messageSender.SendPrivateAsync(senderUserId, (SimpleMessage)$"DongBot {Environment.Version}");
+            await _messageSender.SendPrivateAsync(senderUserId, (SimpleMessage)$"DongBot {Assembly.GetExecutingAssembly().GetName().Version}");
         }
 
         [OnKeyword("图灵测试", InvokePolicies = InvokePolicies.Private, KeywordPolicy = KeywordPolicy.Trim)]

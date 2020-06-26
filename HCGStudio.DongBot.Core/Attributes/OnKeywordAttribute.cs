@@ -23,8 +23,7 @@ namespace HCGStudio.DongBot.Core.Attributes
         Contains,
         Begin,
         AcceptAll,
-        Regex,
-        ToLower
+        Regex
     }
 
     [Flags]
