@@ -43,7 +43,7 @@ For examle:
 [OnKeyword("Hello", "你好", InvokePolicies = InvokePolicies.Private, KeywordPolicy = KeywordPolicy.Trim)]
 public async Task SimpleTask(long senderUserId)
 {
-    await _messageSender.SendPrivateAsync(senderUserId, (SimpleMessage)$"Hello!");
+    await _messageSender.SendPrivateAsync(senderUserId, (SimpleMessage)"Hello!");
 }
 ```
 
