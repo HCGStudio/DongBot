@@ -14,6 +14,7 @@ namespace HCGStudio.DongBot.Core.Attributes
         public List<string> Keywords { get; }
         public KeywordPolicy KeywordPolicy { get; set; } = KeywordPolicy.Trim;
         public InvokePolicies InvokePolicies { get; set; } = InvokePolicies.Private;
+        public bool RequireSuperUser { get; set; } = false;
     }
 
     public enum KeywordPolicy

@@ -2,7 +2,7 @@
 {
     public class AtMessage : Message, IAtMessage
     {
-        public AtMessage(long atAccount, bool atAll)
+        public AtMessage(long atAccount, bool atAll = false)
         {
             Content = atAccount;
             AtAll = atAll;

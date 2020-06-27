@@ -28,7 +28,8 @@ namespace HCGStudio.DongBot.App.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ServiceName")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasMaxLength(500);
 
                     b.HasKey("ServiceRecordId");
 

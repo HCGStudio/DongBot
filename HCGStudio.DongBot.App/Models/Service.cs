@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Authentication.ExtendedProtection;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ namespace HCGStudio.DongBot.App.Models
     {
         public int ServiceRecordId { get; set; }
         public long GroupId { get; set; }
+        [MaxLength(500)]
         public string ServiceName { get; set; }
         public bool IsEnabled { get; set; }
     }

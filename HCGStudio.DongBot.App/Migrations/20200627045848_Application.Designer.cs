@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HCGStudio.DongBot.App.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200626153153_Application")]
+    [Migration("20200627045848_Application")]
     partial class Application
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,7 +30,8 @@ namespace HCGStudio.DongBot.App.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ServiceName")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasMaxLength(500);
 
                     b.HasKey("ServiceRecordId");
 

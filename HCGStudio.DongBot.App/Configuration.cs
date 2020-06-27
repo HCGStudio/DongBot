@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace HCGStudio.DongBot.App
@@ -21,5 +22,6 @@ namespace HCGStudio.DongBot.App
         public string EventUrl { get; set; }
         public string ApiPath { get; set; }
         public string EventPath { get; set; }
+        public List<long> SuperUserIds { get; set; }
     }
 }

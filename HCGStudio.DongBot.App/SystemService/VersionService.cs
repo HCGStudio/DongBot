@@ -25,10 +25,5 @@ namespace HCGStudio.DongBot.App.SystemService
             await _messageSender.SendPrivateAsync(senderUserId, (SimpleMessage)$"DongBot {Assembly.GetExecutingAssembly().GetName().Version}");
         }
 
-        [OnKeyword("图灵测试", InvokePolicies = InvokePolicies.Private, KeywordPolicy = KeywordPolicy.Trim)]
-        public async Task Turing(long senderUserId)
-        {
-            await _messageSender.SendPrivateAsync(senderUserId, (SimpleMessage)"Hello, world! 父亲！");
-        }
     }
 }
