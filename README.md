@@ -55,4 +55,4 @@ There are some requirment of your method:
 | InvokePolicies.Group \| InvokePolicies.GroupAtMe | void, Task                | empty, `long groupId, long userId`,or `long groupId, long userId, Message message` |
 | ScheduleTaskAttribute                            | Task                      | empty                                                        |
 
-Then build, put it in the plugins folder of Dong! Bot and test your work!
+Filnally build, put your dll file under the plugins folder of Dong! Bot and test your work!
