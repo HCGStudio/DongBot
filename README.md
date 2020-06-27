@@ -1,6 +1,6 @@
-# DongBot
+# Dong! Bot
 
-Dong! Bot is a multi backed chat bot framework.
+Dong! Bot is a multi backend chat bot framework.
 
 ## Backend support:
 
