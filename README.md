@@ -24,15 +24,10 @@ public class SimpleVersion
 
 **Notice**: Name "Core" is reserved for built-in services and cannot be used.
 
-Write your constructor depending on your requirement, we support constructor with no parameter, IMessageSender, IBroadcastMessageSender or both.
+Add provided interface properties you need.
 
 ``` C#
-private readonly IMessageSender _messageSender;
-
-public SimpleService(IMessageSender messageSender)
-{
-    _messageSender = messageSender;
-}
+public IMessageSender MessageSender { get; set; }
 ```
 
 Write your response to the message, or schedule task, and add correct attribute.
@@ -43,7 +38,7 @@ For examle:
 [OnKeyword("Hello", "你好", InvokePolicies = InvokePolicies.Private, KeywordPolicy = KeywordPolicy.Trim)]
 public async Task SimpleTask(long senderUserId)
 {
-    await _messageSender.SendPrivateAsync(senderUserId, (SimpleMessage)"Hello!");
+    await MessageSender.SendPrivateAsync(senderUserId, (SimpleMessage)"Hello!");
 }
 ```
 
