@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
-using cqhttp.Cyan.ApiCall.Requests.Base;
 using cqhttp.Cyan.Clients;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;

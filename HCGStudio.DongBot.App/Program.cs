@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Autofac;
 using HCGStudio.DongBot.App.Models;
-using HCGStudio.DongBot.App.SystemService;
 using HCGStudio.DongBot.Core.Attributes;
 using HCGStudio.DongBot.Core.Messages;
 using HCGStudio.DongBot.Core.Service;
@@ -23,9 +19,15 @@ namespace HCGStudio.DongBot.App
     internal class Program
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-        private static readonly Dictionary<string, List<(object, MethodInfo)>> GroupMethodDirectory = new Dictionary<string, List<(object, MethodInfo)>>();
-        private static readonly Dictionary<string, List<(object, MethodInfo)>> GroupAtMeMethodDirectory = new Dictionary<string, List<(object, MethodInfo)>>();
+
+        private static readonly Dictionary<string, List<(object, MethodInfo)>> GroupMethodDirectory =
+            new Dictionary<string, List<(object, MethodInfo)>>();
+
+        private static readonly Dictionary<string, List<(object, MethodInfo)>> GroupAtMeMethodDirectory =
+            new Dictionary<string, List<(object, MethodInfo)>>();
+
         private static readonly List<(object, MethodInfo)> PrivateMethodList = new List<(object, MethodInfo)>();
+
         private static readonly Dictionary<(int, int), List<(object, MethodInfo)>> ScheduledTaskDictionary =
             new Dictionary<(int, int), List<(object, MethodInfo)>>();
 
@@ -36,7 +38,6 @@ namespace HCGStudio.DongBot.App
             await using var context = new ApplicationContext();
             foreach (var type in assembly.GetTypes())
             {
-                var messageSender = _container.Resolve<IMessageSender>();
                 var service = type.GetCustomAttribute<ServiceAttribute>();
                 if (service == null)
                     continue;
@@ -55,15 +56,15 @@ namespace HCGStudio.DongBot.App
                 Logger.Info($"Now loading service {service.Name}.");
 
                 var added = from record in context.ServiceRecords
-                            where record.ServiceName == service.Name
-                            select record.GroupId;
+                    where record.ServiceName == service.Name
+                    select record.GroupId;
 
                 //Add not in the database
                 foreach (var groupId in groups.SkipWhile(g => added.Contains(g)))
                 {
                     Logger.Info($"Service {service.Name} not on group {groupId}, now adding.");
                     await context.ServiceRecords.AddAsync(new ServiceRecord
-                    { GroupId = groupId,ServiceName = service.Name, IsEnabled = service.AutoEnable });
+                        {GroupId = groupId, ServiceName = service.Name, IsEnabled = service.AutoEnable});
                 }
 
                 await context.SaveChangesAsync();
@@ -100,21 +101,19 @@ namespace HCGStudio.DongBot.App
                         continue;
                     if (methodInfo.ReturnType != typeof(Task) || methodInfo.GetParameters().Length != 0)
                     {
-                        Logger.Error($"Schedule task only supports async Task with no parameters, {methodInfo.Name} will not load.");
+                        Logger.Error(
+                            $"Schedule task only supports async Task with no parameters, {methodInfo.Name} will not load.");
                         continue;
                     }
+
                     if (ScheduledTaskDictionary.TryGetValue((schedule.Hour, schedule.Minute), out var list))
-                    {
                         list.Add((instance, methodInfo));
-                    }
                     else
-                    {
                         ScheduledTaskDictionary.Add((schedule.Hour, schedule.Minute),
                             new List<(object, MethodInfo)>
                             {
                                 (instance, methodInfo)
                             });
-                    }
                 }
             }
         }
@@ -166,7 +165,6 @@ namespace HCGStudio.DongBot.App
 
                 foreach (var file in Directory.CreateDirectory("plugins").GetFiles()
                     .Where(file => file.Extension == "dll").Select(file => file.FullName))
-                {
                     try
                     {
                         var assembly = Assembly.LoadFrom(file);
@@ -177,7 +175,6 @@ namespace HCGStudio.DongBot.App
                         Logger.Error($"File {file} is not a vaild plugin.");
                         Logger.Error(e);
                     }
-                }
 
                 //Save changes
                 await context.SaveChangesAsync();
@@ -228,29 +225,30 @@ namespace HCGStudio.DongBot.App
                         {
                             // ReSharper disable once PossibleNullReferenceException
                             case 0 when methodInfo.ReturnType == typeof(Task):
-                                await (Task)methodInfo.Invoke(instance, null);
+                                await (Task) methodInfo.Invoke(instance, null);
                                 break;
                             case 0:
                                 methodInfo.Invoke(instance, null);
                                 break;
                             case 1 when parameters[0].ParameterType == typeof(long):
-                                {
-                                    if (methodInfo.ReturnType == typeof(Task))
-                                        // ReSharper disable once PossibleNullReferenceException
-                                        await (Task)methodInfo.Invoke(instance, new object[] { userId });
-                                    else
-                                        methodInfo.Invoke(instance, new object[] { userId });
-                                    break;
-                                }
-                            case 2 when parameters[0].ParameterType == typeof(long) && parameters[1].ParameterType == typeof(Message):
-                                {
-                                    if (methodInfo.ReturnType == typeof(Task))
-                                        // ReSharper disable once PossibleNullReferenceException
-                                        await (Task)methodInfo.Invoke(instance, new object[] { userId, message });
-                                    else
-                                        methodInfo.Invoke(instance, new object[] { userId, message });
-                                    break;
-                                }
+                            {
+                                if (methodInfo.ReturnType == typeof(Task))
+                                    // ReSharper disable once PossibleNullReferenceException
+                                    await (Task) methodInfo.Invoke(instance, new object[] {userId});
+                                else
+                                    methodInfo.Invoke(instance, new object[] {userId});
+                                break;
+                            }
+                            case 2 when parameters[0].ParameterType == typeof(long) &&
+                                        parameters[1].ParameterType == typeof(Message):
+                            {
+                                if (methodInfo.ReturnType == typeof(Task))
+                                    // ReSharper disable once PossibleNullReferenceException
+                                    await (Task) methodInfo.Invoke(instance, new object[] {userId, message});
+                                else
+                                    methodInfo.Invoke(instance, new object[] {userId, message});
+                                break;
+                            }
                             default:
                                 Logger.Error(
                                     $"Unsupported parameter type on method {methodInfo.Name}, type {instance.GetType().Name}");
@@ -269,79 +267,83 @@ namespace HCGStudio.DongBot.App
 
                     var dict = atMe ? GroupAtMeMethodDirectory : GroupMethodDirectory;
                     var enabled = from record in context.ServiceRecords
-                                  where record.GroupId == groupId && record.IsEnabled
-                                  select record.ServiceName;
+                        where record.GroupId == groupId && record.IsEnabled
+                        select record.ServiceName;
 
                     foreach (var service in enabled)
-                        foreach (var (instance, methodInfo) in dict[service])
+                    foreach (var (instance, methodInfo) in dict[service])
+                    {
+                        var attribute = methodInfo.GetCustomAttribute<OnKeywordAttribute>();
+                        if (attribute == null)
+                            continue;
+                        if (attribute.RequireSuperUser && !config.SuperUserIds.Contains(userId))
+                            continue;
+                        switch (attribute.KeywordPolicy)
                         {
-                            var attribute = methodInfo.GetCustomAttribute<OnKeywordAttribute>();
-                            if (attribute == null)
-                                continue;
-                            if (attribute.RequireSuperUser && !config.SuperUserIds.Contains(userId))
-                                continue;
-                            switch (attribute.KeywordPolicy)
-                            {
-                                case KeywordPolicy.AllMatch:
-                                    if (!attribute.Keywords.Contains(pureText))
-                                        continue;
-                                    break;
-                                case KeywordPolicy.Trim:
-                                    if (!attribute.Keywords.Contains(pureText.Trim()))
-                                        continue;
-                                    break;
-                                case KeywordPolicy.Contains:
-                                    if (!attribute.Keywords.Any(k => pureText.Contains(k)))
-                                        continue;
-                                    break;
-                                case KeywordPolicy.Begin:
-                                    if (!attribute.Keywords.Any(k => pureText.StartsWith(k)))
-                                        continue;
-                                    break;
-                                case KeywordPolicy.AcceptAll:
-                                    break;
-                                case KeywordPolicy.Regex:
-                                    var regexs = from s in attribute.Keywords select new Regex(s);
-                                    if (!regexs.Any(r => r.IsMatch(pureText)))
-                                        continue;
-                                    break;
-                                default:
+                            case KeywordPolicy.AllMatch:
+                                if (!attribute.Keywords.Contains(pureText))
                                     continue;
-                            }
-                            var parameters = methodInfo.GetParameters();
-                            switch (parameters.Length)
-                            {
-                                // ReSharper disable once PossibleNullReferenceException
-                                case 0 when methodInfo.ReturnType == typeof(Task):
-                                    await (Task)methodInfo.Invoke(instance, null);
-                                    break;
-                                case 0:
-                                    methodInfo.Invoke(instance, null);
-                                    break;
-                                case 2 when parameters[0].ParameterType == typeof(long) && parameters[1].ParameterType == typeof(long):
-                                    {
-                                        if (methodInfo.ReturnType == typeof(Task))
-                                            // ReSharper disable once PossibleNullReferenceException
-                                            await (Task)methodInfo.Invoke(instance, new object[] { groupId, userId });
-                                        else
-                                            methodInfo.Invoke(instance, new object[] { groupId, userId });
-                                        break;
-                                    }
-                                case 3 when parameters[0].ParameterType == typeof(long) && parameters[1].ParameterType == typeof(long) && parameters[2].ParameterType == typeof(Message):
-                                    {
-                                        if (methodInfo.ReturnType == typeof(Task))
-                                            // ReSharper disable once PossibleNullReferenceException
-                                            await (Task)methodInfo.Invoke(instance, new object[] { groupId, userId, message });
-                                        else
-                                            methodInfo.Invoke(instance, new object[] { groupId, userId, message });
-                                        break;
-                                    }
-                                default:
-                                    Logger.Error(
-                                        $"Unsupported parameter type on method {methodInfo.Name}, type {instance.GetType().Name}");
-                                    break;
-                            }
+                                break;
+                            case KeywordPolicy.Trim:
+                                if (!attribute.Keywords.Contains(pureText.Trim()))
+                                    continue;
+                                break;
+                            case KeywordPolicy.Contains:
+                                if (!attribute.Keywords.Any(k => pureText.Contains(k)))
+                                    continue;
+                                break;
+                            case KeywordPolicy.Begin:
+                                if (!attribute.Keywords.Any(k => pureText.StartsWith(k)))
+                                    continue;
+                                break;
+                            case KeywordPolicy.AcceptAll:
+                                break;
+                            case KeywordPolicy.Regex:
+                                var regexs = from s in attribute.Keywords select new Regex(s);
+                                if (!regexs.Any(r => r.IsMatch(pureText)))
+                                    continue;
+                                break;
+                            default:
+                                continue;
                         }
+
+                        var parameters = methodInfo.GetParameters();
+                        switch (parameters.Length)
+                        {
+                            // ReSharper disable once PossibleNullReferenceException
+                            case 0 when methodInfo.ReturnType == typeof(Task):
+                                await (Task) methodInfo.Invoke(instance, null);
+                                break;
+                            case 0:
+                                methodInfo.Invoke(instance, null);
+                                break;
+                            case 2 when parameters[0].ParameterType == typeof(long) &&
+                                        parameters[1].ParameterType == typeof(long):
+                            {
+                                if (methodInfo.ReturnType == typeof(Task))
+                                    // ReSharper disable once PossibleNullReferenceException
+                                    await (Task) methodInfo.Invoke(instance, new object[] {groupId, userId});
+                                else
+                                    methodInfo.Invoke(instance, new object[] {groupId, userId});
+                                break;
+                            }
+                            case 3 when parameters[0].ParameterType == typeof(long) &&
+                                        parameters[1].ParameterType == typeof(long) &&
+                                        parameters[2].ParameterType == typeof(Message):
+                            {
+                                if (methodInfo.ReturnType == typeof(Task))
+                                    // ReSharper disable once PossibleNullReferenceException
+                                    await (Task) methodInfo.Invoke(instance, new object[] {groupId, userId, message});
+                                else
+                                    methodInfo.Invoke(instance, new object[] {groupId, userId, message});
+                                break;
+                            }
+                            default:
+                                Logger.Error(
+                                    $"Unsupported parameter type on method {methodInfo.Name}, type {instance.GetType().Name}");
+                                break;
+                        }
+                    }
                 });
 
 
@@ -356,7 +358,7 @@ namespace HCGStudio.DongBot.App
                 var lastTime = (-1, -1);
                 while (true)
                 {
-                    var time = (DateTime.Now.Hour,DateTime.Now.Minute);
+                    var time = (DateTime.Now.Hour, DateTime.Now.Minute);
                     if (time == lastTime)
                     {
                         await Task.Delay(100);
@@ -364,13 +366,9 @@ namespace HCGStudio.DongBot.App
                     }
 
                     if (ScheduledTaskDictionary.TryGetValue(time, out var list))
-                    {
-                        foreach (var (instance,methodInfo) in list)
-                        {
+                        foreach (var (instance, methodInfo) in list)
                             // ReSharper disable once PossibleNullReferenceException
                             await (Task) methodInfo.Invoke(instance, null);
-                        }
-                    }
 
                     lastTime = time;
                 }

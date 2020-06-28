@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Security.Authentication.ExtendedProtection;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
 namespace HCGStudio.DongBot.App.Models
@@ -11,8 +7,9 @@ namespace HCGStudio.DongBot.App.Models
     {
         public int ServiceRecordId { get; set; }
         public long GroupId { get; set; }
-        [MaxLength(500)]
-        public string ServiceName { get; set; }
+
+        [MaxLength(500)] public string ServiceName { get; set; }
+
         public bool IsEnabled { get; set; }
     }
 
@@ -21,6 +18,8 @@ namespace HCGStudio.DongBot.App.Models
         public DbSet<ServiceRecord> ServiceRecords { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseSqlite("Data Source=ServiceRecords.db");
+        {
+            optionsBuilder.UseSqlite("Data Source=ServiceRecords.db");
+        }
     }
 }
