@@ -2,6 +2,8 @@
 
 Dong! Bot is a multi backend chat bot framework.
 
+**WARNING:** This framework is useable but still under construction and have many bugs.
+
 ## Backend support:
 
 - [x] CqHttp (Only websocket tested, through [cqhttp.Cyan](https://github.com/frank-bots/cqhttp.Cyan))
