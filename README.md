@@ -2,7 +2,7 @@
 
 Dong! Bot is a multi backend chat bot framework.
 
-**WARNING:** This framework is useable but still under construction and have many bugs.
+**WARNING:** This framework is useable but still under construction and may have many bugs.
 
 ## Backend support:
 
