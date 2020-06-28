@@ -164,7 +164,7 @@ namespace HCGStudio.DongBot.App
                 await LoadService(Assembly.GetExecutingAssembly(), groups, true);
 
                 foreach (var file in Directory.CreateDirectory("plugins").GetFiles()
-                    .Where(file => file.Extension == "dll").Select(file => file.FullName))
+                    .Where(file => file.Extension == ".dll").Select(file => file.FullName))
                     try
                     {
                         var assembly = Assembly.LoadFrom(file);
@@ -223,9 +223,12 @@ namespace HCGStudio.DongBot.App
                         var parameters = methodInfo.GetParameters();
                         switch (parameters.Length)
                         {
-                            // ReSharper disable once PossibleNullReferenceException
                             case 0 when methodInfo.ReturnType == typeof(Task):
-                                await (Task) methodInfo.Invoke(instance, null);
+                            {
+                                var task = (Task) methodInfo.Invoke(instance, null);
+                                if (task != null)
+                                    await task;
+                            }
                                 break;
                             case 0:
                                 methodInfo.Invoke(instance, null);
@@ -233,20 +236,32 @@ namespace HCGStudio.DongBot.App
                             case 1 when parameters[0].ParameterType == typeof(long):
                             {
                                 if (methodInfo.ReturnType == typeof(Task))
-                                    // ReSharper disable once PossibleNullReferenceException
-                                    await (Task) methodInfo.Invoke(instance, new object[] {userId});
+                                {
+                                    var task = (Task) methodInfo.Invoke(instance, new object[] {userId});
+                                    if (task != null)
+                                        await task;
+                                }
                                 else
+                                {
                                     methodInfo.Invoke(instance, new object[] {userId});
+                                }
+
                                 break;
                             }
                             case 2 when parameters[0].ParameterType == typeof(long) &&
                                         parameters[1].ParameterType == typeof(Message):
                             {
                                 if (methodInfo.ReturnType == typeof(Task))
-                                    // ReSharper disable once PossibleNullReferenceException
-                                    await (Task) methodInfo.Invoke(instance, new object[] {userId, message});
+                                {
+                                    var task = (Task) methodInfo.Invoke(instance, new object[] {userId, message});
+                                    if (task != null)
+                                        await task;
+                                }
                                 else
+                                {
                                     methodInfo.Invoke(instance, new object[] {userId, message});
+                                }
+
                                 break;
                             }
                             default:
@@ -310,9 +325,12 @@ namespace HCGStudio.DongBot.App
                         var parameters = methodInfo.GetParameters();
                         switch (parameters.Length)
                         {
-                            // ReSharper disable once PossibleNullReferenceException
                             case 0 when methodInfo.ReturnType == typeof(Task):
-                                await (Task) methodInfo.Invoke(instance, null);
+                            {
+                                var task = (Task) methodInfo.Invoke(instance, null);
+                                if (task != null)
+                                    await task;
+                            }
                                 break;
                             case 0:
                                 methodInfo.Invoke(instance, null);
@@ -321,10 +339,17 @@ namespace HCGStudio.DongBot.App
                                         parameters[1].ParameterType == typeof(long):
                             {
                                 if (methodInfo.ReturnType == typeof(Task))
-                                    // ReSharper disable once PossibleNullReferenceException
-                                    await (Task) methodInfo.Invoke(instance, new object[] {groupId, userId});
+                                {
+                                    var task = (Task) methodInfo.Invoke(instance,
+                                        new object[] {groupId, userId});
+                                    if (task != null)
+                                        await task;
+                                }
                                 else
+                                {
                                     methodInfo.Invoke(instance, new object[] {groupId, userId});
+                                }
+
                                 break;
                             }
                             case 3 when parameters[0].ParameterType == typeof(long) &&
@@ -332,10 +357,17 @@ namespace HCGStudio.DongBot.App
                                         parameters[2].ParameterType == typeof(Message):
                             {
                                 if (methodInfo.ReturnType == typeof(Task))
-                                    // ReSharper disable once PossibleNullReferenceException
-                                    await (Task) methodInfo.Invoke(instance, new object[] {groupId, userId, message});
+                                {
+                                    var task = (Task) methodInfo.Invoke(instance,
+                                        new object[] {groupId, userId, message});
+                                    if (task != null)
+                                        await task;
+                                }
                                 else
+                                {
                                     methodInfo.Invoke(instance, new object[] {groupId, userId, message});
+                                }
+
                                 break;
                             }
                             default:
@@ -367,8 +399,11 @@ namespace HCGStudio.DongBot.App
 
                     if (ScheduledTaskDictionary.TryGetValue(time, out var list))
                         foreach (var (instance, methodInfo) in list)
-                            // ReSharper disable once PossibleNullReferenceException
-                            await (Task) methodInfo.Invoke(instance, null);
+                        {
+                            var task = (Task) methodInfo.Invoke(instance, null);
+                            if (task != null)
+                                await task;
+                        }
 
                     lastTime = time;
                 }
