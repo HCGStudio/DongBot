@@ -13,12 +13,7 @@ namespace HCGStudio.DongBot.App.SystemService
     [Service("Core")]
     public class ServiceService
     {
-        private readonly IMessageSender _messageSender;
-
-        public ServiceService(IMessageSender messageSender)
-        {
-            _messageSender = messageSender;
-        }
+        public  IMessageSender MessageSender { get; set; }
 
         [OnKeyword("查看服务", InvokePolicies = InvokePolicies.Group, RequireSuperUser = true)]
         public async Task ListServices(long groupId, long userId)
@@ -33,7 +28,7 @@ namespace HCGStudio.DongBot.App.SystemService
                 messageBuilder.Append((SimpleMessage)$"{(serviceRecord.IsEnabled ? "√" : "×")} {serviceRecord.ServiceName}\n");
             }
 
-            await _messageSender.SendGroupAsync(groupId, messageBuilder.ToMessage());
+            await MessageSender.SendGroupAsync(groupId, messageBuilder.ToMessage());
         }
 
         [OnKeyword("启用", InvokePolicies = InvokePolicies.Group, KeywordPolicy = KeywordPolicy.Begin, RequireSuperUser = true)]
@@ -55,7 +50,7 @@ namespace HCGStudio.DongBot.App.SystemService
                 await context.SaveChangesAsync();
             }
 
-            await _messageSender.SendGroupAsync(groupId, messageBuilder.ToMessage());
+            await MessageSender.SendGroupAsync(groupId, messageBuilder.ToMessage());
         }
 
         [OnKeyword("禁用", InvokePolicies = InvokePolicies.Group, KeywordPolicy = KeywordPolicy.Begin, RequireSuperUser = true)]
@@ -81,7 +76,7 @@ namespace HCGStudio.DongBot.App.SystemService
                 messageBuilder.Append((SimpleMessage) "不能禁用Core服务！");
             }
 
-            await _messageSender.SendGroupAsync(groupId, messageBuilder.ToMessage());
+            await MessageSender.SendGroupAsync(groupId, messageBuilder.ToMessage());
         }
     }
 }

@@ -63,54 +63,22 @@ namespace HCGStudio.DongBot.App
                 {
                     Logger.Info($"Service {service.Name} not on group {groupId}, now adding.");
                     await context.ServiceRecords.AddAsync(new ServiceRecord
-                    { GroupId = groupId, IsEnabled = service.AutoEnable });
+                    { GroupId = groupId,ServiceName = service.Name, IsEnabled = service.AutoEnable });
                 }
+
+                await context.SaveChangesAsync();
 
                 //Add to dictionary if service name not added before
                 if (!GroupMethodDirectory.ContainsKey(service.Name))
                     GroupMethodDirectory.Add(service.Name, new List<(object, MethodInfo)>());
 
                 if (!GroupAtMeMethodDirectory.ContainsKey(service.Name))
-                    GroupMethodDirectory.Add(service.Name, new List<(object, MethodInfo)>());
-
+                    GroupAtMeMethodDirectory.Add(service.Name, new List<(object, MethodInfo)>());
                 //Create instance
                 //IMessage sender only
-                var constructor = type.GetConstructor(new[] { typeof(IMessageSender) });
-                var instance = constructor?.Invoke(new object[] { messageSender });
-                //IBroadcastMessageSender only
-                if (instance == null)
-                {
-                    constructor = type.GetConstructor(new[] { typeof(IBroadcastMessageSender) });
-                    instance = constructor?.Invoke(new object[]
-                        {new BroadcastMessageSender(messageSender, service.Name)});
-                }
-                //IBroadcastMessageSender and IMessageSender
-                if (instance == null)
-                {
-                    constructor = type.GetConstructor(new[] { typeof(IBroadcastMessageSender), typeof(IMessageSender) });
-                    instance = constructor?.Invoke(new object[]
-                        {new BroadcastMessageSender(messageSender, service.Name), messageSender});
-                }
-                //IMessageSender and IBroadcastMessageSender
-                if (instance == null)
-                {
-                    constructor = type.GetConstructor(new[] { typeof(IMessageSender), typeof(IBroadcastMessageSender) });
-                    instance = constructor?.Invoke(new object[]
-                        {messageSender, new BroadcastMessageSender(messageSender, service.Name)});
-                }
-                //None
-                if (instance == null)
-                {
-                    constructor = type.GetConstructor(new Type[] { });
-                    instance = constructor?.Invoke(new object[] { });
-                }
-                //Constructor not supported
-                if (instance == null)
-                {
-                    Logger.Error(
-                        $"Unsupported parameter type on constructor {type.Name}.");
-                    continue;
-                }
+                var instance = Activator.CreateInstance(type);
+                _container.InjectProperties(instance);
+
                 //Find marked method
                 foreach (var methodInfo in type.GetMethods())
                 {
@@ -190,7 +158,6 @@ namespace HCGStudio.DongBot.App
 
                 _container = builder.Build();
                 var messageProvider = _container.Resolve<IMessageProvider>();
-                Logger.Info("Now loading builtin services.");
                 var groups = await messageProvider.GetAllGroupsAsync();
 
                 //Load service
@@ -292,7 +259,7 @@ namespace HCGStudio.DongBot.App
                     }
                 });
 
-                messageProvider.SubscribeGroupMessage(async (message, userId, groupId, atMe) =>
+                messageProvider.SubscribeGroupMessage(async (message, groupId, userId, atMe) =>
                 {
                     var pureText = message.ToPureString();
                     Logger.Info(atMe

@@ -9,10 +9,13 @@
 		<PackageProjectUrl>https://github.com/HCGStudio/DongBot</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/HCGStudio/DongBot</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Version>1.0.1</Version>
+		<PackageReleaseNotes>Add refrence to AutoFac.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.6">
+		<PackageReference Include="Autofac" Version="5.2.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
