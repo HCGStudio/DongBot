@@ -10,7 +10,7 @@ using HCGStudio.DongBot.Core.Service;
 
 namespace HCGStudio.DongBot.App.SystemService
 {
-    [Service("Core")]
+    [Service("Core",AutoEnable = true)]
     public class ServiceService
     {
         public  IMessageSender MessageSender { get; set; }
