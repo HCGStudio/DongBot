@@ -8,14 +8,15 @@ namespace HCGStudio.DongBot.App
     {
         CqHttpHttp,
         CqWs,
-        CqWsReserve
+        CqWsReserve,
+        Custom
     }
 
     public class Configuration
     {
         [JsonConverter(typeof(StringEnumConverter))]
         public ServiceType ServiceType { get; set; }
-
+        public string CustomServiceName { get; set; }
         public string AccessUrl { get; set; }
         public string AccessToken { get; set; }
         public int ListenPort { get; set; }

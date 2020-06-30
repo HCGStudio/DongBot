@@ -9,7 +9,7 @@ namespace HCGStudio.DongBot.App.SystemService
     [Service("Core", AutoEnable = true)]
     public class VersionService
     {
-        private IMessageSender MessageSender { get; set; }
+        public IMessageSender MessageSender { get; set; }
 
 
         [OnKeyword("版本", "Version", InvokePolicies = InvokePolicies.Private, KeywordPolicy = KeywordPolicy.Trim)]

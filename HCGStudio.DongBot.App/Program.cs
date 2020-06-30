@@ -11,12 +11,13 @@ using HCGStudio.DongBot.Core.Attributes;
 using HCGStudio.DongBot.Core.Messages;
 using HCGStudio.DongBot.Core.Service;
 using HCGStudio.DongBot.CqHttp;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using NLog;
 
 namespace HCGStudio.DongBot.App
 {
-    internal class Program
+    internal static class Program
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
@@ -118,6 +119,11 @@ namespace HCGStudio.DongBot.App
             }
         }
 
+        private static ContainerBuilder UseDefaultService(this ContainerBuilder builder, string serviceName)
+        {
+
+            return builder;
+        }
         private static async Task Main(string[] args)
         {
             //Read config
@@ -136,6 +142,9 @@ namespace HCGStudio.DongBot.App
             {
                 //Build container for dependency inject
                 var builder = new ContainerBuilder();
+                //register config.json
+                builder.Register(c => new ConfigurationBuilder().AddJsonFile("config.json").Build())
+                    .As<IConfiguration>();
                 switch (config.ServiceType)
                 {
                     case ServiceType.CqHttpHttp:
@@ -146,6 +155,8 @@ namespace HCGStudio.DongBot.App
                         break;
                     case ServiceType.CqWsReserve:
                         builder.UseCqWsReserve(config.ListenPort, config.ApiPath, config.EventPath, config.AccessToken);
+                        break;
+                    case ServiceType.Custom:
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
