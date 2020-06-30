@@ -203,11 +203,12 @@ namespace HCGStudio.DongBot.App
                         AppDomain.CurrentDomain.GetAssemblies().Select(x => MetadataReference.CreateFromFile(x.Location)),
                         new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
 
-                    await using var stream = new FileStream(Path.Combine("./", $"{file.Name}.dll"), FileMode.Create);
+                    await using var stream = new FileStream(Path.Combine("./temp", $"{file.Name}.dll"), FileMode.Create);
                     var compileResult = compile.Emit(stream);
+                    await stream.FlushAsync();
                     if (compileResult.Success)
                     {
-                        await LoadService(Assembly.Load(Path.Combine("./", $"{file.Name}.dll")), groups);
+                        await LoadService(Assembly.Load(Path.Combine("./temp", $"{file.Name}.dll")), groups);
                     }
                     else
                     {
