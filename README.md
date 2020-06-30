@@ -4,13 +4,14 @@ Dong! Bot is a multi backend chat bot framework.
 
 **WARNING:** This framework is useable but still under construction and may have many bugs.
 
-## Backend support:
+## Backend Support:
 
 - [x] CqHttp (Only websocket tested, through [cqhttp.Cyan](https://github.com/frank-bots/cqhttp.Cyan))
-- [ ] mirai-api-http
+- [ ] mirai (Not in recent plan, you can use [cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) instead)
+- [ ] Custom backend (Working on it)
 - [ ] Other chat software.
 
-## Plugin write guide
+## Plugin Write guide
 
 Add refrence to nuget package [HCGStudio.DongBot.Core](https://www.nuget.org/packages/HCGStudio.DongBot.Core/) on your csproj file.
 ``` XML
@@ -57,3 +58,11 @@ Filnally build, put your dll file under the plugins folder of Dong! Bot and test
 You can also view our official plugin:
 
 [Dong! Bot Reminder](https://github.com/HCGStudio/DongBot-Reminder)
+
+## Light Plugin Guide
+
+If you don't want to build every time you update your plugin, try light-plugin. When Dong! Bot starts, we check every file end with `.cs` or `.plg`ungder `light-plugin`folder and compile it and load it as plugin!
+
+Light Plugin does everything like normal Dong! Bot plugin, but you can't reference any type in other light plugin.  
+
+Tip: If you are starting Dong! bot through `dotnet run` or `vscode`, you should use `.plg` suffix, because light-plugin will  compiled by `dotnet`.

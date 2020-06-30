@@ -176,6 +176,22 @@ namespace HCGStudio.DongBot.App
                 Logger.Info("Now loading builtin services.");
                 await LoadService(Assembly.GetExecutingAssembly(), groups, true);
 
+                //Load plugins
+                Logger.Info("Now load plguins from plugins dir.");
+
+                foreach (var file in Directory.CreateDirectory("plugins").GetFiles()
+                    .Where(file => file.Extension == ".dll").Select(file => file.FullName))
+                    try
+                    {
+                        var assembly = Assembly.LoadFrom(file);
+                        await LoadService(assembly, groups);
+                    }
+                    catch (Exception e)
+                    {
+                        Logger.Error($"File {file} is not a vaild plugin.");
+                        Logger.Error(e);
+                    }
+
 
                 //Load Light-Plugins
                 Directory.CreateDirectory("temp");
@@ -184,7 +200,7 @@ namespace HCGStudio.DongBot.App
                     .Where(file => file.Extension == ".cs" || file.Extension == ".lpg").Select(file => file))
                 {
                     var compile = CSharpCompilation.Create($"{file.Name}.g",
-                        new[] {CSharpSyntaxTree.ParseText(await File.ReadAllTextAsync(file.FullName))},
+                        new[] { CSharpSyntaxTree.ParseText(await File.ReadAllTextAsync(file.FullName)) },
                         AppDomain.CurrentDomain.GetAssemblies().Select(x =>
                         {
                             try
@@ -213,22 +229,6 @@ namespace HCGStudio.DongBot.App
                     }
                 }
 
-
-                //Load plugins
-                Logger.Info("Now load plguins from plugins dir.");
-
-                foreach (var file in Directory.CreateDirectory("plugins").GetFiles()
-                    .Where(file => file.Extension == ".dll").Select(file => file.FullName))
-                    try
-                    {
-                        var assembly = Assembly.LoadFrom(file);
-                        await LoadService(assembly, groups);
-                    }
-                    catch (Exception e)
-                    {
-                        Logger.Error($"File {file} is not a vaild plugin.");
-                        Logger.Error(e);
-                    }
 
                 //Save changes
                 await context.SaveChangesAsync();
