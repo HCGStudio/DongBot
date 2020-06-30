@@ -199,7 +199,7 @@ namespace HCGStudio.DongBot.App
                     .Where(file => file.Extension == ".cs").Select(file => file))
                 {
                     var compile = CSharpCompilation.Create($"{file.Name}.g",
-                        new[] { CSharpSyntaxTree.ParseText(await File.ReadAllTextAsync(file.Name)) },
+                        new[] { CSharpSyntaxTree.ParseText(await File.ReadAllTextAsync(file.FullName)) },
                         AppDomain.CurrentDomain.GetAssemblies().Select(x => MetadataReference.CreateFromFile(x.Location)),
                         new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
 
