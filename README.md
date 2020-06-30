@@ -2,6 +2,8 @@
 
 Dong! Bot is a multi backend chat bot framework.
 
+**WARNING:** This framework is useable but still under construction and may have many bugs.
+
 ## Backend support:
 
 - [x] CqHttp (Only websocket tested, through [cqhttp.Cyan](https://github.com/frank-bots/cqhttp.Cyan))
@@ -12,7 +14,7 @@ Dong! Bot is a multi backend chat bot framework.
 
 Add refrence to nuget package [HCGStudio.DongBot.Core](https://www.nuget.org/packages/HCGStudio.DongBot.Core/) on your csproj file.
 ``` XML
-<PackageReference Include="HCGStudio.DongBot.Core" Version="1.0.0" />
+<PackageReference Include="HCGStudio.DongBot.Core" Version="1.0.1" />
 ```
 
 Add class for your service, and add `ServiceAttribute`.
@@ -51,3 +53,7 @@ There are some requirment of your method:
 | ScheduleTaskAttribute                            | Task                      | empty                                                        |
 
 Filnally build, put your dll file under the plugins folder of Dong! Bot and test your work!
+
+You can also view our official plugin:
+
+[Dong! Bot Reminder](https://github.com/HCGStudio/DongBot-Reminder)
