@@ -16,6 +16,7 @@ namespace HCGStudio.DongBot.App
     {
         [JsonConverter(typeof(StringEnumConverter))]
         public ServiceType ServiceType { get; set; }
+
         public string CustomServiceName { get; set; }
         public string AccessUrl { get; set; }
         public string AccessToken { get; set; }
