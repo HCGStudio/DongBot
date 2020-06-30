@@ -11,6 +11,8 @@ using HCGStudio.DongBot.Core.Attributes;
 using HCGStudio.DongBot.Core.Messages;
 using HCGStudio.DongBot.Core.Service;
 using HCGStudio.DongBot.CqHttp;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using NLog;
@@ -57,15 +59,15 @@ namespace HCGStudio.DongBot.App
                 Logger.Info($"Now loading service {service.Name}.");
 
                 var added = from record in context.ServiceRecords
-                    where record.ServiceName == service.Name
-                    select record.GroupId;
+                            where record.ServiceName == service.Name
+                            select record.GroupId;
 
                 //Add not in the database
                 foreach (var groupId in groups.SkipWhile(g => added.Contains(g)))
                 {
                     Logger.Info($"Service {service.Name} not on group {groupId}, now adding.");
                     await context.ServiceRecords.AddAsync(new ServiceRecord
-                        {GroupId = groupId, ServiceName = service.Name, IsEnabled = service.AutoEnable});
+                    { GroupId = groupId, ServiceName = service.Name, IsEnabled = service.AutoEnable });
                 }
 
                 await context.SaveChangesAsync();
@@ -174,6 +176,9 @@ namespace HCGStudio.DongBot.App
                 Logger.Info("Now loading builtin services.");
                 await LoadService(Assembly.GetExecutingAssembly(), groups, true);
 
+                //Load plugins
+                Logger.Info("Now load plguins from plugins dir.");
+
                 foreach (var file in Directory.CreateDirectory("plugins").GetFiles()
                     .Where(file => file.Extension == ".dll").Select(file => file.FullName))
                     try
@@ -186,6 +191,32 @@ namespace HCGStudio.DongBot.App
                         Logger.Error($"File {file} is not a vaild plugin.");
                         Logger.Error(e);
                     }
+
+                //Load Light-Plugins
+                Directory.CreateDirectory("temp");
+                Logger.Info("Noe compling light plugins.");
+                foreach (var file in Directory.CreateDirectory("light-plugins").GetFiles()
+                    .Where(file => file.Extension == ".cs").Select(file => file))
+                {
+                    var compile = CSharpCompilation.Create($"{file.Name}.g",
+                        new[] { CSharpSyntaxTree.ParseText(await File.ReadAllTextAsync(file.Name)) },
+                        AppDomain.CurrentDomain.GetAssemblies().Select(x => MetadataReference.CreateFromFile(x.Location)),
+                        new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+
+                    await using var ms = new MemoryStream();
+                    var compileResult = compile.Emit(ms);
+                    if (compileResult.Success)
+                    {
+                        ms.Seek(0, SeekOrigin.Begin);
+                        await LoadService(Assembly.Load(ms.ToArray()), groups);
+                    }
+                    else
+                    {
+                        Logger.Error($"Compile failed on file {file.Name}.");
+                        Logger.Error($"{compileResult.Diagnostics}");
+                    }
+                }
+
 
                 //Save changes
                 await context.SaveChangesAsync();
@@ -235,46 +266,46 @@ namespace HCGStudio.DongBot.App
                         switch (parameters.Length)
                         {
                             case 0 when methodInfo.ReturnType == typeof(Task):
-                            {
-                                var task = (Task) methodInfo.Invoke(instance, null);
-                                if (task != null)
-                                    await task;
-                            }
+                                {
+                                    var task = (Task)methodInfo.Invoke(instance, null);
+                                    if (task != null)
+                                        await task;
+                                }
                                 break;
                             case 0:
                                 methodInfo.Invoke(instance, null);
                                 break;
                             case 1 when parameters[0].ParameterType == typeof(long):
-                            {
-                                if (methodInfo.ReturnType == typeof(Task))
                                 {
-                                    var task = (Task) methodInfo.Invoke(instance, new object[] {userId});
-                                    if (task != null)
-                                        await task;
-                                }
-                                else
-                                {
-                                    methodInfo.Invoke(instance, new object[] {userId});
-                                }
+                                    if (methodInfo.ReturnType == typeof(Task))
+                                    {
+                                        var task = (Task)methodInfo.Invoke(instance, new object[] { userId });
+                                        if (task != null)
+                                            await task;
+                                    }
+                                    else
+                                    {
+                                        methodInfo.Invoke(instance, new object[] { userId });
+                                    }
 
-                                break;
-                            }
+                                    break;
+                                }
                             case 2 when parameters[0].ParameterType == typeof(long) &&
                                         parameters[1].ParameterType == typeof(Message):
-                            {
-                                if (methodInfo.ReturnType == typeof(Task))
                                 {
-                                    var task = (Task) methodInfo.Invoke(instance, new object[] {userId, message});
-                                    if (task != null)
-                                        await task;
-                                }
-                                else
-                                {
-                                    methodInfo.Invoke(instance, new object[] {userId, message});
-                                }
+                                    if (methodInfo.ReturnType == typeof(Task))
+                                    {
+                                        var task = (Task)methodInfo.Invoke(instance, new object[] { userId, message });
+                                        if (task != null)
+                                            await task;
+                                    }
+                                    else
+                                    {
+                                        methodInfo.Invoke(instance, new object[] { userId, message });
+                                    }
 
-                                break;
-                            }
+                                    break;
+                                }
                             default:
                                 Logger.Error(
                                     $"Unsupported parameter type on method {methodInfo.Name}, type {instance.GetType().Name}");
@@ -293,100 +324,100 @@ namespace HCGStudio.DongBot.App
 
                     var dict = atMe ? GroupAtMeMethodDirectory : GroupMethodDirectory;
                     var enabled = from record in context.ServiceRecords
-                        where record.GroupId == groupId && record.IsEnabled
-                        select record.ServiceName;
+                                  where record.GroupId == groupId && record.IsEnabled
+                                  select record.ServiceName;
 
                     foreach (var service in enabled)
-                    foreach (var (instance, methodInfo) in dict[service])
-                    {
-                        var attribute = methodInfo.GetCustomAttribute<OnKeywordAttribute>();
-                        if (attribute == null)
-                            continue;
-                        if (attribute.RequireSuperUser && !config.SuperUserIds.Contains(userId))
-                            continue;
-                        switch (attribute.KeywordPolicy)
+                        foreach (var (instance, methodInfo) in dict[service])
                         {
-                            case KeywordPolicy.AllMatch:
-                                if (!attribute.Keywords.Contains(pureText))
-                                    continue;
-                                break;
-                            case KeywordPolicy.Trim:
-                                if (!attribute.Keywords.Contains(pureText.Trim()))
-                                    continue;
-                                break;
-                            case KeywordPolicy.Contains:
-                                if (!attribute.Keywords.Any(k => pureText.Contains(k)))
-                                    continue;
-                                break;
-                            case KeywordPolicy.Begin:
-                                if (!attribute.Keywords.Any(k => pureText.StartsWith(k)))
-                                    continue;
-                                break;
-                            case KeywordPolicy.AcceptAll:
-                                break;
-                            case KeywordPolicy.Regex:
-                                var regexs = from s in attribute.Keywords select new Regex(s);
-                                if (!regexs.Any(r => r.IsMatch(pureText)))
-                                    continue;
-                                break;
-                            default:
+                            var attribute = methodInfo.GetCustomAttribute<OnKeywordAttribute>();
+                            if (attribute == null)
                                 continue;
+                            if (attribute.RequireSuperUser && !config.SuperUserIds.Contains(userId))
+                                continue;
+                            switch (attribute.KeywordPolicy)
+                            {
+                                case KeywordPolicy.AllMatch:
+                                    if (!attribute.Keywords.Contains(pureText))
+                                        continue;
+                                    break;
+                                case KeywordPolicy.Trim:
+                                    if (!attribute.Keywords.Contains(pureText.Trim()))
+                                        continue;
+                                    break;
+                                case KeywordPolicy.Contains:
+                                    if (!attribute.Keywords.Any(k => pureText.Contains(k)))
+                                        continue;
+                                    break;
+                                case KeywordPolicy.Begin:
+                                    if (!attribute.Keywords.Any(k => pureText.StartsWith(k)))
+                                        continue;
+                                    break;
+                                case KeywordPolicy.AcceptAll:
+                                    break;
+                                case KeywordPolicy.Regex:
+                                    var regexs = from s in attribute.Keywords select new Regex(s);
+                                    if (!regexs.Any(r => r.IsMatch(pureText)))
+                                        continue;
+                                    break;
+                                default:
+                                    continue;
+                            }
+
+                            var parameters = methodInfo.GetParameters();
+                            switch (parameters.Length)
+                            {
+                                case 0 when methodInfo.ReturnType == typeof(Task):
+                                    {
+                                        var task = (Task)methodInfo.Invoke(instance, null);
+                                        if (task != null)
+                                            await task;
+                                    }
+                                    break;
+                                case 0:
+                                    methodInfo.Invoke(instance, null);
+                                    break;
+                                case 2 when parameters[0].ParameterType == typeof(long) &&
+                                            parameters[1].ParameterType == typeof(long):
+                                    {
+                                        if (methodInfo.ReturnType == typeof(Task))
+                                        {
+                                            var task = (Task)methodInfo.Invoke(instance,
+                                                new object[] { groupId, userId });
+                                            if (task != null)
+                                                await task;
+                                        }
+                                        else
+                                        {
+                                            methodInfo.Invoke(instance, new object[] { groupId, userId });
+                                        }
+
+                                        break;
+                                    }
+                                case 3 when parameters[0].ParameterType == typeof(long) &&
+                                            parameters[1].ParameterType == typeof(long) &&
+                                            parameters[2].ParameterType == typeof(Message):
+                                    {
+                                        if (methodInfo.ReturnType == typeof(Task))
+                                        {
+                                            var task = (Task)methodInfo.Invoke(instance,
+                                                new object[] { groupId, userId, message });
+                                            if (task != null)
+                                                await task;
+                                        }
+                                        else
+                                        {
+                                            methodInfo.Invoke(instance, new object[] { groupId, userId, message });
+                                        }
+
+                                        break;
+                                    }
+                                default:
+                                    Logger.Error(
+                                        $"Unsupported parameter type on method {methodInfo.Name}, type {instance.GetType().Name}");
+                                    break;
+                            }
                         }
-
-                        var parameters = methodInfo.GetParameters();
-                        switch (parameters.Length)
-                        {
-                            case 0 when methodInfo.ReturnType == typeof(Task):
-                            {
-                                var task = (Task) methodInfo.Invoke(instance, null);
-                                if (task != null)
-                                    await task;
-                            }
-                                break;
-                            case 0:
-                                methodInfo.Invoke(instance, null);
-                                break;
-                            case 2 when parameters[0].ParameterType == typeof(long) &&
-                                        parameters[1].ParameterType == typeof(long):
-                            {
-                                if (methodInfo.ReturnType == typeof(Task))
-                                {
-                                    var task = (Task) methodInfo.Invoke(instance,
-                                        new object[] {groupId, userId});
-                                    if (task != null)
-                                        await task;
-                                }
-                                else
-                                {
-                                    methodInfo.Invoke(instance, new object[] {groupId, userId});
-                                }
-
-                                break;
-                            }
-                            case 3 when parameters[0].ParameterType == typeof(long) &&
-                                        parameters[1].ParameterType == typeof(long) &&
-                                        parameters[2].ParameterType == typeof(Message):
-                            {
-                                if (methodInfo.ReturnType == typeof(Task))
-                                {
-                                    var task = (Task) methodInfo.Invoke(instance,
-                                        new object[] {groupId, userId, message});
-                                    if (task != null)
-                                        await task;
-                                }
-                                else
-                                {
-                                    methodInfo.Invoke(instance, new object[] {groupId, userId, message});
-                                }
-
-                                break;
-                            }
-                            default:
-                                Logger.Error(
-                                    $"Unsupported parameter type on method {methodInfo.Name}, type {instance.GetType().Name}");
-                                break;
-                        }
-                    }
                 });
 
 
@@ -411,7 +442,7 @@ namespace HCGStudio.DongBot.App
                     if (ScheduledTaskDictionary.TryGetValue(time, out var list))
                         foreach (var (instance, methodInfo) in list)
                         {
-                            var task = (Task) methodInfo.Invoke(instance, null);
+                            var task = (Task)methodInfo.Invoke(instance, null);
                             if (task != null)
                                 await task;
                         }
