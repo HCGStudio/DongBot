@@ -9,8 +9,8 @@
 		<PackageProjectUrl>https://github.com/HCGStudio/DongBot</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/HCGStudio/DongBot</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>1.0.4</Version>
-		<PackageReleaseNotes>Add support for custom provider.</PackageReleaseNotes>
+		<Version>1.0.7</Version>
+		<PackageReleaseNotes>Add more useful methods to IMessageProvider.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -19,6 +19,7 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.5" />
 	</ItemGroup>
 
 </Project>

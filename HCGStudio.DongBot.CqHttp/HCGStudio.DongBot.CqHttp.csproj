@@ -8,6 +8,8 @@
     <Description>CQHttp support for DongBot.</Description>
     <PackageProjectUrl>https://github.com/HCGStudio/DongBot</PackageProjectUrl>
     <RepositoryUrl>https://github.com/HCGStudio/DongBot</RepositoryUrl>
+    <Version>1.0.7</Version>
+    <PackageReleaseNotes>Adjust changes in DongBot.Core 1.0.7.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using cqhttp.Cyan.ApiCall.Requests;
+using cqhttp.Cyan.ApiCall.Results;
 using cqhttp.Cyan.Clients;
 using cqhttp.Cyan.Events.CQEvents;
 using cqhttp.Cyan.Events.CQEvents.Base;
@@ -144,8 +145,23 @@ namespace HCGStudio.DongBot.CqHttp
 
         public async Task<List<long>> GetAllGroupsAsync()
         {
-            var result = await Client.SendRequestAsync(new GetGroupListRequest());
-            return result.raw_data.Select(token => Convert.ToInt64(token["group_id"])).ToList();
+            var result = (GetGroupListResult) await Client.SendRequestAsync(new GetGroupListRequest());
+            return result.groupList.Select(record => record.Item1).ToList();
+        }
+
+        public async Task<string> GetGroupNameAsync(long groupId)
+        {
+            var result = (GetGroupListResult) await Client.SendRequestAsync(new GetGroupListRequest());
+            return result.groupList.Where(record => record.Item1 == groupId).Select(record => record.Item2)
+                .FirstOrDefault();
+        }
+
+        public async Task<string> GetGroupUserNameAsync(long groupId, long userId)
+        {
+            var result =
+                (GetGroupMemberInfoResult) await Client.SendRequestAsync(
+                    new GetGroupMemberInfoRequest(groupId, userId));
+            return result.memberInfo.card;
         }
     }
 }

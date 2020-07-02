@@ -2,7 +2,7 @@
 
 namespace HCGStudio.DongBot.Core.Attributes
 {
-    [AttributeUsage(AttributeTargets.Method)]
+    [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
     public class ScheduleTaskAttribute : Attribute
     {
         public ScheduleTaskAttribute(int hour, int minute)

@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Autofac;
 using HCGStudio.DongBot.App.Models;
+using HCGStudio.DongBot.App.SystemService;
 using HCGStudio.DongBot.Core.Attributes;
 using HCGStudio.DongBot.Core.Messages;
 using HCGStudio.DongBot.Core.Service;
@@ -83,6 +84,12 @@ namespace HCGStudio.DongBot.App
                 var instance = Activator.CreateInstance(type);
                 _container.InjectProperties(instance);
 
+                //Manually inject IBroadcastMessageSender
+                foreach (var propertyInfo in type.GetProperties())
+                    if (propertyInfo.PropertyType == typeof(IBroadcastMessageSender) && propertyInfo.CanWrite)
+                        propertyInfo.SetValue(instance,
+                            new BroadcastMessageSender(_container.Resolve<IMessageSender>(), service.Name));
+
                 //Find marked method
                 foreach (var methodInfo in type.GetMethods())
                 {
@@ -99,24 +106,25 @@ namespace HCGStudio.DongBot.App
 
                 foreach (var methodInfo in type.GetMethods())
                 {
-                    var schedule = methodInfo.GetCustomAttribute<ScheduleTaskAttribute>();
-                    if (schedule == null)
-                        continue;
-                    if (methodInfo.ReturnType != typeof(Task) || methodInfo.GetParameters().Length != 0)
+                    var schedules = methodInfo.GetCustomAttributes<ScheduleTaskAttribute>();
+                    foreach (var schedule in schedules)
                     {
-                        Logger.Error(
-                            $"Schedule task only supports async Task with no parameters, {methodInfo.Name} will not load.");
-                        continue;
-                    }
+                        if (methodInfo.ReturnType != typeof(Task) || methodInfo.GetParameters().Length != 0)
+                        {
+                            Logger.Error(
+                                $"Schedule task only supports async Task with no parameters, {methodInfo.Name} will not load.");
+                            continue;
+                        }
 
-                    if (ScheduledTaskDictionary.TryGetValue((schedule.Hour, schedule.Minute), out var list))
-                        list.Add((instance, methodInfo));
-                    else
-                        ScheduledTaskDictionary.Add((schedule.Hour, schedule.Minute),
-                            new List<(object, MethodInfo)>
-                            {
-                                (instance, methodInfo)
-                            });
+                        if (ScheduledTaskDictionary.TryGetValue((schedule.Hour, schedule.Minute), out var list))
+                            list.Add((instance, methodInfo));
+                        else
+                            ScheduledTaskDictionary.Add((schedule.Hour, schedule.Minute),
+                                new List<(object, MethodInfo)>
+                                {
+                                    (instance, methodInfo)
+                                });
+                    }
                 }
             }
         }
@@ -144,8 +152,14 @@ namespace HCGStudio.DongBot.App
             {
                 //Build container for dependency inject
                 var builder = new ContainerBuilder();
-                //register config.json
-                builder.Register(c => new ConfigurationBuilder().AddJsonFile("config.json").Build())
+
+                var configBuilder = new ConfigurationBuilder().AddJsonFile("config.json");
+                //Add service config files
+                foreach (var configFile in Directory.CreateDirectory("PluginConfig").GetFiles()
+                    .Where(f => f.Extension == ".json").Select(f => f.FullName))
+                    configBuilder.AddJsonFile(configFile, false, true);
+                //Register IConfiguration
+                builder.Register(c => configBuilder.Build())
                     .As<IConfiguration>();
                 switch (config.ServiceType)
                 {
@@ -171,6 +185,7 @@ namespace HCGStudio.DongBot.App
                 _container = builder.Build();
                 var messageProvider = _container.Resolve<IMessageProvider>();
                 var groups = await messageProvider.GetAllGroupsAsync();
+
 
                 //Load service
                 Logger.Info("Now loading builtin services.");
@@ -200,7 +215,7 @@ namespace HCGStudio.DongBot.App
                     .Where(file => file.Extension == ".cs" || file.Extension == ".lpg").Select(file => file))
                 {
                     var compile = CSharpCompilation.Create($"{file.Name}.g",
-                        new[] { CSharpSyntaxTree.ParseText(await File.ReadAllTextAsync(file.FullName)) },
+                        new[] {CSharpSyntaxTree.ParseText(await File.ReadAllTextAsync(file.FullName))},
                         AppDomain.CurrentDomain.GetAssemblies().Select(x =>
                         {
                             try
