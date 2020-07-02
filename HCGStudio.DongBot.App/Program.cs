@@ -153,7 +153,7 @@ namespace HCGStudio.DongBot.App
                 //Build container for dependency inject
                 var builder = new ContainerBuilder();
 
-                var configBuilder = new ConfigurationBuilder().AddJsonFile("config.json");
+                var configBuilder = new ConfigurationBuilder().AddJsonFile(Path.Combine(Environment.CurrentDirectory, "config.json"));
                 //Add service config files
                 foreach (var configFile in Directory.CreateDirectory("PluginConfig").GetFiles()
                     .Where(f => f.Extension == ".json").Select(f => f.FullName))
