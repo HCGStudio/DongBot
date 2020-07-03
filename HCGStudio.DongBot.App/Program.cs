@@ -17,9 +17,9 @@ using Microsoft.Extensions.Logging;
 
 namespace HCGStudio.DongBot.App
 {
-    internal static class Program
+    public class Program
     {
-        private static ILogger Logger;
+        private static ILogger<Program> _logger;
 
         private static async Task Main(string[] args)
         {
@@ -37,7 +37,7 @@ namespace HCGStudio.DongBot.App
             startup.ConfigureServices(services);
             services.AddTransient<PluginResolver>();
             var resolver = services.BuildServiceProvider().GetRequiredService<PluginResolver>();
-            Logger = services.BuildServiceProvider().GetService<ILogger>();
+            _logger = services.BuildServiceProvider().GetService<ILogger<Program>>();
 
             try
             {
@@ -51,11 +51,11 @@ namespace HCGStudio.DongBot.App
 
 
                 //Load service
-                Logger.LogInformation("Now loading builtin services.");
+                _logger.LogInformation("Now loading builtin services.");
                 resolver.Load(services, Assembly.GetExecutingAssembly(), true);
 
                 //Load plugins
-                Logger.LogInformation("Now load plugins from plugins dir.");
+                _logger.LogInformation("Now load plugins from plugins dir.");
 
                 foreach (var file in Directory.CreateDirectory("plugins").GetFiles()
                     .Where(file => file.Extension == ".dll").Select(file => file.FullName))
@@ -66,14 +66,14 @@ namespace HCGStudio.DongBot.App
                     }
                     catch (Exception e)
                     {
-                        Logger.LogError($"File {file} is not a valid plugin.");
-                        Logger.LogError(e.ToString());
+                        _logger.LogError($"File {file} is not a valid plugin.");
+                        _logger.LogError(e.ToString());
                     }
 
 
                 //Load Light-Plugins
                 Directory.CreateDirectory("temp");
-                Logger.LogInformation("Now compiling light plugins.");
+                _logger.LogInformation("Now compiling light plugins.");
                 foreach (var file in Directory.CreateDirectory("light-plugins").GetFiles()
                     .Where(file => file.Extension == ".cs" || file.Extension == ".lpg").Select(file => file))
                 {
@@ -102,8 +102,8 @@ namespace HCGStudio.DongBot.App
                     }
                     else
                     {
-                        Logger.LogError($"Compile failed on file {file.Name}.");
-                        Logger.LogError($"{compileResult.Diagnostics}");
+                        _logger.LogError($"Compile failed on file {file.Name}.");
+                        _logger.LogError($"{compileResult.Diagnostics}");
                     }
                 }
 
@@ -128,7 +128,7 @@ namespace HCGStudio.DongBot.App
                 messageProvider.SubscribePrivateMessage(async (message, userId) =>
                 {
                     var pureText = message.ToPureString();
-                    Logger.LogInformation($"Received a private message {pureText} from {userId}.");
+                    _logger.LogInformation($"Received a private message {pureText} from {userId}.");
 
                     foreach (var (type, methodInfo) in resolver.PrivateMethodList)
                     {
@@ -212,7 +212,7 @@ namespace HCGStudio.DongBot.App
                                 break;
                             }
                             default:
-                                Logger.LogError(
+                                _logger.LogError(
                                     $"Unsupported parameter type on method {methodInfo.Name}, type {instance.GetType().Name}");
                                 break;
                         }
@@ -222,7 +222,7 @@ namespace HCGStudio.DongBot.App
                 messageProvider.SubscribeGroupMessage(async (message, groupId, userId, atMe) =>
                 {
                     var pureText = message.ToPureString();
-                    Logger.LogInformation(atMe
+                    _logger.LogInformation(atMe
                         ? $"Received an atMe message {pureText} from {userId} at group {groupId}."
                         : $"Received a group message {pureText} from {userId} at group {groupId}.");
 
@@ -319,7 +319,7 @@ namespace HCGStudio.DongBot.App
                                 break;
                             }
                             default:
-                                Logger.LogError(
+                                _logger.LogError(
                                     $"Unsupported parameter type on method {methodInfo.Name}, type {type.Name}");
                                 break;
                         }
@@ -327,12 +327,12 @@ namespace HCGStudio.DongBot.App
                 });
 
 
-                Logger.LogInformation("Start ended, now listening.");
+                _logger.LogInformation("Start ended, now listening.");
 
                 //Start service loop
                 Console.CancelKeyPress += (sender, eventArgs) =>
                 {
-                    Logger.LogInformation("Ctrl+C pressed, ending.");
+                    _logger.LogInformation("Ctrl+C pressed, ending.");
                     Environment.Exit(0);
                 };
                 var lastTime = (-1, -1);
@@ -359,7 +359,7 @@ namespace HCGStudio.DongBot.App
             }
             catch (Exception e)
             {
-                Logger.LogError(e.ToString());
+                _logger.LogError(e.ToString());
             }
         }
     }

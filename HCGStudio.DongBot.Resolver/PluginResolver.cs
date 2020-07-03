@@ -22,7 +22,12 @@ namespace HCGStudio.DongBot.Resolver
             new Dictionary<(int, int), List<(Type, MethodInfo)>>();
 
         public HashSet<ServiceAttribute> Services { get; } = new HashSet<ServiceAttribute>();
-        public ILogger<PluginResolver> Logger { get; set; }
+        private readonly ILogger<PluginResolver> _logger;
+
+        public PluginResolver(ILogger<PluginResolver> logger)
+        {
+            _logger = logger;
+        }
 
         public void Load(IServiceCollection services, Assembly assembly, bool builtIn = false)
         {
@@ -33,18 +38,18 @@ namespace HCGStudio.DongBot.Resolver
                     continue;
                 if (string.IsNullOrWhiteSpace(service.Name) || service.Name.Contains(' '))
                 {
-                    Logger.Log(LogLevel.Error, $"Service name {service.Name} is invalid, not loading.");
+                    _logger.Log(LogLevel.Error, $"Service name {service.Name} is invalid, not loading.");
                     continue;
                 }
 
                 if (!builtIn && service.Name == "Core")
                 {
-                    Logger.Log(LogLevel.Error,
+                    _logger.Log(LogLevel.Error,
                         $"Non builtin class {type.FullName} has service name Core, will not loading.");
                     continue;
                 }
 
-                Logger.Log(LogLevel.Information, $"Now loading service {service.Name}.");
+                _logger.Log(LogLevel.Information, $"Now loading service {service.Name}.");
 
                 Services.Add(service);
 
@@ -79,7 +84,7 @@ namespace HCGStudio.DongBot.Resolver
                     {
                         if (methodInfo.ReturnType != typeof(Task) || methodInfo.GetParameters().Length != 0)
                         {
-                            Logger.Log(LogLevel.Error,
+                            _logger.Log(LogLevel.Error,
                                 $"Schedule task only supports async Task with no parameters, {methodInfo.Name} will not load.");
                             continue;
                         }
