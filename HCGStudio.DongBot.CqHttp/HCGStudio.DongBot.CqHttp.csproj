@@ -1,23 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>CQHttp support for DongBot.</Description>
-    <PackageProjectUrl>https://github.com/HCGStudio/DongBot</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/HCGStudio/DongBot</RepositoryUrl>
-    <Version>1.1.0</Version>
-    <PackageReleaseNotes>Fix GetGroupUserName.</PackageReleaseNotes>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<Description>CQHttp support for DongBot.</Description>
+		<PackageProjectUrl>https://github.com/HCGStudio/DongBot</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/HCGStudio/DongBot</RepositoryUrl>
+		<Version>1.1.0</Version>
+		<PackageReleaseNotes>Fix GetGroupUserName.</PackageReleaseNotes>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="cqhttp.Cyan" Version="2.2.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="cqhttp.Cyan" Version="2.2.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\HCGStudio.DongBot.Core\HCGStudio.DongBot.Core.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\HCGStudio.DongBot.Core\HCGStudio.DongBot.Core.csproj" />
+	</ItemGroup>
 
 </Project>

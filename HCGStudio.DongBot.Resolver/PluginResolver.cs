@@ -9,42 +9,78 @@ using Microsoft.Extensions.Logging;
 
 namespace HCGStudio.DongBot.Resolver
 {
+    /// <summary>
+    ///     为Dong! Bot提供插件解析器
+    /// </summary>
     public class PluginResolver
     {
-        public Dictionary<string, List<(Type, MethodInfo)>> GroupMethodDirectory { get; } =
-            new Dictionary<string, List<(Type, MethodInfo)>>();
-
-        public Dictionary<string, List<(Type, MethodInfo)>> GroupAtMeMethodDirectory { get; } =
-            new Dictionary<string, List<(Type, MethodInfo)>>();
-
-        public List<(Type, MethodInfo)> PrivateMethodList { get; } = new List<(Type, MethodInfo)>();
-
-        public Dictionary<(int, int), List<(Type, MethodInfo)>> ScheduledTaskDictionary { get; } =
-            new Dictionary<(int, int), List<(Type, MethodInfo)>>();
-
-        public HashSet<ServiceAttribute> Services { get; } = new HashSet<ServiceAttribute>();
         private readonly ILogger<PluginResolver> _logger;
 
+        /// <summary>
+        ///     创建一个新的插件解析器，请使用依赖注入的框架创建实例，直接调用可能会出现问题
+        /// </summary>
+        /// <param name="logger">日志记录类</param>
         public PluginResolver(ILogger<PluginResolver> logger)
         {
             _logger = logger;
         }
 
+        /// <summary>
+        ///     服务名称与群组内触发方法对应的字典
+        /// </summary>
+        public Dictionary<string, List<(Type, MethodInfo)>> GroupMethodDirectory { get; } =
+            new Dictionary<string, List<(Type, MethodInfo)>>();
+
+        /// <summary>
+        ///     服务名称与群组内指定触发方法对应的字典
+        /// </summary>
+        public Dictionary<string, List<(Type, MethodInfo)>> GroupAtMeMethodDirectory { get; } =
+            new Dictionary<string, List<(Type, MethodInfo)>>();
+
+        /// <summary>
+        ///     私聊触发方法的列表
+        /// </summary>
+        public List<(Type, MethodInfo)> PrivateMethodList { get; } = new List<(Type, MethodInfo)>();
+
+        /// <summary>
+        ///     计划任务的时间与方法对应的字典
+        /// </summary>
+        public Dictionary<(int, int), List<(Type, MethodInfo)>> ScheduledTaskDictionary { get; } =
+            new Dictionary<(int, int), List<(Type, MethodInfo)>>();
+
+        /// <summary>
+        ///     储存所有服务名称的哈希表
+        /// </summary>
+        public HashSet<ServiceAttribute> Services { get; } = new HashSet<ServiceAttribute>();
+
+        /// <summary>
+        ///     加载自带自带服务
+        /// </summary>
+        /// <param name="services">依赖注入服务集合</param>
         public void LoadBuiltinServices(IServiceCollection services)
         {
+#pragma warning disable CA1303 // 请不要将文本作为本地化参数传递
             _logger.LogInformation("Now loading builtin services.");
+#pragma warning restore CA1303 // 请不要将文本作为本地化参数传递
             Load(services, Assembly.GetCallingAssembly(), true);
             Load(services, typeof(HelpService).Assembly, true);
         }
 
+        /// <summary>
+        ///     加载指定插件
+        /// </summary>
+        /// <param name="services">依赖注入服务集合</param>
+        /// <param name="assembly">依赖的汇编</param>
+        /// <param name="builtIn">是否为额外添加的内置插件</param>
         public void Load(IServiceCollection services, Assembly assembly, bool builtIn = false)
         {
-            foreach (var type in assembly.GetTypes())
+            foreach (var type in assembly?.GetTypes()!)
             {
                 var service = type.GetCustomAttribute<ServiceAttribute>();
                 if (service == null)
                     continue;
-                if (string.IsNullOrWhiteSpace(service.Name) || service.Name.Contains(' '))
+                if (string.IsNullOrWhiteSpace(service.Name) ||
+                    service.Name.Contains(' ', StringComparison.CurrentCulture))
                 {
                     _logger.Log(LogLevel.Error, $"Service name {service.Name} is invalid, not loading.");
                     continue;
