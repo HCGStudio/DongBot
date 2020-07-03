@@ -232,7 +232,7 @@ namespace HCGStudio.DongBot.App
                         where record.GroupId == groupId && record.IsEnabled
                         select record.ServiceName;
 
-                    foreach (var service in enabled)
+                    foreach (var service in enabled.AsEnumerable().Where(dict.ContainsKey))
                     foreach (var (type, methodInfo) in dict[service])
                     {
                         var attribute = methodInfo.GetCustomAttribute<OnKeywordAttribute>();
