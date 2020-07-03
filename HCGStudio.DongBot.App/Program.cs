@@ -36,7 +36,7 @@ namespace HCGStudio.DongBot.App
             var services = new ServiceCollection();
             startup.ConfigureServices(services);
             services.AddTransient<PluginResolver>();
-            var tmpProvider = services.BuildServiceProvider();
+            await using var tmpProvider = services.BuildServiceProvider();
             var resolver = tmpProvider.GetRequiredService<PluginResolver>();
             _logger = tmpProvider.GetService<ILogger<Program>>();
 
@@ -48,9 +48,6 @@ namespace HCGStudio.DongBot.App
 
                 var messageProvider = tmpProvider.GetRequiredService<IMessageProvider>();
                 var groups = await messageProvider.GetAllGroupsAsync();
-
-                //Dispose old provider
-                await tmpProvider.DisposeAsync();
 
                 //Load builtin
                 resolver.LoadBuiltinServices(services);
