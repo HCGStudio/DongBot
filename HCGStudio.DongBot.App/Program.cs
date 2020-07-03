@@ -51,6 +51,7 @@ namespace HCGStudio.DongBot.App
 
                 //Load builtin
                 resolver.LoadBuiltinServices(services);
+                resolver.Load(services, Assembly.GetExecutingAssembly(), true);
 
                 //Load plugins
                 _logger.LogInformation("Now load plugins from plugins dir.");
@@ -76,7 +77,7 @@ namespace HCGStudio.DongBot.App
                     .Where(file => file.Extension == ".cs" || file.Extension == ".lpg").Select(file => file))
                 {
                     var compile = CSharpCompilation.Create($"{file.Name}.g",
-                        new[] {CSharpSyntaxTree.ParseText(await File.ReadAllTextAsync(file.FullName))},
+                        new[] { CSharpSyntaxTree.ParseText(await File.ReadAllTextAsync(file.FullName)) },
                         AppDomain.CurrentDomain.GetAssemblies().Select(x =>
                         {
                             try
@@ -112,11 +113,11 @@ namespace HCGStudio.DongBot.App
                 foreach (var service in resolver.Services)
                 {
                     var added = from record in context.ServiceRecords
-                        where record.ServiceName == service.Name
-                        select record.GroupId;
+                                where record.ServiceName == service.Name
+                                select record.GroupId;
                     foreach (var g in groups.Where(g => !added.Contains(g)))
                         await context.ServiceRecords.AddAsync(new ServiceRecord
-                            {GroupId = g, IsEnabled = service.AutoEnable, ServiceName = service.Name});
+                        { GroupId = g, IsEnabled = service.AutoEnable, ServiceName = service.Name });
                 }
 
                 //Save changes
@@ -124,7 +125,7 @@ namespace HCGStudio.DongBot.App
 
                 //Load superusers
                 var superUsers = config.GetSection("SuperUsers").GetChildren().Select(s => s.Value)
-                    .SelectMany(s => long.TryParse(s, out var uid) ? new[] {uid} : null).ToArray();
+                    .SelectMany(s => long.TryParse(s, out var uid) ? new[] { uid } : null).ToArray();
 
                 messageProvider.SubscribePrivateMessage(async (message, userId) =>
                 {
@@ -172,46 +173,46 @@ namespace HCGStudio.DongBot.App
                         switch (parameters.Length)
                         {
                             case 0 when methodInfo.ReturnType == typeof(Task):
-                            {
-                                var task = (Task) methodInfo.Invoke(instance, null);
-                                if (task != null)
-                                    await task;
-                            }
+                                {
+                                    var task = (Task)methodInfo.Invoke(instance, null);
+                                    if (task != null)
+                                        await task;
+                                }
                                 break;
                             case 0:
                                 methodInfo.Invoke(instance, null);
                                 break;
                             case 1 when parameters[0].ParameterType == typeof(long):
-                            {
-                                if (methodInfo.ReturnType == typeof(Task))
                                 {
-                                    var task = (Task) methodInfo.Invoke(instance, new object[] {userId});
-                                    if (task != null)
-                                        await task;
-                                }
-                                else
-                                {
-                                    methodInfo.Invoke(instance, new object[] {userId});
-                                }
+                                    if (methodInfo.ReturnType == typeof(Task))
+                                    {
+                                        var task = (Task)methodInfo.Invoke(instance, new object[] { userId });
+                                        if (task != null)
+                                            await task;
+                                    }
+                                    else
+                                    {
+                                        methodInfo.Invoke(instance, new object[] { userId });
+                                    }
 
-                                break;
-                            }
+                                    break;
+                                }
                             case 2 when parameters[0].ParameterType == typeof(long) &&
                                         parameters[1].ParameterType == typeof(Message):
-                            {
-                                if (methodInfo.ReturnType == typeof(Task))
                                 {
-                                    var task = (Task) methodInfo.Invoke(instance, new object[] {userId, message});
-                                    if (task != null)
-                                        await task;
-                                }
-                                else
-                                {
-                                    methodInfo.Invoke(instance, new object[] {userId, message});
-                                }
+                                    if (methodInfo.ReturnType == typeof(Task))
+                                    {
+                                        var task = (Task)methodInfo.Invoke(instance, new object[] { userId, message });
+                                        if (task != null)
+                                            await task;
+                                    }
+                                    else
+                                    {
+                                        methodInfo.Invoke(instance, new object[] { userId, message });
+                                    }
 
-                                break;
-                            }
+                                    break;
+                                }
                             default:
                                 _logger.LogError(
                                     $"Unsupported parameter type on method {methodInfo.Name}, type {instance.GetType().Name}");
@@ -230,101 +231,101 @@ namespace HCGStudio.DongBot.App
 
                     var dict = atMe ? resolver.GroupAtMeMethodDirectory : resolver.GroupMethodDirectory;
                     var enabled = from record in context.ServiceRecords
-                        where record.GroupId == groupId && record.IsEnabled
-                        select record.ServiceName;
+                                  where record.GroupId == groupId && record.IsEnabled
+                                  select record.ServiceName;
 
                     foreach (var service in enabled.AsEnumerable().Where(dict.ContainsKey))
-                    foreach (var (type, methodInfo) in dict[service])
-                    {
-                        var attribute = methodInfo.GetCustomAttribute<OnKeywordAttribute>();
-                        if (attribute == null)
-                            continue;
-                        if (attribute.RequireSuperUser && !superUsers.Contains(userId))
-                            continue;
-                        switch (attribute.KeywordPolicy)
+                        foreach (var (type, methodInfo) in dict[service])
                         {
-                            case KeywordPolicy.AllMatch:
-                                if (!attribute.Keywords.Contains(pureText))
-                                    continue;
-                                break;
-                            case KeywordPolicy.Trim:
-                                if (!attribute.Keywords.Contains(pureText.Trim()))
-                                    continue;
-                                break;
-                            case KeywordPolicy.Contains:
-                                if (!attribute.Keywords.Any(k => pureText.Contains(k)))
-                                    continue;
-                                break;
-                            case KeywordPolicy.Begin:
-                                if (!attribute.Keywords.Any(k => pureText.StartsWith(k)))
-                                    continue;
-                                break;
-                            case KeywordPolicy.AcceptAll:
-                                break;
-                            case KeywordPolicy.Regex:
-                                var regexs = from s in attribute.Keywords select new Regex(s);
-                                if (!regexs.Any(r => r.IsMatch(pureText)))
-                                    continue;
-                                break;
-                            default:
+                            var attribute = methodInfo.GetCustomAttribute<OnKeywordAttribute>();
+                            if (attribute == null)
                                 continue;
+                            if (attribute.RequireSuperUser && !superUsers.Contains(userId))
+                                continue;
+                            switch (attribute.KeywordPolicy)
+                            {
+                                case KeywordPolicy.AllMatch:
+                                    if (!attribute.Keywords.Contains(pureText))
+                                        continue;
+                                    break;
+                                case KeywordPolicy.Trim:
+                                    if (!attribute.Keywords.Contains(pureText.Trim()))
+                                        continue;
+                                    break;
+                                case KeywordPolicy.Contains:
+                                    if (!attribute.Keywords.Any(k => pureText.Contains(k)))
+                                        continue;
+                                    break;
+                                case KeywordPolicy.Begin:
+                                    if (!attribute.Keywords.Any(k => pureText.StartsWith(k)))
+                                        continue;
+                                    break;
+                                case KeywordPolicy.AcceptAll:
+                                    break;
+                                case KeywordPolicy.Regex:
+                                    var regexs = from s in attribute.Keywords select new Regex(s);
+                                    if (!regexs.Any(r => r.IsMatch(pureText)))
+                                        continue;
+                                    break;
+                                default:
+                                    continue;
+                            }
+
+                            var parameters = methodInfo.GetParameters();
+                            var instance = provider.GetService(type);
+                            switch (parameters.Length)
+                            {
+                                case 0 when methodInfo.ReturnType == typeof(Task):
+                                    {
+                                        var task = (Task)methodInfo.Invoke(instance, null);
+                                        if (task != null)
+                                            await task;
+                                    }
+                                    break;
+                                case 0:
+                                    methodInfo.Invoke(instance, null);
+                                    break;
+                                case 2 when parameters[0].ParameterType == typeof(long) &&
+                                            parameters[1].ParameterType == typeof(long):
+                                    {
+                                        if (methodInfo.ReturnType == typeof(Task))
+                                        {
+                                            var task = (Task)methodInfo.Invoke(instance,
+                                                new object[] { groupId, userId });
+                                            if (task != null)
+                                                await task;
+                                        }
+                                        else
+                                        {
+                                            methodInfo.Invoke(instance, new object[] { groupId, userId });
+                                        }
+
+                                        break;
+                                    }
+                                case 3 when parameters[0].ParameterType == typeof(long) &&
+                                            parameters[1].ParameterType == typeof(long) &&
+                                            parameters[2].ParameterType == typeof(Message):
+                                    {
+                                        if (methodInfo.ReturnType == typeof(Task))
+                                        {
+                                            var task = (Task)methodInfo.Invoke(instance,
+                                                new object[] { groupId, userId, message });
+                                            if (task != null)
+                                                await task;
+                                        }
+                                        else
+                                        {
+                                            methodInfo.Invoke(instance, new object[] { groupId, userId, message });
+                                        }
+
+                                        break;
+                                    }
+                                default:
+                                    _logger.LogError(
+                                        $"Unsupported parameter type on method {methodInfo.Name}, type {type.Name}");
+                                    break;
+                            }
                         }
-
-                        var parameters = methodInfo.GetParameters();
-                        var instance = provider.GetService(type);
-                        switch (parameters.Length)
-                        {
-                            case 0 when methodInfo.ReturnType == typeof(Task):
-                            {
-                                var task = (Task) methodInfo.Invoke(instance, null);
-                                if (task != null)
-                                    await task;
-                            }
-                                break;
-                            case 0:
-                                methodInfo.Invoke(instance, null);
-                                break;
-                            case 2 when parameters[0].ParameterType == typeof(long) &&
-                                        parameters[1].ParameterType == typeof(long):
-                            {
-                                if (methodInfo.ReturnType == typeof(Task))
-                                {
-                                    var task = (Task) methodInfo.Invoke(instance,
-                                        new object[] {groupId, userId});
-                                    if (task != null)
-                                        await task;
-                                }
-                                else
-                                {
-                                    methodInfo.Invoke(instance, new object[] {groupId, userId});
-                                }
-
-                                break;
-                            }
-                            case 3 when parameters[0].ParameterType == typeof(long) &&
-                                        parameters[1].ParameterType == typeof(long) &&
-                                        parameters[2].ParameterType == typeof(Message):
-                            {
-                                if (methodInfo.ReturnType == typeof(Task))
-                                {
-                                    var task = (Task) methodInfo.Invoke(instance,
-                                        new object[] {groupId, userId, message});
-                                    if (task != null)
-                                        await task;
-                                }
-                                else
-                                {
-                                    methodInfo.Invoke(instance, new object[] {groupId, userId, message});
-                                }
-
-                                break;
-                            }
-                            default:
-                                _logger.LogError(
-                                    $"Unsupported parameter type on method {methodInfo.Name}, type {type.Name}");
-                                break;
-                        }
-                    }
                 });
 
 
@@ -350,7 +351,7 @@ namespace HCGStudio.DongBot.App
                         foreach (var (type, methodInfo) in list)
                         {
                             var instance = provider.GetService(type);
-                            var task = (Task) methodInfo.Invoke(instance, null);
+                            var task = (Task)methodInfo.Invoke(instance, null);
                             if (task != null)
                                 await task;
                         }
