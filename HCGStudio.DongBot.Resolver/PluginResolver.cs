@@ -57,10 +57,6 @@ namespace HCGStudio.DongBot.Resolver
                     continue;
                 }
 
-                var info = type.GetCustomAttribute<InformationAttribute>();
-                if (info != null)
-                    HelpService.AllHelps.Add(info);
-
                 _logger.Log(LogLevel.Information, $"Now loading service {service.Name}.");
 
                 Services.Add(service);
@@ -81,6 +77,10 @@ namespace HCGStudio.DongBot.Resolver
                     var keyword = methodInfo.GetCustomAttribute<OnKeywordAttribute>();
                     if (keyword == null)
                         continue;
+                    //Add help
+                    var info = methodInfo.GetCustomAttribute<InformationAttribute>();
+                    if (info != null)
+                        HelpService.AllHelps.Add(info);
                     if ((keyword.InvokePolicies & InvokePolicies.Private) != 0)
                         PrivateMethodList.Add((type, methodInfo));
                     if ((keyword.InvokePolicies & InvokePolicies.Group) != 0)
