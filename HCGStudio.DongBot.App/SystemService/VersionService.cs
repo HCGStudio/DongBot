@@ -9,13 +9,17 @@ namespace HCGStudio.DongBot.App.SystemService
     [Service("Core", AutoEnable = true)]
     public class VersionService
     {
-        public IMessageSender MessageSender { get; set; }
+        private readonly IMessageSender _messageSender;
 
+        public VersionService(IMessageSender messageSender)
+        {
+            _messageSender = messageSender;
+        }
 
         [OnKeyword("版本", "Version", InvokePolicies = InvokePolicies.Private, KeywordPolicy = KeywordPolicy.Trim)]
         public async Task VersionQuery(long senderUserId)
         {
-            await MessageSender.SendPrivateAsync(senderUserId,
+            await _messageSender.SendPrivateAsync(senderUserId,
                 (SimpleMessage) $"DongBot {Assembly.GetExecutingAssembly().GetName().Version}");
         }
     }

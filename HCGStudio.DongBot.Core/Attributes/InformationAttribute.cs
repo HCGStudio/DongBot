@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HCGStudio.DongBot.Core
+namespace HCGStudio.DongBot.Core.Attributes
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class InformationAttribute : Attribute

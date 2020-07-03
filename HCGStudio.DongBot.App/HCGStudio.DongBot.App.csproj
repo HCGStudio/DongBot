@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<Version>1.1.0</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -18,18 +19,15 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.5" />
-		<PackageReference Include="NLog" Version="4.7.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.5" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.5" />
+		<PackageReference Include="Microsoft.Extensions.Logging.EventLog" Version="3.1.5" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\HCGStudio.DongBot.Core\HCGStudio.DongBot.Core.csproj" />
 		<ProjectReference Include="..\HCGStudio.DongBot.CqHttp\HCGStudio.DongBot.CqHttp.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Update="nlog.config">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
+		<ProjectReference Include="..\HCGStudio.DongBot.Resolver\HCGStudio.DongBot.Resolver.csproj" />
 	</ItemGroup>
 
 </Project>

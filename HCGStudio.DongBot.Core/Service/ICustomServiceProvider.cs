@@ -1,6 +1,4 @@
-﻿using Autofac;
-
-namespace HCGStudio.DongBot.Core.Service
+﻿namespace HCGStudio.DongBot.Core.Service
 {
     public interface ICustomServiceProvider
     {

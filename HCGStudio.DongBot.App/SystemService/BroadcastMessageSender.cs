@@ -1,22 +1,24 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using HCGStudio.DongBot.App.Models;
+using HCGStudio.DongBot.Core.Attributes;
 using HCGStudio.DongBot.Core.Messages;
 using HCGStudio.DongBot.Core.Service;
 
 namespace HCGStudio.DongBot.App.SystemService
 {
-    public class BroadcastMessageSender : IBroadcastMessageSender
+    public class BroadcastMessageSender<TService> : IBroadcastMessageSender<TService>
     {
         private readonly IMessageSender _messageSender;
 
-        public BroadcastMessageSender(IMessageSender messageSender, string serviceName)
+        public BroadcastMessageSender(IMessageSender messageSender)
         {
             _messageSender = messageSender;
-            ServiceName = serviceName;
+            ServiceName = ServiceAttribute.GetServiceName(typeof(TService));
         }
 
         public string ServiceName { get; }
+
 
         public async Task BroadcastAllEnabled(Message message, int interval = 100)
         {

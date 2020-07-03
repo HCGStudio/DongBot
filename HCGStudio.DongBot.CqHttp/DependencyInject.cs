@@ -1,46 +1,54 @@
-﻿using Autofac;
+﻿using System;
 using cqhttp.Cyan.Clients;
 using HCGStudio.DongBot.Core.Service;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace HCGStudio.DongBot.CqHttp
 {
     public static class DependencyInject
     {
-        public static ContainerBuilder UseCqHttpClient(this ContainerBuilder builder, string accessUrl,
-            string accessToken = "", int listenPort = -1, string secret = "", bool useGroupTable = false,
-            bool useMessageTable = false)
+        public static IServiceCollection UseCqHttpClient(this IServiceCollection builder, Action<CqConfig> action)
         {
-            var client = new CQHTTPClient(accessUrl, accessToken, listenPort, secret, useGroupTable, useMessageTable);
+            var config = new CqConfig();
+            action(config);
+            var client = new CQHTTPClient(config.AccessUrl, config.AccessToken, config.ListenPort, config.Secret,
+                config.UseGroupTable, config.UseMessageTable);
             var provider = new CqMessageProvider(client);
             var sender = new CqMessageSender(client);
 
-            builder.Register(p => provider).As<IMessageProvider>();
-            builder.Register(s => sender).As<IMessageSender>();
+            builder.Add(new ServiceDescriptor(typeof(IMessageProvider), provider));
+            builder.Add(new ServiceDescriptor(typeof(IMessageSender), sender));
+
             return builder;
         }
 
-        public static ContainerBuilder UseCqWs(this ContainerBuilder builder, string accessUrl,
-            string accessToken = "", string eventUrl = "", bool useGroupTable = false, bool useMessageTable = false)
+        public static IServiceCollection UseCqWs(this IServiceCollection builder, Action<CqConfig> action)
         {
-            var client = new CQWebsocketClient(accessUrl, accessToken, eventUrl, useGroupTable, useMessageTable);
+            var config = new CqConfig();
+            action(config);
+            var client = new CQWebsocketClient(config.AccessUrl, config.AccessToken, config.EventUrl,
+                config.UseGroupTable, config.UseMessageTable);
             var provider = new CqMessageProvider(client);
             var sender = new CqMessageSender(client);
 
-            builder.Register(p => provider).As<IMessageProvider>();
-            builder.Register(s => sender).As<IMessageSender>();
+            builder.Add(new ServiceDescriptor(typeof(IMessageProvider), provider));
+            builder.Add(new ServiceDescriptor(typeof(IMessageSender), sender));
+
             return builder;
         }
 
-        public static ContainerBuilder UseCqWsReserve(this ContainerBuilder builder, int bindPort, string apiPath,
-            string eventPath, string accessToken = "", bool useGroupTable = false, bool useMessageTable = false)
+        public static IServiceCollection UseCqWsReserve(this IServiceCollection builder, Action<CqConfig> action)
         {
-            var client = new CQReverseWSClient(bindPort, apiPath, eventPath, accessToken, useGroupTable,
-                useMessageTable);
+            var config = new CqConfig();
+            action(config);
+            var client = new CQReverseWSClient(config.BindPort, config.ApiPath, config.EventPath, config.AccessToken,
+                config.UseGroupTable, config.UseMessageTable);
             var provider = new CqMessageProvider(client);
             var sender = new CqMessageSender(client);
 
-            builder.Register(p => provider).As<IMessageProvider>();
-            builder.Register(s => sender).As<IMessageSender>();
+            builder.Add(new ServiceDescriptor(typeof(IMessageProvider), provider));
+            builder.Add(new ServiceDescriptor(typeof(IMessageSender), sender));
+
             return builder;
         }
     }

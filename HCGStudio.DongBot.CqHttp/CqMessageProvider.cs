@@ -145,13 +145,13 @@ namespace HCGStudio.DongBot.CqHttp
 
         public async Task<List<long>> GetAllGroupsAsync()
         {
-            var result = (GetGroupListResult)await Client.SendRequestAsync(new GetGroupListRequest());
+            var result = (GetGroupListResult) await Client.SendRequestAsync(new GetGroupListRequest());
             return result.groupList.Select(record => record.Item1).ToList();
         }
 
         public async Task<string> GetGroupNameAsync(long groupId)
         {
-            var result = (GetGroupListResult)await Client.SendRequestAsync(new GetGroupListRequest());
+            var result = (GetGroupListResult) await Client.SendRequestAsync(new GetGroupListRequest());
             return result.groupList.Where(record => record.Item1 == groupId).Select(record => record.Item2)
                 .FirstOrDefault();
         }
@@ -159,9 +159,11 @@ namespace HCGStudio.DongBot.CqHttp
         public async Task<string> GetGroupUserNameAsync(long groupId, long userId)
         {
             var result =
-                (GetGroupMemberInfoResult)await Client.SendRequestAsync(
+                (GetGroupMemberInfoResult) await Client.SendRequestAsync(
                     new GetGroupMemberInfoRequest(groupId, userId));
-            return string.IsNullOrWhiteSpace(result.memberInfo.card) ? result.memberInfo.nickname : result.memberInfo.card;
+            return string.IsNullOrWhiteSpace(result.memberInfo.card)
+                ? result.memberInfo.nickname
+                : result.memberInfo.card;
         }
     }
 }
