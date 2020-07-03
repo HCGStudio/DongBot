@@ -8,7 +8,7 @@
     <Description>CQHttp support for DongBot.</Description>
     <PackageProjectUrl>https://github.com/HCGStudio/DongBot</PackageProjectUrl>
     <RepositoryUrl>https://github.com/HCGStudio/DongBot</RepositoryUrl>
-    <Version>1.0.8</Version>
+    <Version>1.1.0</Version>
     <PackageReleaseNotes>Fix GetGroupUserName.</PackageReleaseNotes>
   </PropertyGroup>
 
