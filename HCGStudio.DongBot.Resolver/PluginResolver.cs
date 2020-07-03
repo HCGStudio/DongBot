@@ -62,8 +62,7 @@ namespace HCGStudio.DongBot.Resolver
 #pragma warning disable CA1303 // 请不要将文本作为本地化参数传递
             _logger.LogInformation("Now loading builtin services.");
 #pragma warning restore CA1303 // 请不要将文本作为本地化参数传递
-            Load(services, Assembly.GetCallingAssembly(), true);
-            Load(services, typeof(HelpService).Assembly, true);
+            Load(services, Assembly.GetExecutingAssembly(), true);
         }
 
         /// <summary>
