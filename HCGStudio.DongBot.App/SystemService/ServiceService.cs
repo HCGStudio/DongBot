@@ -18,6 +18,7 @@ namespace HCGStudio.DongBot.App.SystemService
         }
 
         [OnKeyword("查看服务", InvokePolicies = InvokePolicies.Group, RequireSuperUser = true)]
+        [Information("查看服务", "核心", "列出所有服务，需要权限")]
         public async Task ListServices(long groupId, long userId)
         {
             await using var context = new ApplicationContext();
@@ -34,6 +35,7 @@ namespace HCGStudio.DongBot.App.SystemService
 
         [OnKeyword("启用", InvokePolicies = InvokePolicies.Group, KeywordPolicy = KeywordPolicy.Begin,
             RequireSuperUser = true)]
+        [Information("启用", "核心", "启用一个服务")]
         public async Task EnableService(long groupId, long userId, Message message)
         {
             var name = message.ToPureString().Substring(2);
@@ -59,6 +61,7 @@ namespace HCGStudio.DongBot.App.SystemService
 
         [OnKeyword("禁用", InvokePolicies = InvokePolicies.Group, KeywordPolicy = KeywordPolicy.Begin,
             RequireSuperUser = true)]
+        [Information("禁用", "核心", "禁用一个服务")]
         public async Task DisableService(long groupId, long userId, Message message)
         {
             var name = message.ToPureString().Substring(2);

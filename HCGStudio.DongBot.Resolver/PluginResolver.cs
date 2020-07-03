@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
 using HCGStudio.DongBot.Core.Attributes;
+using HCGStudio.DongBot.Resolver.BuiltinServices;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -29,6 +30,12 @@ namespace HCGStudio.DongBot.Resolver
             _logger = logger;
         }
 
+        public void LoadBuiltinServices(IServiceCollection services)
+        {
+            _logger.LogInformation("Now loading builtin services.");
+            Load(services, Assembly.GetCallingAssembly(), true);
+        }
+
         public void Load(IServiceCollection services, Assembly assembly, bool builtIn = false)
         {
             foreach (var type in assembly.GetTypes())
@@ -48,6 +55,10 @@ namespace HCGStudio.DongBot.Resolver
                         $"Non builtin class {type.FullName} has service name Core, will not loading.");
                     continue;
                 }
+
+                var info = type.GetCustomAttribute<InformationAttribute>();
+                if (info != null)
+                    HelpService.AllHelps.Add(info);
 
                 _logger.Log(LogLevel.Information, $"Now loading service {service.Name}.");
 

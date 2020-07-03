@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace HCGStudio.DongBot.CqHttp
 {
-    public static class DependencyInject
+    public static class Extension
     {
         public static IServiceCollection UseCqHttpClient(this IServiceCollection builder, Action<CqConfig> action)
         {

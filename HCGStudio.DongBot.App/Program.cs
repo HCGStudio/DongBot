@@ -36,8 +36,9 @@ namespace HCGStudio.DongBot.App
             var services = new ServiceCollection();
             startup.ConfigureServices(services);
             services.AddTransient<PluginResolver>();
-            var resolver = services.BuildServiceProvider().GetRequiredService<PluginResolver>();
-            _logger = services.BuildServiceProvider().GetService<ILogger<Program>>();
+            var tmpProvider = services.BuildServiceProvider();
+            var resolver = tmpProvider.GetRequiredService<PluginResolver>();
+            _logger = tmpProvider.GetService<ILogger<Program>>();
 
             try
             {
@@ -45,14 +46,14 @@ namespace HCGStudio.DongBot.App
                 await using var context = new ApplicationContext();
                 await context.Database.EnsureCreatedAsync();
 
-                await using var provider = services.BuildServiceProvider();
-                var messageProvider = provider.GetRequiredService<IMessageProvider>();
+                var messageProvider = tmpProvider.GetRequiredService<IMessageProvider>();
                 var groups = await messageProvider.GetAllGroupsAsync();
 
+                //Dispose old provider
+                await tmpProvider.DisposeAsync();
 
-                //Load service
-                _logger.LogInformation("Now loading builtin services.");
-                resolver.Load(services, Assembly.GetExecutingAssembly(), true);
+                //Load builtin
+                resolver.LoadBuiltinServices(services);
 
                 //Load plugins
                 _logger.LogInformation("Now load plugins from plugins dir.");
@@ -106,6 +107,9 @@ namespace HCGStudio.DongBot.App
                         _logger.LogError($"{compileResult.Diagnostics}");
                     }
                 }
+
+                //Build new service provider
+                await using var provider = services.BuildServiceProvider();
 
                 //Add database record for new service.
                 foreach (var service in resolver.Services)
