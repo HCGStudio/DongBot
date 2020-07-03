@@ -34,6 +34,7 @@ namespace HCGStudio.DongBot.Resolver
         {
             _logger.LogInformation("Now loading builtin services.");
             Load(services, Assembly.GetCallingAssembly(), true);
+            Load(services, typeof(HelpService).Assembly, true);
         }
 
         public void Load(IServiceCollection services, Assembly assembly, bool builtIn = false)
