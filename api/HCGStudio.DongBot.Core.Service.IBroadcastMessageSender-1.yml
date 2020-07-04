@@ -1,0 +1,133 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1
+  commentId: T:HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1
+  id: IBroadcastMessageSender`1
+  parent: HCGStudio.DongBot.Core.Service
+  children:
+  - HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1.BroadcastAllEnabled(HCGStudio.DongBot.Core.Messages.Message,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IBroadcastMessageSender<TService>
+  nameWithType: IBroadcastMessageSender<TService>
+  fullName: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender<TService>
+  type: Interface
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Service/IBroadcastMessageSender.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: IBroadcastMessageSender
+    path: HCGStudio.DongBot.Core/Service/IBroadcastMessageSender.cs
+    startLine: 9
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Service
+  summary: "\n播报服务\n"
+  example: []
+  syntax:
+    content: public interface IBroadcastMessageSender<TService>
+    typeParameters:
+    - id: TService
+      description: 使用播报服务的类
+    content.vb: Public Interface IBroadcastMessageSender(Of TService)
+  nameWithType.vb: IBroadcastMessageSender(Of TService)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender(Of TService)
+  name.vb: IBroadcastMessageSender(Of TService)
+- uid: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1.BroadcastAllEnabled(HCGStudio.DongBot.Core.Messages.Message,System.Int32)
+  commentId: M:HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1.BroadcastAllEnabled(HCGStudio.DongBot.Core.Messages.Message,System.Int32)
+  id: BroadcastAllEnabled(HCGStudio.DongBot.Core.Messages.Message,System.Int32)
+  parent: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1
+  langs:
+  - csharp
+  - vb
+  name: BroadcastAllEnabled(Message, Int32)
+  nameWithType: IBroadcastMessageSender<TService>.BroadcastAllEnabled(Message, Int32)
+  fullName: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender<TService>.BroadcastAllEnabled(HCGStudio.DongBot.Core.Messages.Message, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Service/IBroadcastMessageSender.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: BroadcastAllEnabled
+    path: HCGStudio.DongBot.Core/Service/IBroadcastMessageSender.cs
+    startLine: 17
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Service
+  summary: "\n播报所有已经启用指定服务的类\n"
+  example: []
+  syntax:
+    content: Task BroadcastAllEnabled(Message message, int interval = 100)
+    parameters:
+    - id: message
+      type: HCGStudio.DongBot.Core.Messages.Message
+      description: 播报的信息
+    - id: interval
+      type: System.Int32
+      description: 播报间隔（毫秒）
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Function BroadcastAllEnabled(message As Message, interval As Integer = 100) As Task
+  overload: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1.BroadcastAllEnabled*
+  nameWithType.vb: IBroadcastMessageSender(Of TService).BroadcastAllEnabled(Message, Int32)
+  fullName.vb: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender(Of TService).BroadcastAllEnabled(HCGStudio.DongBot.Core.Messages.Message, System.Int32)
+references:
+- uid: HCGStudio.DongBot.Core.Service
+  commentId: N:HCGStudio.DongBot.Core.Service
+  name: HCGStudio.DongBot.Core.Service
+  nameWithType: HCGStudio.DongBot.Core.Service
+  fullName: HCGStudio.DongBot.Core.Service
+- uid: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1.BroadcastAllEnabled*
+  commentId: Overload:HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1.BroadcastAllEnabled
+  name: BroadcastAllEnabled
+  nameWithType: IBroadcastMessageSender<TService>.BroadcastAllEnabled
+  fullName: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender<TService>.BroadcastAllEnabled
+  nameWithType.vb: IBroadcastMessageSender(Of TService).BroadcastAllEnabled
+  fullName.vb: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender(Of TService).BroadcastAllEnabled
+- uid: HCGStudio.DongBot.Core.Messages.Message
+  commentId: T:HCGStudio.DongBot.Core.Messages.Message
+  parent: HCGStudio.DongBot.Core.Messages
+  name: Message
+  nameWithType: Message
+  fullName: HCGStudio.DongBot.Core.Messages.Message
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: HCGStudio.DongBot.Core.Messages
+  commentId: N:HCGStudio.DongBot.Core.Messages
+  name: HCGStudio.DongBot.Core.Messages
+  nameWithType: HCGStudio.DongBot.Core.Messages
+  fullName: HCGStudio.DongBot.Core.Messages
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

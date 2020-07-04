@@ -1,0 +1,593 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.CqHttp.Extension
+  commentId: T:HCGStudio.DongBot.CqHttp.Extension
+  id: Extension
+  parent: HCGStudio.DongBot.CqHttp
+  children:
+  - HCGStudio.DongBot.CqHttp.Extension.UseCqHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  - HCGStudio.DongBot.CqHttp.Extension.UseCqWs(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  - HCGStudio.DongBot.CqHttp.Extension.UseCqWsReserve(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  langs:
+  - csharp
+  - vb
+  name: Extension
+  nameWithType: Extension
+  fullName: HCGStudio.DongBot.CqHttp.Extension
+  type: Class
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/Extension.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: Extension
+    path: HCGStudio.DongBot.CqHttp/Extension.cs
+    startLine: 7
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public static class Extension
+    content.vb: Public Module Extension
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: HCGStudio.DongBot.CqHttp.Extension.UseCqHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  commentId: M:HCGStudio.DongBot.CqHttp.Extension.UseCqHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  id: UseCqHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  isExtensionMethod: true
+  parent: HCGStudio.DongBot.CqHttp.Extension
+  langs:
+  - csharp
+  - vb
+  name: UseCqHttpClient(IServiceCollection, Action<CqConfig>)
+  nameWithType: Extension.UseCqHttpClient(IServiceCollection, Action<CqConfig>)
+  fullName: HCGStudio.DongBot.CqHttp.Extension.UseCqHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<HCGStudio.DongBot.CqHttp.CqConfig>)
+  type: Method
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/Extension.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: UseCqHttpClient
+    path: HCGStudio.DongBot.CqHttp/Extension.cs
+    startLine: 9
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public static IServiceCollection UseCqHttpClient(this IServiceCollection builder, Action<CqConfig> action)
+    parameters:
+    - id: builder
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: action
+      type: System.Action{HCGStudio.DongBot.CqHttp.CqConfig}
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UseCqHttpClient(builder As IServiceCollection, action As Action(Of CqConfig)) As IServiceCollection
+  overload: HCGStudio.DongBot.CqHttp.Extension.UseCqHttpClient*
+  nameWithType.vb: Extension.UseCqHttpClient(IServiceCollection, Action(Of CqConfig))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: HCGStudio.DongBot.CqHttp.Extension.UseCqHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of HCGStudio.DongBot.CqHttp.CqConfig))
+  name.vb: UseCqHttpClient(IServiceCollection, Action(Of CqConfig))
+- uid: HCGStudio.DongBot.CqHttp.Extension.UseCqWs(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  commentId: M:HCGStudio.DongBot.CqHttp.Extension.UseCqWs(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  id: UseCqWs(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  isExtensionMethod: true
+  parent: HCGStudio.DongBot.CqHttp.Extension
+  langs:
+  - csharp
+  - vb
+  name: UseCqWs(IServiceCollection, Action<CqConfig>)
+  nameWithType: Extension.UseCqWs(IServiceCollection, Action<CqConfig>)
+  fullName: HCGStudio.DongBot.CqHttp.Extension.UseCqWs(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<HCGStudio.DongBot.CqHttp.CqConfig>)
+  type: Method
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/Extension.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: UseCqWs
+    path: HCGStudio.DongBot.CqHttp/Extension.cs
+    startLine: 24
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public static IServiceCollection UseCqWs(this IServiceCollection builder, Action<CqConfig> action)
+    parameters:
+    - id: builder
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: action
+      type: System.Action{HCGStudio.DongBot.CqHttp.CqConfig}
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UseCqWs(builder As IServiceCollection, action As Action(Of CqConfig)) As IServiceCollection
+  overload: HCGStudio.DongBot.CqHttp.Extension.UseCqWs*
+  nameWithType.vb: Extension.UseCqWs(IServiceCollection, Action(Of CqConfig))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: HCGStudio.DongBot.CqHttp.Extension.UseCqWs(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of HCGStudio.DongBot.CqHttp.CqConfig))
+  name.vb: UseCqWs(IServiceCollection, Action(Of CqConfig))
+- uid: HCGStudio.DongBot.CqHttp.Extension.UseCqWsReserve(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  commentId: M:HCGStudio.DongBot.CqHttp.Extension.UseCqWsReserve(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  id: UseCqWsReserve(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{HCGStudio.DongBot.CqHttp.CqConfig})
+  isExtensionMethod: true
+  parent: HCGStudio.DongBot.CqHttp.Extension
+  langs:
+  - csharp
+  - vb
+  name: UseCqWsReserve(IServiceCollection, Action<CqConfig>)
+  nameWithType: Extension.UseCqWsReserve(IServiceCollection, Action<CqConfig>)
+  fullName: HCGStudio.DongBot.CqHttp.Extension.UseCqWsReserve(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<HCGStudio.DongBot.CqHttp.CqConfig>)
+  type: Method
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/Extension.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: UseCqWsReserve
+    path: HCGStudio.DongBot.CqHttp/Extension.cs
+    startLine: 39
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public static IServiceCollection UseCqWsReserve(this IServiceCollection builder, Action<CqConfig> action)
+    parameters:
+    - id: builder
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: action
+      type: System.Action{HCGStudio.DongBot.CqHttp.CqConfig}
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UseCqWsReserve(builder As IServiceCollection, action As Action(Of CqConfig)) As IServiceCollection
+  overload: HCGStudio.DongBot.CqHttp.Extension.UseCqWsReserve*
+  nameWithType.vb: Extension.UseCqWsReserve(IServiceCollection, Action(Of CqConfig))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: HCGStudio.DongBot.CqHttp.Extension.UseCqWsReserve(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of HCGStudio.DongBot.CqHttp.CqConfig))
+  name.vb: UseCqWsReserve(IServiceCollection, Action(Of CqConfig))
+references:
+- uid: HCGStudio.DongBot.CqHttp
+  commentId: N:HCGStudio.DongBot.CqHttp
+  name: HCGStudio.DongBot.CqHttp
+  nameWithType: HCGStudio.DongBot.CqHttp
+  fullName: HCGStudio.DongBot.CqHttp
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HCGStudio.DongBot.CqHttp.Extension.UseCqHttpClient*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.Extension.UseCqHttpClient
+  name: UseCqHttpClient
+  nameWithType: Extension.UseCqHttpClient
+  fullName: HCGStudio.DongBot.CqHttp.Extension.UseCqHttpClient
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: System.Action{HCGStudio.DongBot.CqHttp.CqConfig}
+  commentId: T:System.Action{HCGStudio.DongBot.CqHttp.CqConfig}
+  parent: System
+  definition: System.Action`1
+  name: Action<CqConfig>
+  nameWithType: Action<CqConfig>
+  fullName: System.Action<HCGStudio.DongBot.CqHttp.CqConfig>
+  nameWithType.vb: Action(Of CqConfig)
+  fullName.vb: System.Action(Of HCGStudio.DongBot.CqHttp.CqConfig)
+  name.vb: Action(Of CqConfig)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HCGStudio.DongBot.CqHttp.CqConfig
+    name: CqConfig
+    nameWithType: CqConfig
+    fullName: HCGStudio.DongBot.CqHttp.CqConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HCGStudio.DongBot.CqHttp.CqConfig
+    name: CqConfig
+    nameWithType: CqConfig
+    fullName: HCGStudio.DongBot.CqHttp.CqConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HCGStudio.DongBot.CqHttp.Extension.UseCqWs*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.Extension.UseCqWs
+  name: UseCqWs
+  nameWithType: Extension.UseCqWs
+  fullName: HCGStudio.DongBot.CqHttp.Extension.UseCqWs
+- uid: HCGStudio.DongBot.CqHttp.Extension.UseCqWsReserve*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.Extension.UseCqWsReserve
+  name: UseCqWsReserve
+  nameWithType: Extension.UseCqWsReserve
+  fullName: HCGStudio.DongBot.CqHttp.Extension.UseCqWsReserve

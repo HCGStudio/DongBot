@@ -1,0 +1,243 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.Core.Service.IMessageSender
+  commentId: T:HCGStudio.DongBot.Core.Service.IMessageSender
+  id: IMessageSender
+  parent: HCGStudio.DongBot.Core.Service
+  children:
+  - HCGStudio.DongBot.Core.Service.IMessageSender.SendGroupAsync(System.Int64,HCGStudio.DongBot.Core.Messages.Message)
+  - HCGStudio.DongBot.Core.Service.IMessageSender.SendPrivateAsync(System.Int64,HCGStudio.DongBot.Core.Messages.Message)
+  langs:
+  - csharp
+  - vb
+  name: IMessageSender
+  nameWithType: IMessageSender
+  fullName: HCGStudio.DongBot.Core.Service.IMessageSender
+  type: Interface
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: IMessageSender
+    path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
+    startLine: 8
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Service
+  summary: "\n消息发送\n"
+  example: []
+  syntax:
+    content: public interface IMessageSender
+    content.vb: Public Interface IMessageSender
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HCGStudio.DongBot.Core.Service.IMessageSender.SendGroupAsync(System.Int64,HCGStudio.DongBot.Core.Messages.Message)
+  commentId: M:HCGStudio.DongBot.Core.Service.IMessageSender.SendGroupAsync(System.Int64,HCGStudio.DongBot.Core.Messages.Message)
+  id: SendGroupAsync(System.Int64,HCGStudio.DongBot.Core.Messages.Message)
+  parent: HCGStudio.DongBot.Core.Service.IMessageSender
+  langs:
+  - csharp
+  - vb
+  name: SendGroupAsync(Int64, Message)
+  nameWithType: IMessageSender.SendGroupAsync(Int64, Message)
+  fullName: HCGStudio.DongBot.Core.Service.IMessageSender.SendGroupAsync(System.Int64, HCGStudio.DongBot.Core.Messages.Message)
+  type: Method
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: SendGroupAsync
+    path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
+    startLine: 16
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Service
+  summary: "\n发送群组信息\n"
+  example: []
+  syntax:
+    content: Task<bool> SendGroupAsync(long groupId, Message message)
+    parameters:
+    - id: groupId
+      type: System.Int64
+      description: 发送群组的Id
+    - id: message
+      type: HCGStudio.DongBot.Core.Messages.Message
+      description: 要发送的信息
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: 消息是否发送成功
+    content.vb: Function SendGroupAsync(groupId As Long, message As Message) As Task(Of Boolean)
+  overload: HCGStudio.DongBot.Core.Service.IMessageSender.SendGroupAsync*
+- uid: HCGStudio.DongBot.Core.Service.IMessageSender.SendPrivateAsync(System.Int64,HCGStudio.DongBot.Core.Messages.Message)
+  commentId: M:HCGStudio.DongBot.Core.Service.IMessageSender.SendPrivateAsync(System.Int64,HCGStudio.DongBot.Core.Messages.Message)
+  id: SendPrivateAsync(System.Int64,HCGStudio.DongBot.Core.Messages.Message)
+  parent: HCGStudio.DongBot.Core.Service.IMessageSender
+  langs:
+  - csharp
+  - vb
+  name: SendPrivateAsync(Int64, Message)
+  nameWithType: IMessageSender.SendPrivateAsync(Int64, Message)
+  fullName: HCGStudio.DongBot.Core.Service.IMessageSender.SendPrivateAsync(System.Int64, HCGStudio.DongBot.Core.Messages.Message)
+  type: Method
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: SendPrivateAsync
+    path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
+    startLine: 24
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Service
+  summary: "\n发送私聊信息\n"
+  example: []
+  syntax:
+    content: Task<bool> SendPrivateAsync(long userId, Message message)
+    parameters:
+    - id: userId
+      type: System.Int64
+      description: 发送到的用户Id
+    - id: message
+      type: HCGStudio.DongBot.Core.Messages.Message
+      description: 要发送的消息
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: 消息是否发送成功
+    content.vb: Function SendPrivateAsync(userId As Long, message As Message) As Task(Of Boolean)
+  overload: HCGStudio.DongBot.Core.Service.IMessageSender.SendPrivateAsync*
+references:
+- uid: HCGStudio.DongBot.Core.Service
+  commentId: N:HCGStudio.DongBot.Core.Service
+  name: HCGStudio.DongBot.Core.Service
+  nameWithType: HCGStudio.DongBot.Core.Service
+  fullName: HCGStudio.DongBot.Core.Service
+- uid: HCGStudio.DongBot.Core.Service.IMessageSender.SendGroupAsync*
+  commentId: Overload:HCGStudio.DongBot.Core.Service.IMessageSender.SendGroupAsync
+  name: SendGroupAsync
+  nameWithType: IMessageSender.SendGroupAsync
+  fullName: HCGStudio.DongBot.Core.Service.IMessageSender.SendGroupAsync
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: HCGStudio.DongBot.Core.Messages.Message
+  commentId: T:HCGStudio.DongBot.Core.Messages.Message
+  parent: HCGStudio.DongBot.Core.Messages
+  name: Message
+  nameWithType: Message
+  fullName: HCGStudio.DongBot.Core.Messages.Message
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: System.Threading.Tasks.Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HCGStudio.DongBot.Core.Messages
+  commentId: N:HCGStudio.DongBot.Core.Messages
+  name: HCGStudio.DongBot.Core.Messages
+  nameWithType: HCGStudio.DongBot.Core.Messages
+  fullName: HCGStudio.DongBot.Core.Messages
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: HCGStudio.DongBot.Core.Service.IMessageSender.SendPrivateAsync*
+  commentId: Overload:HCGStudio.DongBot.Core.Service.IMessageSender.SendPrivateAsync
+  name: SendPrivateAsync
+  nameWithType: IMessageSender.SendPrivateAsync
+  fullName: HCGStudio.DongBot.Core.Service.IMessageSender.SendPrivateAsync

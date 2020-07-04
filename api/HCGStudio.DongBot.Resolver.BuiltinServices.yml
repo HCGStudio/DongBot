@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.Resolver.BuiltinServices
+  commentId: N:HCGStudio.DongBot.Resolver.BuiltinServices
+  id: HCGStudio.DongBot.Resolver.BuiltinServices
+  children:
+  - HCGStudio.DongBot.Resolver.BuiltinServices.HelpService
+  langs:
+  - csharp
+  - vb
+  name: HCGStudio.DongBot.Resolver.BuiltinServices
+  nameWithType: HCGStudio.DongBot.Resolver.BuiltinServices
+  fullName: HCGStudio.DongBot.Resolver.BuiltinServices
+  type: Namespace
+  assemblies:
+  - HCGStudio.DongBot.Resolver
+references:
+- uid: HCGStudio.DongBot.Resolver.BuiltinServices.HelpService
+  commentId: T:HCGStudio.DongBot.Resolver.BuiltinServices.HelpService
+  name: HelpService
+  nameWithType: HelpService
+  fullName: HCGStudio.DongBot.Resolver.BuiltinServices.HelpService

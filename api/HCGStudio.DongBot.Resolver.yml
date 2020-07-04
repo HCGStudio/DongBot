@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.Resolver
+  commentId: N:HCGStudio.DongBot.Resolver
+  id: HCGStudio.DongBot.Resolver
+  children:
+  - HCGStudio.DongBot.Resolver.PluginResolver
+  langs:
+  - csharp
+  - vb
+  name: HCGStudio.DongBot.Resolver
+  nameWithType: HCGStudio.DongBot.Resolver
+  fullName: HCGStudio.DongBot.Resolver
+  type: Namespace
+  assemblies:
+  - HCGStudio.DongBot.Resolver
+references:
+- uid: HCGStudio.DongBot.Resolver.PluginResolver
+  commentId: T:HCGStudio.DongBot.Resolver.PluginResolver
+  name: PluginResolver
+  nameWithType: PluginResolver
+  fullName: HCGStudio.DongBot.Resolver.PluginResolver

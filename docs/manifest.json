@@ -5,35 +5,11 @@
   "files": [
     {
       "type": "Conceptual",
-      "source_relative_path": "InstallationGuide.md",
-      "output": {
-        ".html": {
-          "relative_path": "InstallationGuide.html",
-          "hash": "iCEtDrYYSNu27UI3QXW+Xw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "PluginGuide.md",
-      "output": {
-        ".html": {
-          "relative_path": "PluginGuide.html",
-          "hash": "+np3Vnm8JUX9BDXJVRT43Q=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "README.md",
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "srB8pxNJ962Wvu0SdSnvrQ=="
+          "hash": "UKEzwDSt39QFj8DJ8ByM2Q=="
         }
       },
       "is_incremental": true,
@@ -544,6 +520,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "NQu+LlImcSYHXlzLlFnfCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
@@ -557,11 +545,62 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/InstallationGuide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/InstallationGuide.html",
+          "hash": "fU3RL0QE1d1FgXiGs8E2aw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/PluginGuide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/PluginGuide.html",
+          "hash": "Ibr6Q1Zy71mNGGpqmjSg+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "oOUkNZAaTj+qBGWpQlaHFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "L+Z12AsyrtK1onKVf0TVLA=="
+          "hash": "jaTsVLd0EtPS3osuRKyBLg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Uh38ebcl6gnxOXGTKi94Yg=="
         }
       },
       "is_incremental": false,
@@ -580,8 +619,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 4,
-          "skipped_file_count": 3
+          "total_file_count": 5,
+          "skipped_file_count": 4
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

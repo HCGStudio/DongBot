@@ -14,7 +14,7 @@ Dong! Bot是一个多后端，支持插件，一部驱动的dotnet平台上的�
 
 请按照您的需求
 
-| 插件开发者                                                   | Dong! Bot其他实现开发者                                      | 仅仅是用户       |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------- |
-| 安装[HCGStudio.DongBot.Core](https://www.nuget.org/packages/HCGStudio.DongBot.Core/) | 安装[HCGStudio.DongBot.Resolver](https://www.nuget.org/packages/HCGStudio.DongBot.Resolver/) | 查看安装配置文档 |
+| 插件开发者                                                   | Dong! Bot其他实现开发者                                      | 仅仅是用户         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------ |
+| 安装[HCGStudio.DongBot.Core](https://www.nuget.org/packages/HCGStudio.DongBot.Core/) | 安装[HCGStudio.DongBot.Resolver](https://www.nuget.org/packages/HCGStudio.DongBot.Resolver/) | 查看[安装配文档]() |
 

@@ -1,0 +1,97 @@
+### YamlMime:TableOfContent
+- uid: HCGStudio.DongBot.App
+  name: HCGStudio.DongBot.App
+  items:
+  - uid: HCGStudio.DongBot.App.Program
+    name: Program
+  - uid: HCGStudio.DongBot.App.Startup
+    name: Startup
+- uid: HCGStudio.DongBot.App.Migrations
+  name: HCGStudio.DongBot.App.Migrations
+  items:
+  - uid: HCGStudio.DongBot.App.Migrations.Application
+    name: Application
+- uid: HCGStudio.DongBot.App.Models
+  name: HCGStudio.DongBot.App.Models
+  items:
+  - uid: HCGStudio.DongBot.App.Models.ApplicationContext
+    name: ApplicationContext
+  - uid: HCGStudio.DongBot.App.Models.ServiceRecord
+    name: ServiceRecord
+- uid: HCGStudio.DongBot.App.SystemService
+  name: HCGStudio.DongBot.App.SystemService
+  items:
+  - uid: HCGStudio.DongBot.App.SystemService.BroadcastMessageSender`1
+    name: BroadcastMessageSender<TService>
+    name.vb: BroadcastMessageSender(Of TService)
+  - uid: HCGStudio.DongBot.App.SystemService.ServiceService
+    name: ServiceService
+  - uid: HCGStudio.DongBot.App.SystemService.VersionService
+    name: VersionService
+- uid: HCGStudio.DongBot.Core.Attributes
+  name: HCGStudio.DongBot.Core.Attributes
+  items:
+  - uid: HCGStudio.DongBot.Core.Attributes.InformationAttribute
+    name: InformationAttribute
+  - uid: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+    name: InvokePolicies
+  - uid: HCGStudio.DongBot.Core.Attributes.KeywordPolicy
+    name: KeywordPolicy
+  - uid: HCGStudio.DongBot.Core.Attributes.OnKeywordAttribute
+    name: OnKeywordAttribute
+  - uid: HCGStudio.DongBot.Core.Attributes.ScheduleTaskAttribute
+    name: ScheduleTaskAttribute
+  - uid: HCGStudio.DongBot.Core.Attributes.ServiceAttribute
+    name: ServiceAttribute
+- uid: HCGStudio.DongBot.Core.Messages
+  name: HCGStudio.DongBot.Core.Messages
+  items:
+  - uid: HCGStudio.DongBot.Core.Messages.AtMessage
+    name: AtMessage
+  - uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage
+    name: Base64PictureMessage
+  - uid: HCGStudio.DongBot.Core.Messages.IAtMessage
+    name: IAtMessage
+  - uid: HCGStudio.DongBot.Core.Messages.IPictureMessage
+    name: IPictureMessage
+  - uid: HCGStudio.DongBot.Core.Messages.ISimpleMessage
+    name: ISimpleMessage
+  - uid: HCGStudio.DongBot.Core.Messages.IUnionMessage
+    name: IUnionMessage
+  - uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
+    name: LocalPictureMessage
+  - uid: HCGStudio.DongBot.Core.Messages.Message
+    name: Message
+  - uid: HCGStudio.DongBot.Core.Messages.MessageBuilder
+    name: MessageBuilder
+  - uid: HCGStudio.DongBot.Core.Messages.SimpleMessage
+    name: SimpleMessage
+  - uid: HCGStudio.DongBot.Core.Messages.UnionMessage
+    name: UnionMessage
+- uid: HCGStudio.DongBot.Core.Service
+  name: HCGStudio.DongBot.Core.Service
+  items:
+  - uid: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1
+    name: IBroadcastMessageSender<TService>
+    name.vb: IBroadcastMessageSender(Of TService)
+  - uid: HCGStudio.DongBot.Core.Service.IMessageProvider
+    name: IMessageProvider
+  - uid: HCGStudio.DongBot.Core.Service.IMessageSender
+    name: IMessageSender
+- uid: HCGStudio.DongBot.CqHttp
+  name: HCGStudio.DongBot.CqHttp
+  items:
+  - uid: HCGStudio.DongBot.CqHttp.CqConfig
+    name: CqConfig
+  - uid: HCGStudio.DongBot.CqHttp.Extension
+    name: Extension
+- uid: HCGStudio.DongBot.Resolver
+  name: HCGStudio.DongBot.Resolver
+  items:
+  - uid: HCGStudio.DongBot.Resolver.PluginResolver
+    name: PluginResolver
+- uid: HCGStudio.DongBot.Resolver.BuiltinServices
+  name: HCGStudio.DongBot.Resolver.BuiltinServices
+  items:
+  - uid: HCGStudio.DongBot.Resolver.BuiltinServices.HelpService
+    name: HelpService

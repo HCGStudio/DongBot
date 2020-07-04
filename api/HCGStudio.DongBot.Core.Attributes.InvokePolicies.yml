@@ -1,0 +1,163 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  commentId: T:HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  id: InvokePolicies
+  parent: HCGStudio.DongBot.Core.Attributes
+  children:
+  - HCGStudio.DongBot.Core.Attributes.InvokePolicies.Group
+  - HCGStudio.DongBot.Core.Attributes.InvokePolicies.GroupAt
+  - HCGStudio.DongBot.Core.Attributes.InvokePolicies.Private
+  langs:
+  - csharp
+  - vb
+  name: InvokePolicies
+  nameWithType: InvokePolicies
+  fullName: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  type: Enum
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: InvokePolicies
+    path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
+    startLine: 80
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Attributes
+  summary: "\n触发策略\n"
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum InvokePolicies
+    content.vb: >-
+      <Flags>
+
+      Public Enum InvokePolicies
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: HCGStudio.DongBot.Core.Attributes.InvokePolicies.Group
+  commentId: F:HCGStudio.DongBot.Core.Attributes.InvokePolicies.Group
+  id: Group
+  parent: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: InvokePolicies.Group
+  fullName: HCGStudio.DongBot.Core.Attributes.InvokePolicies.Group
+  type: Field
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: Group
+    path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
+    startLine: 86
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Attributes
+  summary: "\n在群组中发送的消息符合关键词策略就触发\n"
+  example: []
+  syntax:
+    content: Group = 1
+    return:
+      type: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HCGStudio.DongBot.Core.Attributes.InvokePolicies.GroupAt
+  commentId: F:HCGStudio.DongBot.Core.Attributes.InvokePolicies.GroupAt
+  id: GroupAt
+  parent: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  langs:
+  - csharp
+  - vb
+  name: GroupAt
+  nameWithType: InvokePolicies.GroupAt
+  fullName: HCGStudio.DongBot.Core.Attributes.InvokePolicies.GroupAt
+  type: Field
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: GroupAt
+    path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
+    startLine: 91
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Attributes
+  summary: "\n在群组中收到At自己的消息就触发\n"
+  example: []
+  syntax:
+    content: GroupAt = 2
+    return:
+      type: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: HCGStudio.DongBot.Core.Attributes.InvokePolicies.Private
+  commentId: F:HCGStudio.DongBot.Core.Attributes.InvokePolicies.Private
+  id: Private
+  parent: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  langs:
+  - csharp
+  - vb
+  name: Private
+  nameWithType: InvokePolicies.Private
+  fullName: HCGStudio.DongBot.Core.Attributes.InvokePolicies.Private
+  type: Field
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: Private
+    path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
+    startLine: 96
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Attributes
+  summary: "\n私聊触发\n"
+  example: []
+  syntax:
+    content: Private = 4
+    return:
+      type: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: HCGStudio.DongBot.Core.Attributes
+  commentId: N:HCGStudio.DongBot.Core.Attributes
+  name: HCGStudio.DongBot.Core.Attributes
+  nameWithType: HCGStudio.DongBot.Core.Attributes
+  fullName: HCGStudio.DongBot.Core.Attributes
+- uid: HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  commentId: T:HCGStudio.DongBot.Core.Attributes.InvokePolicies
+  parent: HCGStudio.DongBot.Core.Attributes
+  name: InvokePolicies
+  nameWithType: InvokePolicies
+  fullName: HCGStudio.DongBot.Core.Attributes.InvokePolicies

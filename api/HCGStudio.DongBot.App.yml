@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.App
+  commentId: N:HCGStudio.DongBot.App
+  id: HCGStudio.DongBot.App
+  children:
+  - HCGStudio.DongBot.App.Program
+  - HCGStudio.DongBot.App.Startup
+  langs:
+  - csharp
+  - vb
+  name: HCGStudio.DongBot.App
+  nameWithType: HCGStudio.DongBot.App
+  fullName: HCGStudio.DongBot.App
+  type: Namespace
+  assemblies:
+  - HCGStudio.DongBot.App
+references:
+- uid: HCGStudio.DongBot.App.Program
+  commentId: T:HCGStudio.DongBot.App.Program
+  name: Program
+  nameWithType: Program
+  fullName: HCGStudio.DongBot.App.Program
+- uid: HCGStudio.DongBot.App.Startup
+  commentId: T:HCGStudio.DongBot.App.Startup
+  name: Startup
+  nameWithType: Startup
+  fullName: HCGStudio.DongBot.App.Startup

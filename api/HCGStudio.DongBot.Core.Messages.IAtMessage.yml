@@ -1,0 +1,144 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage
+  commentId: T:HCGStudio.DongBot.Core.Messages.IAtMessage
+  id: IAtMessage
+  parent: HCGStudio.DongBot.Core.Messages
+  children:
+  - HCGStudio.DongBot.Core.Messages.IAtMessage.AtAll
+  - HCGStudio.DongBot.Core.Messages.IAtMessage.Content
+  langs:
+  - csharp
+  - vb
+  name: IAtMessage
+  nameWithType: IAtMessage
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage
+  type: Interface
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: IAtMessage
+    path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+    startLine: 5
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\nAt消息的接口\n"
+  example: []
+  syntax:
+    content: public interface IAtMessage
+    content.vb: Public Interface IAtMessage
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage.Content
+  commentId: P:HCGStudio.DongBot.Core.Messages.IAtMessage.Content
+  id: Content
+  parent: HCGStudio.DongBot.Core.Messages.IAtMessage
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: IAtMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage.Content
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: Content
+    path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+    startLine: 10
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n被At人账号Id\n"
+  example: []
+  syntax:
+    content: long Content { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: ReadOnly Property Content As Long
+  overload: HCGStudio.DongBot.Core.Messages.IAtMessage.Content*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage.AtAll
+  commentId: P:HCGStudio.DongBot.Core.Messages.IAtMessage.AtAll
+  id: AtAll
+  parent: HCGStudio.DongBot.Core.Messages.IAtMessage
+  langs:
+  - csharp
+  - vb
+  name: AtAll
+  nameWithType: IAtMessage.AtAll
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage.AtAll
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: AtAll
+    path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+    startLine: 15
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n是否为At全体成员消息\n"
+  example: []
+  syntax:
+    content: bool AtAll { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property AtAll As Boolean
+  overload: HCGStudio.DongBot.Core.Messages.IAtMessage.AtAll*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: HCGStudio.DongBot.Core.Messages
+  commentId: N:HCGStudio.DongBot.Core.Messages
+  name: HCGStudio.DongBot.Core.Messages
+  nameWithType: HCGStudio.DongBot.Core.Messages
+  fullName: HCGStudio.DongBot.Core.Messages
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage.Content*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.IAtMessage.Content
+  name: Content
+  nameWithType: IAtMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage.Content
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage.AtAll*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.IAtMessage.AtAll
+  name: AtAll
+  nameWithType: IAtMessage.AtAll
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage.AtAll
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

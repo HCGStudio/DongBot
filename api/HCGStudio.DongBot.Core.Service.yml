@@ -1,0 +1,71 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.Core.Service
+  commentId: N:HCGStudio.DongBot.Core.Service
+  id: HCGStudio.DongBot.Core.Service
+  children:
+  - HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1
+  - HCGStudio.DongBot.Core.Service.IMessageProvider
+  - HCGStudio.DongBot.Core.Service.IMessageSender
+  langs:
+  - csharp
+  - vb
+  name: HCGStudio.DongBot.Core.Service
+  nameWithType: HCGStudio.DongBot.Core.Service
+  fullName: HCGStudio.DongBot.Core.Service
+  type: Namespace
+  assemblies:
+  - HCGStudio.DongBot.Core
+references:
+- uid: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1
+  commentId: T:HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1
+  name: IBroadcastMessageSender<TService>
+  nameWithType: IBroadcastMessageSender<TService>
+  fullName: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender<TService>
+  nameWithType.vb: IBroadcastMessageSender(Of TService)
+  fullName.vb: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender(Of TService)
+  name.vb: IBroadcastMessageSender(Of TService)
+  spec.csharp:
+  - uid: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1
+    name: IBroadcastMessageSender
+    nameWithType: IBroadcastMessageSender
+    fullName: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender`1
+    name: IBroadcastMessageSender
+    nameWithType: IBroadcastMessageSender
+    fullName: HCGStudio.DongBot.Core.Service.IBroadcastMessageSender
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HCGStudio.DongBot.Core.Service.IMessageProvider
+  commentId: T:HCGStudio.DongBot.Core.Service.IMessageProvider
+  name: IMessageProvider
+  nameWithType: IMessageProvider
+  fullName: HCGStudio.DongBot.Core.Service.IMessageProvider
+- uid: HCGStudio.DongBot.Core.Service.IMessageSender
+  commentId: T:HCGStudio.DongBot.Core.Service.IMessageSender
+  parent: HCGStudio.DongBot.Core.Service
+  name: IMessageSender
+  nameWithType: IMessageSender
+  fullName: HCGStudio.DongBot.Core.Service.IMessageSender
+- uid: HCGStudio.DongBot.Core.Service
+  commentId: N:HCGStudio.DongBot.Core.Service
+  name: HCGStudio.DongBot.Core.Service
+  nameWithType: HCGStudio.DongBot.Core.Service
+  fullName: HCGStudio.DongBot.Core.Service

@@ -1,0 +1,689 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage
+  commentId: T:HCGStudio.DongBot.Core.Messages.SimpleMessage
+  id: SimpleMessage
+  parent: HCGStudio.DongBot.Core.Messages
+  children:
+  - HCGStudio.DongBot.Core.Messages.SimpleMessage.#ctor(System.String)
+  - HCGStudio.DongBot.Core.Messages.SimpleMessage.Content
+  - HCGStudio.DongBot.Core.Messages.SimpleMessage.FromString(System.String)
+  - HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Explicit(System.String)~HCGStudio.DongBot.Core.Messages.SimpleMessage
+  - HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Implicit(HCGStudio.DongBot.Core.Messages.SimpleMessage)~System.String
+  - HCGStudio.DongBot.Core.Messages.SimpleMessage.ToString
+  langs:
+  - csharp
+  - vb
+  name: SimpleMessage
+  nameWithType: SimpleMessage
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage
+  type: Class
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: SimpleMessage
+    path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+    startLine: 5
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n简单消息的\n"
+  example: []
+  syntax:
+    content: 'public class SimpleMessage : Message, ISimpleMessage'
+    content.vb: >-
+      Public Class SimpleMessage
+          Inherits Message
+          Implements ISimpleMessage
+  inheritance:
+  - System.Object
+  - HCGStudio.DongBot.Core.Messages.Message
+  implements:
+  - HCGStudio.DongBot.Core.Messages.ISimpleMessage
+  inheritedMembers:
+  - HCGStudio.DongBot.Core.Messages.Message.ToPureString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.#ctor(System.String)
+  commentId: M:HCGStudio.DongBot.Core.Messages.SimpleMessage.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: HCGStudio.DongBot.Core.Messages.SimpleMessage
+  langs:
+  - csharp
+  - vb
+  name: SimpleMessage(String)
+  nameWithType: SimpleMessage.SimpleMessage(String)
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.SimpleMessage(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: .ctor
+    path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+    startLine: 11
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n构建一个简单消息\n"
+  example: []
+  syntax:
+    content: public SimpleMessage(string content)
+    parameters:
+    - id: content
+      type: System.String
+      description: 消息的内容
+    content.vb: Public Sub New(content As String)
+  overload: HCGStudio.DongBot.Core.Messages.SimpleMessage.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.Content
+  commentId: P:HCGStudio.DongBot.Core.Messages.SimpleMessage.Content
+  id: Content
+  parent: HCGStudio.DongBot.Core.Messages.SimpleMessage
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: SimpleMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.Content
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: Content
+    path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+    startLine: 17
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n消息的文字内容\n"
+  example: []
+  syntax:
+    content: public string Content { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Content As String
+  overload: HCGStudio.DongBot.Core.Messages.SimpleMessage.Content*
+  implements:
+  - HCGStudio.DongBot.Core.Messages.ISimpleMessage.Content
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.FromString(System.String)
+  commentId: M:HCGStudio.DongBot.Core.Messages.SimpleMessage.FromString(System.String)
+  id: FromString(System.String)
+  parent: HCGStudio.DongBot.Core.Messages.SimpleMessage
+  langs:
+  - csharp
+  - vb
+  name: FromString(String)
+  nameWithType: SimpleMessage.FromString(String)
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.FromString(System.String)
+  type: Method
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: FromString
+    path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+    startLine: 24
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n从字符串转换简单消息\n"
+  example: []
+  syntax:
+    content: public static SimpleMessage FromString(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 消息的内容
+    return:
+      type: HCGStudio.DongBot.Core.Messages.SimpleMessage
+      description: 转换的消息
+    content.vb: Public Shared Function FromString(message As String) As SimpleMessage
+  overload: HCGStudio.DongBot.Core.Messages.SimpleMessage.FromString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Explicit(System.String)~HCGStudio.DongBot.Core.Messages.SimpleMessage
+  commentId: M:HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Explicit(System.String)~HCGStudio.DongBot.Core.Messages.SimpleMessage
+  id: op_Explicit(System.String)~HCGStudio.DongBot.Core.Messages.SimpleMessage
+  parent: HCGStudio.DongBot.Core.Messages.SimpleMessage
+  langs:
+  - csharp
+  - vb
+  name: Explicit(String to SimpleMessage)
+  nameWithType: SimpleMessage.Explicit(String to SimpleMessage)
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.Explicit(System.String to HCGStudio.DongBot.Core.Messages.SimpleMessage)
+  type: Operator
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: op_Explicit
+    path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+    startLine: 33
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n将字符串转化为简单消息\n"
+  example: []
+  syntax:
+    content: public static explicit operator SimpleMessage(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: 消息的内容
+    return:
+      type: HCGStudio.DongBot.Core.Messages.SimpleMessage
+    content.vb: Public Shared Narrowing Operator CType(message As String) As SimpleMessage
+  overload: HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Explicit*
+  nameWithType.vb: SimpleMessage.Narrowing(String to SimpleMessage)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: HCGStudio.DongBot.Core.Messages.SimpleMessage.Narrowing(System.String to HCGStudio.DongBot.Core.Messages.SimpleMessage)
+  name.vb: Narrowing(String to SimpleMessage)
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Implicit(HCGStudio.DongBot.Core.Messages.SimpleMessage)~System.String
+  commentId: M:HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Implicit(HCGStudio.DongBot.Core.Messages.SimpleMessage)~System.String
+  id: op_Implicit(HCGStudio.DongBot.Core.Messages.SimpleMessage)~System.String
+  parent: HCGStudio.DongBot.Core.Messages.SimpleMessage
+  langs:
+  - csharp
+  - vb
+  name: Implicit(SimpleMessage to String)
+  nameWithType: SimpleMessage.Implicit(SimpleMessage to String)
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.Implicit(HCGStudio.DongBot.Core.Messages.SimpleMessage to System.String)
+  type: Operator
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: op_Implicit
+    path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+    startLine: 42
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n将消息转化为字符串\n"
+  example: []
+  syntax:
+    content: public static implicit operator string (SimpleMessage message)
+    parameters:
+    - id: message
+      type: HCGStudio.DongBot.Core.Messages.SimpleMessage
+      description: 转化的消息
+    return:
+      type: System.String
+    content.vb: Public Shared Widening Operator CType(message As SimpleMessage) As String
+  overload: HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Implicit*
+  nameWithType.vb: SimpleMessage.Widening(SimpleMessage to String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: HCGStudio.DongBot.Core.Messages.SimpleMessage.Widening(HCGStudio.DongBot.Core.Messages.SimpleMessage to System.String)
+  name.vb: Widening(SimpleMessage to String)
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.ToString
+  commentId: M:HCGStudio.DongBot.Core.Messages.SimpleMessage.ToString
+  id: ToString
+  parent: HCGStudio.DongBot.Core.Messages.SimpleMessage
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SimpleMessage.ToString()
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.ToString()
+  type: Method
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: ToString
+    path: HCGStudio.DongBot.Core/Messages/SimpleMessage.cs
+    startLine: 48
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: HCGStudio.DongBot.Core.Messages.SimpleMessage.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: HCGStudio.DongBot.Core.Messages
+  commentId: N:HCGStudio.DongBot.Core.Messages
+  name: HCGStudio.DongBot.Core.Messages
+  nameWithType: HCGStudio.DongBot.Core.Messages
+  fullName: HCGStudio.DongBot.Core.Messages
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: HCGStudio.DongBot.Core.Messages.Message
+  commentId: T:HCGStudio.DongBot.Core.Messages.Message
+  parent: HCGStudio.DongBot.Core.Messages
+  name: Message
+  nameWithType: Message
+  fullName: HCGStudio.DongBot.Core.Messages.Message
+- uid: HCGStudio.DongBot.Core.Messages.ISimpleMessage
+  commentId: T:HCGStudio.DongBot.Core.Messages.ISimpleMessage
+  parent: HCGStudio.DongBot.Core.Messages
+  name: ISimpleMessage
+  nameWithType: ISimpleMessage
+  fullName: HCGStudio.DongBot.Core.Messages.ISimpleMessage
+- uid: HCGStudio.DongBot.Core.Messages.Message.ToPureString
+  commentId: M:HCGStudio.DongBot.Core.Messages.Message.ToPureString
+  parent: HCGStudio.DongBot.Core.Messages.Message
+  name: ToPureString()
+  nameWithType: Message.ToPureString()
+  fullName: HCGStudio.DongBot.Core.Messages.Message.ToPureString()
+  spec.csharp:
+  - uid: HCGStudio.DongBot.Core.Messages.Message.ToPureString
+    name: ToPureString
+    nameWithType: Message.ToPureString
+    fullName: HCGStudio.DongBot.Core.Messages.Message.ToPureString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: HCGStudio.DongBot.Core.Messages.Message.ToPureString
+    name: ToPureString
+    nameWithType: Message.ToPureString
+    fullName: HCGStudio.DongBot.Core.Messages.Message.ToPureString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.#ctor*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.SimpleMessage.#ctor
+  name: SimpleMessage
+  nameWithType: SimpleMessage.SimpleMessage
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.SimpleMessage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.Content*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.SimpleMessage.Content
+  name: Content
+  nameWithType: SimpleMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.Content
+- uid: HCGStudio.DongBot.Core.Messages.ISimpleMessage.Content
+  commentId: P:HCGStudio.DongBot.Core.Messages.ISimpleMessage.Content
+  parent: HCGStudio.DongBot.Core.Messages.ISimpleMessage
+  name: Content
+  nameWithType: ISimpleMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.ISimpleMessage.Content
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.FromString*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.SimpleMessage.FromString
+  name: FromString
+  nameWithType: SimpleMessage.FromString
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.FromString
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage
+  commentId: T:HCGStudio.DongBot.Core.Messages.SimpleMessage
+  parent: HCGStudio.DongBot.Core.Messages
+  name: SimpleMessage
+  nameWithType: SimpleMessage
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Explicit*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Explicit
+  name: Explicit
+  nameWithType: SimpleMessage.Explicit
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.Explicit
+  nameWithType.vb: SimpleMessage.Narrowing
+  fullName.vb: HCGStudio.DongBot.Core.Messages.SimpleMessage.Narrowing
+  name.vb: Narrowing
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Implicit*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.SimpleMessage.op_Implicit
+  name: Implicit
+  nameWithType: SimpleMessage.Implicit
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.Implicit
+  nameWithType.vb: SimpleMessage.Widening
+  fullName.vb: HCGStudio.DongBot.Core.Messages.SimpleMessage.Widening
+  name.vb: Widening
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HCGStudio.DongBot.Core.Messages.SimpleMessage.ToString*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.SimpleMessage.ToString
+  name: ToString
+  nameWithType: SimpleMessage.ToString
+  fullName: HCGStudio.DongBot.Core.Messages.SimpleMessage.ToString

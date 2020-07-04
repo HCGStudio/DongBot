@@ -71,4 +71,4 @@ public async Task VersionQuery(long senderUserId)
 
 ## 其他
 
-关于接口的定义、方法，请查看详细文档，此处不再赘述。
+关于接口的定义、方法，请查看[详细文档](https://hcgstudio.github.io/DongBot/api/HCGStudio.DongBot.Core.Service.html)，此处不再赘述。

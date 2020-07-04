@@ -1,0 +1,773 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.CqHttp.CqConfig
+  commentId: T:HCGStudio.DongBot.CqHttp.CqConfig
+  id: CqConfig
+  parent: HCGStudio.DongBot.CqHttp
+  children:
+  - HCGStudio.DongBot.CqHttp.CqConfig.AccessToken
+  - HCGStudio.DongBot.CqHttp.CqConfig.AccessUrl
+  - HCGStudio.DongBot.CqHttp.CqConfig.ApiPath
+  - HCGStudio.DongBot.CqHttp.CqConfig.BindPort
+  - HCGStudio.DongBot.CqHttp.CqConfig.EventPath
+  - HCGStudio.DongBot.CqHttp.CqConfig.EventUrl
+  - HCGStudio.DongBot.CqHttp.CqConfig.ListenPort
+  - HCGStudio.DongBot.CqHttp.CqConfig.Secret
+  - HCGStudio.DongBot.CqHttp.CqConfig.UseGroupTable
+  - HCGStudio.DongBot.CqHttp.CqConfig.UseMessageTable
+  langs:
+  - csharp
+  - vb
+  name: CqConfig
+  nameWithType: CqConfig
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig
+  type: Class
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: CqConfig
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 2
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public class CqConfig
+    content.vb: Public Class CqConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.AccessUrl
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.AccessUrl
+  id: AccessUrl
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: AccessUrl
+  nameWithType: CqConfig.AccessUrl
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.AccessUrl
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: AccessUrl
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 4
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public string AccessUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AccessUrl As String
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.AccessUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.AccessToken
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.AccessToken
+  id: AccessToken
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: AccessToken
+  nameWithType: CqConfig.AccessToken
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.AccessToken
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: AccessToken
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 5
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public string AccessToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AccessToken As String
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.AccessToken*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.EventUrl
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.EventUrl
+  id: EventUrl
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: EventUrl
+  nameWithType: CqConfig.EventUrl
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.EventUrl
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: EventUrl
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 6
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public string EventUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUrl As String
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.EventUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.ListenPort
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.ListenPort
+  id: ListenPort
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: ListenPort
+  nameWithType: CqConfig.ListenPort
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.ListenPort
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: ListenPort
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 7
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public int ListenPort { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ListenPort As Integer
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.ListenPort*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.BindPort
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.BindPort
+  id: BindPort
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: BindPort
+  nameWithType: CqConfig.BindPort
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.BindPort
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: BindPort
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 8
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public int BindPort { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property BindPort As Integer
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.BindPort*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.ApiPath
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.ApiPath
+  id: ApiPath
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: ApiPath
+  nameWithType: CqConfig.ApiPath
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.ApiPath
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: ApiPath
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 9
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public string ApiPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApiPath As String
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.ApiPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.EventPath
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.EventPath
+  id: EventPath
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: EventPath
+  nameWithType: CqConfig.EventPath
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.EventPath
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: EventPath
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 10
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public string EventPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventPath As String
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.EventPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.Secret
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.Secret
+  id: Secret
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: Secret
+  nameWithType: CqConfig.Secret
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.Secret
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: Secret
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 11
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public string Secret { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Secret As String
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.Secret*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.UseGroupTable
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.UseGroupTable
+  id: UseGroupTable
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: UseGroupTable
+  nameWithType: CqConfig.UseGroupTable
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.UseGroupTable
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: UseGroupTable
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 12
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public bool UseGroupTable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseGroupTable As Boolean
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.UseGroupTable*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.UseMessageTable
+  commentId: P:HCGStudio.DongBot.CqHttp.CqConfig.UseMessageTable
+  id: UseMessageTable
+  parent: HCGStudio.DongBot.CqHttp.CqConfig
+  langs:
+  - csharp
+  - vb
+  name: UseMessageTable
+  nameWithType: CqConfig.UseMessageTable
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.UseMessageTable
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+      branch: master
+      repo: git@github.com:HCGStudio/DongBot.git
+    id: UseMessageTable
+    path: HCGStudio.DongBot.CqHttp/CqConfig.cs
+    startLine: 13
+  assemblies:
+  - HCGStudio.DongBot.CqHttp
+  namespace: HCGStudio.DongBot.CqHttp
+  syntax:
+    content: public bool UseMessageTable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseMessageTable As Boolean
+  overload: HCGStudio.DongBot.CqHttp.CqConfig.UseMessageTable*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: HCGStudio.DongBot.CqHttp
+  commentId: N:HCGStudio.DongBot.CqHttp
+  name: HCGStudio.DongBot.CqHttp
+  nameWithType: HCGStudio.DongBot.CqHttp
+  fullName: HCGStudio.DongBot.CqHttp
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.AccessUrl*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.AccessUrl
+  name: AccessUrl
+  nameWithType: CqConfig.AccessUrl
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.AccessUrl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.AccessToken*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.AccessToken
+  name: AccessToken
+  nameWithType: CqConfig.AccessToken
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.AccessToken
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.EventUrl*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.EventUrl
+  name: EventUrl
+  nameWithType: CqConfig.EventUrl
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.EventUrl
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.ListenPort*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.ListenPort
+  name: ListenPort
+  nameWithType: CqConfig.ListenPort
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.ListenPort
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.BindPort*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.BindPort
+  name: BindPort
+  nameWithType: CqConfig.BindPort
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.BindPort
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.ApiPath*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.ApiPath
+  name: ApiPath
+  nameWithType: CqConfig.ApiPath
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.ApiPath
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.EventPath*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.EventPath
+  name: EventPath
+  nameWithType: CqConfig.EventPath
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.EventPath
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.Secret*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.Secret
+  name: Secret
+  nameWithType: CqConfig.Secret
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.Secret
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.UseGroupTable*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.UseGroupTable
+  name: UseGroupTable
+  nameWithType: CqConfig.UseGroupTable
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.UseGroupTable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: HCGStudio.DongBot.CqHttp.CqConfig.UseMessageTable*
+  commentId: Overload:HCGStudio.DongBot.CqHttp.CqConfig.UseMessageTable
+  name: UseMessageTable
+  nameWithType: CqConfig.UseMessageTable
+  fullName: HCGStudio.DongBot.CqHttp.CqConfig.UseMessageTable
