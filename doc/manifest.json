@@ -1,0 +1,618 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/94048/source/repos/DongBot",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "InstallationGuide.md",
+      "output": {
+        ".html": {
+          "relative_path": "InstallationGuide.html",
+          "hash": "iCEtDrYYSNu27UI3QXW+Xw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "PluginGuide.md",
+      "output": {
+        ".html": {
+          "relative_path": "PluginGuide.html",
+          "hash": "+np3Vnm8JUX9BDXJVRT43Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "srB8pxNJ962Wvu0SdSnvrQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.Migrations.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.Migrations.Application.html",
+          "hash": "eBz2JuAWxCem6Ngbi9nKXg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.Migrations.html",
+          "hash": "d41boZ2fGd1Mu+W/IfdKnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.Models.ApplicationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.Models.ApplicationContext.html",
+          "hash": "lbA5UeORsUzrQV7VnlDMmQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.Models.ServiceRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.Models.ServiceRecord.html",
+          "hash": "Zmd/y8Zk8WdrfNsLVYdaUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.Models.html",
+          "hash": "4NVvnwlbaVJZM0ZWeb2m8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.Program.html",
+          "hash": "WHlHNL8xhqPIdzX3kXmBnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.Startup.html",
+          "hash": "ovbGJFRYfNbK9Yrjkmcvag=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.SystemService.BroadcastMessageSender-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.SystemService.BroadcastMessageSender-1.html",
+          "hash": "WkZF7qIgaYtiz2YaZ5T5ZA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.SystemService.ServiceService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.SystemService.ServiceService.html",
+          "hash": "aZwem7Pu6WZdBr4UnzkBfA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.SystemService.VersionService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.SystemService.VersionService.html",
+          "hash": "aMbYo6Qc9NQgugxMvf2M1g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.SystemService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.SystemService.html",
+          "hash": "VroOAfC3Fh7iNamo5K9ywg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.App.html",
+          "hash": "DOKVuhaFU5VGSslzQvkHGQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Attributes.InformationAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Attributes.InformationAttribute.html",
+          "hash": "wJ0yayB/GanyMPA338r4Bg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Attributes.InvokePolicies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Attributes.InvokePolicies.html",
+          "hash": "h0Hrq8IieuwvYfx1TRMcKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Attributes.KeywordPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Attributes.KeywordPolicy.html",
+          "hash": "jlFbMxOV0zu6/D8WsuvsLA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Attributes.OnKeywordAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Attributes.OnKeywordAttribute.html",
+          "hash": "fhNOulZO4copx3JiV+f1Rw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Attributes.ScheduleTaskAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Attributes.ScheduleTaskAttribute.html",
+          "hash": "3GfXlOj67Jwbmi1ew+etiA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Attributes.ServiceAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Attributes.ServiceAttribute.html",
+          "hash": "wTpimqoe1sLda4oiT88MUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Attributes.html",
+          "hash": "KH1sasf1J5vnUwdu+N2KTQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.AtMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.AtMessage.html",
+          "hash": "mJzB0fq4Q9FKmDAL/R2hKQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html",
+          "hash": "aSrGlidboXJvg6/0UuM3MA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.IAtMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.IAtMessage.html",
+          "hash": "VIOHh8yq3RpTSR+mOBZEAg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.IPictureMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.IPictureMessage.html",
+          "hash": "oCmyxd8bWlObz+CwApcV7A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.ISimpleMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.ISimpleMessage.html",
+          "hash": "+C+Nd2bmkXKylduCNUusWA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.IUnionMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.IUnionMessage.html",
+          "hash": "C1nWIuCceQzsneYZcOYqPw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html",
+          "hash": "SqVIwT6uUq26VUgvBtVQnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.Message.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.Message.html",
+          "hash": "3JRrC26nfwJ9VNA5e716cQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.MessageBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.MessageBuilder.html",
+          "hash": "Hb1kHhKxNNCcvOqNnGMO3g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.SimpleMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.SimpleMessage.html",
+          "hash": "l7sWwbJf7zWzP0IeKP4GtQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.UnionMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.UnionMessage.html",
+          "hash": "wcMgZw9SMuzo6mj6m5CwWQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.html",
+          "hash": "mriHj8/3Ig5NNP9whAdkRg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Service.IBroadcastMessageSender-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Service.IBroadcastMessageSender-1.html",
+          "hash": "1NLOFIty4taVx7PHgVZlZQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Service.IMessageProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Service.IMessageProvider.html",
+          "hash": "Is+pKrvrMS4jE+AzBNP+3g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Service.IMessageSender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Service.IMessageSender.html",
+          "hash": "t+WW9eI0bYQuVrMITJ01MA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Core.Service.html",
+          "hash": "Mcdzu87TEaRj1dq9NXbsuw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.CqHttp.CqConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.CqHttp.CqConfig.html",
+          "hash": "rlrOcIq1BkqGqHaiSOyO6w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.CqHttp.Extension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.CqHttp.Extension.html",
+          "hash": "82Nw7FF1MotDEMZDboGepA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.CqHttp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.CqHttp.html",
+          "hash": "LCs91QiUIYe8t4IkN2HEHw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Resolver.BuiltinServices.HelpService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Resolver.BuiltinServices.HelpService.html",
+          "hash": "+7QWd4q6HD+5zav3octBkQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Resolver.BuiltinServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Resolver.BuiltinServices.html",
+          "hash": "4txY1ygUQSZD5xkTtR4ATg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Resolver.PluginResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Resolver.PluginResolver.html",
+          "hash": "BBTVIOWeqZwsPrW11X1U0w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/HCGStudio.DongBot.Resolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/HCGStudio.DongBot.Resolver.html",
+          "hash": "QCoyJTalqScFQC2Hg4k23Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "O6ZlByDRsEvH2B0xeaJrDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "E80R+VYZay0YhInu8MHNmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 42,
+          "skipped_file_count": 42
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

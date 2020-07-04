@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#23433;&#35013;&#25351;&#21335; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#23433;&#35013;&#25351;&#21335; ">
+    <meta name="generator" content="docfx 2.56.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="安装指南">安装指南</h1>
+
+<h2 id="安装需求">安装需求</h2>
+<p>本框架默认使用酷Q作为聊天收发后端，请先下载并安装<a href="https://dlsec.cqp.me/cqa-full">酷Q Air</a>、<a href="https://dlsec.cqp.me/cqp-xiaoi">酷QPro</a>或者<a href="https://github.com/mamoe/mirai">mirai</a>+<a href="https://github.com/yyuueexxiinngg/cqhttp-mirai">cqhttp-mirai</a>。</p>
+<p>然后安装<code>CqHttp</code>插件，详细请参考<a href="https://cqhttp.cc/docs/">CqHttp文档</a>。请在酷Q<code>data/app/io.github.richardchien.coolqhttpapi</code>目录中新建<code>config.ini</code>，输入以下内容</p>
+<pre><code class="lang-ini">[使用的QQ账号]
+access_token = 你想设置的随机字符串
+ws_port = 5800
+use_ws = yes
+serve_data_files = no
+host = 0.0.0.0
+</code></pre>
+<p>如果您觉得上述步骤过于繁琐，可以使用<code>CqHttp</code>的<a href="https://cqhttp.cc/docs/#/Docker">docker镜像</a>（仅支持<code>Linux</code>容器），docker参考启动命令：</p>
+<pre><code class="lang-bash">sudo docker run -d --name=cqhttp \
+-v $(pwd)/coolq:/home/user/coolq \
+-p 9000:9000 \
+-p 5800:5800 \
+-e VNC_PASSWD=qwertyui \
+-e COOLQ_ACCOUNT=000000 \
+-e COOLQ_URL=https://dlsec.cqp.me/cqp-full \
+-e CQHTTP_SERVE_DATA_FILES=no \
+-e CQHTTP_USE_WS=yes \
+-e CQHTTP_WS_PORT=5800 \
+-e CQHTTP_HOST=0.0.0.0 \
+-e CQHTTP_ACCESS_TOKEN=asdf \
+richardchien/cqhttp:latest
+</code></pre>
+<p>然后安装<code>dotnet</code>，请按照<a href="https://dotnet.microsoft.com/download/dotnet-core/current/runtime">这个页面</a>的步骤进行安装。</p>
+<h2 id="下载程序">下载程序</h2>
+<p>请从<a href="https://github.com/HCGStudio/DongBot/releases">Release页面</a>下载最新的发行版，如果是<code>Windows</code>，运行请双击<code>HCGStudio.DongBot.App.exe</code>，如果使用<code>Linux</code>或者在<code>Windows</code>的命令行中启动，请使用<code>dotnet HCGStudio.DongBot.App.dll</code>。</p>
+<h2 id="配置文件">配置文件</h2>
+<p>本程序的配置使用运行目录下的<code>config.json</code>以及<code>PluginConfig</code>文件夹内所有的<code>JSON</code>文件作为配置文件。安装之后，请按照如下实例创建<code>config.json</code>。</p>
+<pre><code class="lang-json">{
+  &quot;Cq&quot;: {
+    &quot;AccessUrl&quot;: &quot;ws://127.0.0.1:5800&quot;,
+    &quot;AccessToken&quot;: &quot;你上面填的随机字符串&quot;,
+    &quot;EventUrl&quot;: &quot;ws://127.0.0.1:5800&quot;
+  },
+  &quot;SuperUsers&quot;: [
+    &quot;超级管理员的用户Id&quot;
+  ]
+}
+</code></pre>
+<p>你也可以将其拆分，比如将以下文件放在<code>config.json</code>中：</p>
+<pre><code class="lang-json">{
+  &quot;SuperUsers&quot;: [
+    &quot;超级管理员的用户Id&quot;
+  ]
+}
+</code></pre>
+<p>将以下文件放在<code>PluginConfig/cq.json</code>中：</p>
+<pre><code class="lang-json">{
+  &quot;Cq&quot;: {
+    &quot;AccessUrl&quot;: &quot;ws://127.0.0.1:5800&quot;,
+    &quot;AccessToken&quot;: &quot;你上面填的随机字符串&quot;,
+    &quot;EventUrl&quot;: &quot;ws://127.0.0.1:5800&quot;
+  }
+}
+</code></pre>
+<p>然后启动程序，在群里发送<code>帮助</code>或者私聊<code>版本</code>进行测试。</p>
+<h2 id="完成安装">完成安装</h2>
+<p>在你完成安装之后，安装插件并且测试没用问题，那就可以将其作为服务安装。</p>
+<p>如果你使用的是<code>Systemd</code>管理的现代Linux发行版，可以使用以下命令进行安装：</p>
+<pre><code class="lang-bash">sudo mkdir -p /var/dongbot/app
+sudo cp DongBot.Service /etc/systemd/system
+sudo cp -r . /var/dongbot/app
+</code></pre>
+<p>然后启用并启动服务</p>
+<pre><code class="lang-bash">sudo systemctl enable DongBot.Service
+sudo systemctl start DongBot.Service
+</code></pre>
+<p>在你每次更新之后，都可以运行上述指令进行更新，但是记得先停止服务</p>
+<pre><code class="lang-bash">sudo systemctl stop DongBot.Service
+</code></pre>
+<p>如果你使用的<code>Windows</code>服务器，建议直接双击启动，有问题远程登录重启就好。</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/HCGStudio/DongBot/blob/master/InstallationGuide.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
