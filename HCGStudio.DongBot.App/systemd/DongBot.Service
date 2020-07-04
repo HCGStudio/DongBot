@@ -1,0 +1,14 @@
+﻿[Unit]
+Description=Dong! Bot, a chat engine.
+
+[Service]
+WorkingDirectory=/var/dongbot/app
+ExecStart=/usr/bin/dotnet /var/dongbot/app/HCGStudio.DongBot.App.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=dongbot
+User=root
+
+[Install]
+WantedBy=multi-user.target
