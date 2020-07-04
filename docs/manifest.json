@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "UKEzwDSt39QFj8DJ8ByM2Q=="
+          "hash": "8wSArDLpDzmpa4+YHzfhNA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -525,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "NQu+LlImcSYHXlzLlFnfCw=="
+          "hash": "exS6kQmpTfbu5oAocCFLhQ=="
         }
       },
       "is_incremental": false,
@@ -588,19 +588,16 @@
           "hash": "jaTsVLd0EtPS3osuRKyBLg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Uh38ebcl6gnxOXGTKi94Yg=="
+          "hash": "MRn1uQD29dDy4UTT3jYIOA=="
         }
       },
       "is_incremental": false,
@@ -620,7 +617,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 5,
-          "skipped_file_count": 4
+          "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
