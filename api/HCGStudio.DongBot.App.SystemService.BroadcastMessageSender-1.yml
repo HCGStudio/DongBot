@@ -19,7 +19,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/SystemService/BroadcastMessageSender.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: BroadcastMessageSender
     path: HCGStudio.DongBot.App/SystemService/BroadcastMessageSender.cs
     startLine: 9
@@ -32,6 +32,7 @@ items:
     - id: TService
     content.vb: >-
       Public Class BroadcastMessageSender(Of TService)
+
           Implements IBroadcastMessageSender(Of TService)
   inheritance:
   - System.Object
@@ -69,7 +70,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/SystemService/BroadcastMessageSender.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: .ctor
     path: HCGStudio.DongBot.App/SystemService/BroadcastMessageSender.cs
     startLine: 13
@@ -104,7 +105,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/SystemService/BroadcastMessageSender.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ServiceName
     path: HCGStudio.DongBot.App/SystemService/BroadcastMessageSender.cs
     startLine: 19
@@ -141,7 +142,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/SystemService/BroadcastMessageSender.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: BroadcastAllEnabled
     path: HCGStudio.DongBot.App/SystemService/BroadcastMessageSender.cs
     startLine: 22

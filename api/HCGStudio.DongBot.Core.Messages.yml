@@ -5,12 +5,12 @@ items:
   id: HCGStudio.DongBot.Core.Messages
   children:
   - HCGStudio.DongBot.Core.Messages.AtMessage
-  - HCGStudio.DongBot.Core.Messages.Base64PictureMessage
   - HCGStudio.DongBot.Core.Messages.IAtMessage
-  - HCGStudio.DongBot.Core.Messages.IPictureMessage
+  - HCGStudio.DongBot.Core.Messages.IAtMessage`1
+  - HCGStudio.DongBot.Core.Messages.IImageMessage
+  - HCGStudio.DongBot.Core.Messages.ImageMessage
   - HCGStudio.DongBot.Core.Messages.ISimpleMessage
   - HCGStudio.DongBot.Core.Messages.IUnionMessage
-  - HCGStudio.DongBot.Core.Messages.LocalPictureMessage
   - HCGStudio.DongBot.Core.Messages.Message
   - HCGStudio.DongBot.Core.Messages.MessageBuilder
   - HCGStudio.DongBot.Core.Messages.SimpleMessage
@@ -30,23 +30,59 @@ references:
   name: AtMessage
   nameWithType: AtMessage
   fullName: HCGStudio.DongBot.Core.Messages.AtMessage
-- uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage
-  commentId: T:HCGStudio.DongBot.Core.Messages.Base64PictureMessage
-  name: Base64PictureMessage
-  nameWithType: Base64PictureMessage
-  fullName: HCGStudio.DongBot.Core.Messages.Base64PictureMessage
 - uid: HCGStudio.DongBot.Core.Messages.IAtMessage
   commentId: T:HCGStudio.DongBot.Core.Messages.IAtMessage
   parent: HCGStudio.DongBot.Core.Messages
   name: IAtMessage
   nameWithType: IAtMessage
   fullName: HCGStudio.DongBot.Core.Messages.IAtMessage
-- uid: HCGStudio.DongBot.Core.Messages.IPictureMessage
-  commentId: T:HCGStudio.DongBot.Core.Messages.IPictureMessage
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1
+  commentId: T:HCGStudio.DongBot.Core.Messages.IAtMessage`1
+  name: IAtMessage<TAccount>
+  nameWithType: IAtMessage<TAccount>
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>
+  nameWithType.vb: IAtMessage(Of TAccount)
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount)
+  name.vb: IAtMessage(Of TAccount)
+  spec.csharp:
+  - uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1
+    name: IAtMessage
+    nameWithType: IAtMessage
+    fullName: HCGStudio.DongBot.Core.Messages.IAtMessage
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TAccount
+    nameWithType: TAccount
+    fullName: TAccount
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1
+    name: IAtMessage
+    nameWithType: IAtMessage
+    fullName: HCGStudio.DongBot.Core.Messages.IAtMessage
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TAccount
+    nameWithType: TAccount
+    fullName: TAccount
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: HCGStudio.DongBot.Core.Messages.IImageMessage
+  commentId: T:HCGStudio.DongBot.Core.Messages.IImageMessage
   parent: HCGStudio.DongBot.Core.Messages
-  name: IPictureMessage
-  nameWithType: IPictureMessage
-  fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage
+  name: IImageMessage
+  nameWithType: IImageMessage
+  fullName: HCGStudio.DongBot.Core.Messages.IImageMessage
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage
+  commentId: T:HCGStudio.DongBot.Core.Messages.ImageMessage
+  name: ImageMessage
+  nameWithType: ImageMessage
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage
 - uid: HCGStudio.DongBot.Core.Messages.ISimpleMessage
   commentId: T:HCGStudio.DongBot.Core.Messages.ISimpleMessage
   parent: HCGStudio.DongBot.Core.Messages
@@ -59,11 +95,6 @@ references:
   name: IUnionMessage
   nameWithType: IUnionMessage
   fullName: HCGStudio.DongBot.Core.Messages.IUnionMessage
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
-  commentId: T:HCGStudio.DongBot.Core.Messages.LocalPictureMessage
-  name: LocalPictureMessage
-  nameWithType: LocalPictureMessage
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
 - uid: HCGStudio.DongBot.Core.Messages.Message
   commentId: T:HCGStudio.DongBot.Core.Messages.Message
   parent: HCGStudio.DongBot.Core.Messages

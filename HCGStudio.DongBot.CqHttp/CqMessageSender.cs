@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using cqhttp.Cyan.Clients;
 using cqhttp.Cyan.Enums;
@@ -42,11 +43,11 @@ namespace HCGStudio.DongBot.CqHttp
                     else
                         msg += new ElementAt(atMessage.Content);
                     break;
-                case IPictureMessage pictureMessage:
+                case IImageMessage pictureMessage:
                     if (pictureMessage.Url != null)
                         msg += new ElementImage(pictureMessage.Url.AbsoluteUri);
                     else
-                        msg += new ElementImage(Convert.FromBase64String(await pictureMessage.ToBase64StringAsync()));
+                        msg += new ElementImage(pictureMessage.Content.ToArray());
                     break;
                 case ISimpleMessage simpleMessage:
                     msg += new ElementText(simpleMessage.Content);

@@ -19,7 +19,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Startup.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Startup
     path: HCGStudio.DongBot.App/Startup.cs
     startLine: 9
@@ -60,7 +60,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Startup.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: .ctor
     path: HCGStudio.DongBot.App/Startup.cs
     startLine: 11
@@ -93,7 +93,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Startup.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Configuration
     path: HCGStudio.DongBot.App/Startup.cs
     startLine: 16
@@ -128,7 +128,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Startup.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ConfigureServices
     path: HCGStudio.DongBot.App/Startup.cs
     startLine: 18

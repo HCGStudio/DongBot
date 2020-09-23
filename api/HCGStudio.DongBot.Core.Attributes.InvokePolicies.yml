@@ -19,7 +19,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: InvokePolicies
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 80
@@ -62,7 +62,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Group
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 86
@@ -96,7 +96,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: GroupAt
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 91
@@ -130,7 +130,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Private
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 96

@@ -20,7 +20,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ServiceAttribute
     path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
     startLine: 8
@@ -38,6 +38,7 @@ items:
       <AttributeUsage(AttributeTargets.Class)>
 
       Public Class ServiceAttribute
+
           Inherits Attribute
   inheritance:
   - System.Object
@@ -112,7 +113,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: .ctor
     path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
     startLine: 15
@@ -148,7 +149,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Name
     path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
     startLine: 23
@@ -185,7 +186,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: AutoEnable
     path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
     startLine: 28
@@ -222,7 +223,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: GetServiceName
     path: HCGStudio.DongBot.Core/Attributes/ServiceAttribute.cs
     startLine: 35

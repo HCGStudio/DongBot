@@ -19,7 +19,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/Extension.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Extension
     path: HCGStudio.DongBot.CqHttp/Extension.cs
     startLine: 7
@@ -62,7 +62,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/Extension.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: UseCqHttpClient
     path: HCGStudio.DongBot.CqHttp/Extension.cs
     startLine: 9
@@ -108,7 +108,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/Extension.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: UseCqWs
     path: HCGStudio.DongBot.CqHttp/Extension.cs
     startLine: 24
@@ -154,7 +154,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/Extension.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: UseCqWsReserve
     path: HCGStudio.DongBot.CqHttp/Extension.cs
     startLine: 39

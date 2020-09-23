@@ -8,19 +8,19 @@
     <title>&#23433;&#35013;&#25351;&#21335; </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="&#23433;&#35013;&#25351;&#21335; ">
-    <meta name="generator" content="docfx 2.56.0.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     
     
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -70,7 +70,8 @@
 <h1 id="安装指南">安装指南</h1>
 
 <h2 id="安装需求">安装需求</h2>
-<p>本框架默认使用酷Q作为聊天收发后端，请先下载并安装<a href="https://dlsec.cqp.me/cqa-full">酷Q Air</a>、<a href="https://dlsec.cqp.me/cqp-xiaoi">酷QPro</a>或者<a href="https://github.com/mamoe/mirai">mirai</a>+<a href="https://github.com/yyuueexxiinngg/cqhttp-mirai">cqhttp-mirai</a>。</p>
+<blockquote>
+<p>本框架默认使用酷Q作为聊天收发后端，请先下载并安装<a href="https://dlsec.cqp.me/cqa-full">酷Q Air</a>、<a href="https://dlsec.cqp.me/cqp-xiaoi">酷QPro</a>或者<a href="https://github.com/mamoe/mirai">mirai</a>+<a href="https://github.com/yyuueexxiinngg/cqhttp-mirai">cqhttp-mirai</a>.</p>
 <p>然后安装<code>CqHttp</code>插件，详细请参考<a href="https://cqhttp.cc/docs/">CqHttp文档</a>。请在酷Q<code>data/app/io.github.richardchien.coolqhttpapi</code>目录中新建<code>config.ini</code>，输入以下内容</p>
 <pre><code class="lang-ini">[使用的QQ账号]
 access_token = 你想设置的随机字符串
@@ -95,6 +96,8 @@ host = 0.0.0.0
 richardchien/cqhttp:latest
 </code></pre>
 <p>然后安装<code>dotnet</code>，请按照<a href="https://dotnet.microsoft.com/download/dotnet-core/current/runtime">这个页面</a>的步骤进行安装。</p>
+</blockquote>
+<p>由于现在酷Q已死，请考虑使用<a href="https://github.com/Mrs4s/go-cqhttp">go-cqhttp</a>做代替，配置较为简单，配置请注意端口和使用WebSocket。</p>
 <h2 id="下载程序">下载程序</h2>
 <p>请从<a href="https://github.com/HCGStudio/DongBot/releases">Release页面</a>下载最新的发行版，如果是<code>Windows</code>，运行请双击<code>HCGStudio.DongBot.App.exe</code>，如果使用<code>Linux</code>或者在<code>Windows</code>的命令行中启动，请使用<code>dotnet HCGStudio.DongBot.App.dll</code>。</p>
 <h2 id="配置文件">配置文件</h2>

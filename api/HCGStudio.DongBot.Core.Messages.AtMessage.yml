@@ -19,7 +19,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/AtMessage.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: AtMessage
     path: HCGStudio.DongBot.Core/Messages/AtMessage.cs
     startLine: 5
@@ -32,7 +32,9 @@ items:
     content: 'public class AtMessage : Message, IAtMessage'
     content.vb: >-
       Public Class AtMessage
+
           Inherits Message
+
           Implements IAtMessage
   inheritance:
   - System.Object
@@ -40,6 +42,7 @@ items:
   implements:
   - HCGStudio.DongBot.Core.Messages.IAtMessage
   inheritedMembers:
+  - HCGStudio.DongBot.Core.Messages.Message.MessageType
   - HCGStudio.DongBot.Core.Messages.Message.ToPureString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -69,7 +72,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/AtMessage.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: .ctor
     path: HCGStudio.DongBot.Core/Messages/AtMessage.cs
     startLine: 12
@@ -108,14 +111,13 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/AtMessage.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Content
     path: HCGStudio.DongBot.Core/Messages/AtMessage.cs
     startLine: 19
   assemblies:
   - HCGStudio.DongBot.Core
   namespace: HCGStudio.DongBot.Core.Messages
-  summary: "\n被At人账号Id\n"
   example: []
   syntax:
     content: public long Content { get; }
@@ -147,14 +149,13 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/AtMessage.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: AtAll
     path: HCGStudio.DongBot.Core/Messages/AtMessage.cs
     startLine: 22
   assemblies:
   - HCGStudio.DongBot.Core
   namespace: HCGStudio.DongBot.Core.Messages
-  summary: "\n是否为At全体成员消息\n"
   example: []
   syntax:
     content: public bool AtAll { get; }
@@ -196,6 +197,12 @@ references:
   name: IAtMessage
   nameWithType: IAtMessage
   fullName: HCGStudio.DongBot.Core.Messages.IAtMessage
+- uid: HCGStudio.DongBot.Core.Messages.Message.MessageType
+  commentId: P:HCGStudio.DongBot.Core.Messages.Message.MessageType
+  parent: HCGStudio.DongBot.Core.Messages.Message
+  name: MessageType
+  nameWithType: Message.MessageType
+  fullName: HCGStudio.DongBot.Core.Messages.Message.MessageType
 - uid: HCGStudio.DongBot.Core.Messages.Message.ToPureString
   commentId: M:HCGStudio.DongBot.Core.Messages.Message.ToPureString
   parent: HCGStudio.DongBot.Core.Messages.Message

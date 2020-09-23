@@ -26,7 +26,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: CqConfig
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 2
@@ -67,7 +67,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: AccessUrl
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 4
@@ -102,7 +102,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: AccessToken
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 5
@@ -137,7 +137,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: EventUrl
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 6
@@ -172,7 +172,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ListenPort
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 7
@@ -207,7 +207,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: BindPort
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 8
@@ -242,7 +242,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ApiPath
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 9
@@ -277,7 +277,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: EventPath
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 10
@@ -312,7 +312,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Secret
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 11
@@ -347,7 +347,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: UseGroupTable
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 12
@@ -382,7 +382,7 @@ items:
     remote:
       path: HCGStudio.DongBot.CqHttp/CqConfig.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: UseMessageTable
     path: HCGStudio.DongBot.CqHttp/CqConfig.cs
     startLine: 13

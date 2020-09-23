@@ -19,7 +19,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/MessageBuilder.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: MessageBuilder
     path: HCGStudio.DongBot.Core/Messages/MessageBuilder.cs
     startLine: 7
@@ -62,7 +62,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/MessageBuilder.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: .ctor
     path: HCGStudio.DongBot.Core/Messages/MessageBuilder.cs
     startLine: 15
@@ -98,7 +98,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/MessageBuilder.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Append
     path: HCGStudio.DongBot.Core/Messages/MessageBuilder.cs
     startLine: 25
@@ -137,7 +137,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/MessageBuilder.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ToMessage
     path: HCGStudio.DongBot.Core/Messages/MessageBuilder.cs
     startLine: 38

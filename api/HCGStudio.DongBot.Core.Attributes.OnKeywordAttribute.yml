@@ -21,7 +21,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: OnKeywordAttribute
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 8
@@ -39,6 +39,7 @@ items:
       <AttributeUsage(AttributeTargets.Method)>
 
       Public Class OnKeywordAttribute
+
           Inherits Attribute
   inheritance:
   - System.Object
@@ -113,7 +114,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: .ctor
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 15
@@ -152,7 +153,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Keywords
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 23
@@ -189,7 +190,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: KeywordPolicy
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 28
@@ -226,7 +227,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: InvokePolicies
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 33
@@ -263,7 +264,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: RequireSuperUser
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 38

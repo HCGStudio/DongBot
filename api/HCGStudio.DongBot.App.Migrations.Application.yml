@@ -19,7 +19,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Migrations/20200627045848_Application.Designer.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Application
     path: HCGStudio.DongBot.App/Migrations/20200627045848_Application.Designer.cs
     startLine: 9
@@ -39,6 +39,7 @@ items:
       <Migration("20200627045848_Application")>
 
       Public Class Application
+
           Inherits Migration
   inheritance:
   - System.Object
@@ -88,7 +89,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Migrations/20200627045848_Application.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Up
     path: HCGStudio.DongBot.App/Migrations/20200627045848_Application.cs
     startLine: 6
@@ -124,7 +125,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Migrations/20200627045848_Application.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Down
     path: HCGStudio.DongBot.App/Migrations/20200627045848_Application.cs
     startLine: 21
@@ -160,7 +161,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Migrations/20200627045848_Application.Designer.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: BuildTargetModel
     path: HCGStudio.DongBot.App/Migrations/20200627045848_Application.Designer.cs
     startLine: 13

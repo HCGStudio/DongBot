@@ -5,6 +5,8 @@ items:
   id: Message
   parent: HCGStudio.DongBot.Core.Messages
   children:
+  - HCGStudio.DongBot.Core.Messages.Message.#ctor
+  - HCGStudio.DongBot.Core.Messages.Message.MessageType
   - HCGStudio.DongBot.Core.Messages.Message.ToPureString
   langs:
   - csharp
@@ -17,10 +19,10 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/Message.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Message
     path: HCGStudio.DongBot.Core/Messages/Message.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - HCGStudio.DongBot.Core
   namespace: HCGStudio.DongBot.Core.Messages
@@ -33,8 +35,7 @@ items:
   - System.Object
   derivedClasses:
   - HCGStudio.DongBot.Core.Messages.AtMessage
-  - HCGStudio.DongBot.Core.Messages.Base64PictureMessage
-  - HCGStudio.DongBot.Core.Messages.LocalPictureMessage
+  - HCGStudio.DongBot.Core.Messages.ImageMessage
   - HCGStudio.DongBot.Core.Messages.SimpleMessage
   - HCGStudio.DongBot.Core.Messages.UnionMessage
   inheritedMembers:
@@ -53,6 +54,75 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: HCGStudio.DongBot.Core.Messages.Message.MessageType
+  commentId: P:HCGStudio.DongBot.Core.Messages.Message.MessageType
+  id: MessageType
+  parent: HCGStudio.DongBot.Core.Messages.Message
+  langs:
+  - csharp
+  - vb
+  name: MessageType
+  nameWithType: Message.MessageType
+  fullName: HCGStudio.DongBot.Core.Messages.Message.MessageType
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/Message.cs
+      branch: master
+      repo: https://github.com/HCGStudio/DongBot.git
+    id: MessageType
+    path: HCGStudio.DongBot.Core/Messages/Message.cs
+    startLine: 13
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n消息的类型\n"
+  example: []
+  syntax:
+    content: public string MessageType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MessageType As String
+  overload: HCGStudio.DongBot.Core.Messages.Message.MessageType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.Core.Messages.Message.#ctor
+  commentId: M:HCGStudio.DongBot.Core.Messages.Message.#ctor
+  id: '#ctor'
+  parent: HCGStudio.DongBot.Core.Messages.Message
+  langs:
+  - csharp
+  - vb
+  name: Message()
+  nameWithType: Message.Message()
+  fullName: HCGStudio.DongBot.Core.Messages.Message.Message()
+  type: Constructor
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/Message.cs
+      branch: master
+      repo: https://github.com/HCGStudio/DongBot.git
+    id: .ctor
+    path: HCGStudio.DongBot.Core/Messages/Message.cs
+    startLine: 18
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n默认的初始化\n"
+  example: []
+  syntax:
+    content: protected Message()
+    content.vb: Protected Sub New
+  overload: HCGStudio.DongBot.Core.Messages.Message.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: HCGStudio.DongBot.Core.Messages.Message.ToPureString
   commentId: M:HCGStudio.DongBot.Core.Messages.Message.ToPureString
   id: ToPureString
@@ -68,10 +138,10 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Messages/Message.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ToPureString
     path: HCGStudio.DongBot.Core/Messages/Message.cs
-    startLine: 13
+    startLine: 27
   assemblies:
   - HCGStudio.DongBot.Core
   namespace: HCGStudio.DongBot.Core.Messages
@@ -386,11 +456,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: HCGStudio.DongBot.Core.Messages.Message.ToPureString*
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.Message.ToPureString
-  name: ToPureString
-  nameWithType: Message.ToPureString
-  fullName: HCGStudio.DongBot.Core.Messages.Message.ToPureString
+- uid: HCGStudio.DongBot.Core.Messages.Message.MessageType*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.Message.MessageType
+  name: MessageType
+  nameWithType: Message.MessageType
+  fullName: HCGStudio.DongBot.Core.Messages.Message.MessageType
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -398,3 +468,13 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: HCGStudio.DongBot.Core.Messages.Message.#ctor*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.Message.#ctor
+  name: Message
+  nameWithType: Message.Message
+  fullName: HCGStudio.DongBot.Core.Messages.Message.Message
+- uid: HCGStudio.DongBot.Core.Messages.Message.ToPureString*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.Message.ToPureString
+  name: ToPureString
+  nameWithType: Message.ToPureString
+  fullName: HCGStudio.DongBot.Core.Messages.Message.ToPureString

@@ -21,7 +21,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: IMessageProvider
     path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
     startLine: 10
@@ -54,7 +54,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: SubscribePrivateMessage
     path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
     startLine: 16
@@ -89,7 +89,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: SubscribeGroupMessage
     path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
     startLine: 22
@@ -124,7 +124,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: GetAllGroupsAsync
     path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
     startLine: 28
@@ -155,7 +155,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: GetGroupNameAsync
     path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
     startLine: 35
@@ -190,7 +190,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: GetGroupUserNameAsync
     path: HCGStudio.DongBot.Core/Service/IMessageProvider.cs
     startLine: 43

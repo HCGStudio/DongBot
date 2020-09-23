@@ -30,11 +30,23 @@
         ]
       }
     ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "docs/**"
+        ]
+      }
+    ],
     "dest": "docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default",
+      "material/material"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",

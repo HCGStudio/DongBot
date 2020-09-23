@@ -20,7 +20,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: InformationAttribute
     path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
     startLine: 7
@@ -38,6 +38,7 @@ items:
       <AttributeUsage(AttributeTargets.Method)>
 
       Public Class InformationAttribute
+
           Inherits Attribute
   inheritance:
   - System.Object
@@ -112,7 +113,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: .ctor
     path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
     startLine: 16
@@ -154,7 +155,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Name
     path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
     startLine: 26
@@ -191,7 +192,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Group
     path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
     startLine: 31
@@ -228,7 +229,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Content
     path: HCGStudio.DongBot.Core/Attributes/InformationAttribute.cs
     startLine: 36

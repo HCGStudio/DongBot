@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1
+  commentId: T:HCGStudio.DongBot.Core.Messages.IAtMessage`1
+  id: IAtMessage`1
+  parent: HCGStudio.DongBot.Core.Messages
+  children:
+  - HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll
+  - HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content
+  langs:
+  - csharp
+  - vb
+  name: IAtMessage<TAccount>
+  nameWithType: IAtMessage<TAccount>
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>
+  type: Interface
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+      branch: master
+      repo: https://github.com/HCGStudio/DongBot.git
+    id: IAtMessage
+    path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+    startLine: 22
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\nAt消息的接口\n"
+  example: []
+  syntax:
+    content: public interface IAtMessage<out TAccount>
+    typeParameters:
+    - id: TAccount
+      description: 用户ID类型
+    content.vb: Public Interface IAtMessage(Of Out TAccount)
+  nameWithType.vb: IAtMessage(Of TAccount)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount)
+  name.vb: IAtMessage(Of TAccount)
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content
+  commentId: P:HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content
+  id: Content
+  parent: HCGStudio.DongBot.Core.Messages.IAtMessage`1
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: IAtMessage<TAccount>.Content
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>.Content
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+      branch: master
+      repo: https://github.com/HCGStudio/DongBot.git
+    id: Content
+    path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+    startLine: 27
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n被At人账号Id\n"
+  example: []
+  syntax:
+    content: TAccount Content { get; }
+    parameters: []
+    return:
+      type: '{TAccount}'
+    content.vb: ReadOnly Property Content As TAccount
+  overload: HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content*
+  nameWithType.vb: IAtMessage(Of TAccount).Content
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount).Content
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll
+  commentId: P:HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll
+  id: AtAll
+  parent: HCGStudio.DongBot.Core.Messages.IAtMessage`1
+  langs:
+  - csharp
+  - vb
+  name: AtAll
+  nameWithType: IAtMessage<TAccount>.AtAll
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>.AtAll
+  type: Property
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+      branch: master
+      repo: https://github.com/HCGStudio/DongBot.git
+    id: AtAll
+    path: HCGStudio.DongBot.Core/Messages/IAtMessage.cs
+    startLine: 32
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n是否为At全体成员消息\n"
+  example: []
+  syntax:
+    content: bool AtAll { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property AtAll As Boolean
+  overload: HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll*
+  nameWithType.vb: IAtMessage(Of TAccount).AtAll
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount).AtAll
+references:
+- uid: HCGStudio.DongBot.Core.Messages
+  commentId: N:HCGStudio.DongBot.Core.Messages
+  name: HCGStudio.DongBot.Core.Messages
+  nameWithType: HCGStudio.DongBot.Core.Messages
+  fullName: HCGStudio.DongBot.Core.Messages
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content
+  name: Content
+  nameWithType: IAtMessage<TAccount>.Content
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>.Content
+  nameWithType.vb: IAtMessage(Of TAccount).Content
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount).Content
+- uid: '{TAccount}'
+  commentId: '!:TAccount'
+  definition: TAccount
+  name: TAccount
+  nameWithType: TAccount
+  fullName: TAccount
+- uid: TAccount
+  commentId: '!:TAccount'
+  name: TAccount
+  nameWithType: TAccount
+  fullName: TAccount
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll
+  name: AtAll
+  nameWithType: IAtMessage<TAccount>.AtAll
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>.AtAll
+  nameWithType.vb: IAtMessage(Of TAccount).AtAll
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount).AtAll
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

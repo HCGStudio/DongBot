@@ -8,19 +8,19 @@
     <title>&#25554;&#20214;&#32534;&#20889;&#25351;&#21335; </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="&#25554;&#20214;&#32534;&#20889;&#25351;&#21335; ">
-    <meta name="generator" content="docfx 2.56.0.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     
     
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -71,8 +71,8 @@
 
 <h2 id="前提条件">前提条件</h2>
 <p>安装<code>Visual Studio</code>并且启用<code>.Net Core跨平台开发</code>工作负载，或者安装<a href="https://dotnet.microsoft.com/download/dotnet-core">.Net Core SDK</a>与<code>Visual Studio Code</code>。并且添加对包<a href="https://www.nuget.org/packages/HCGStudio.DongBot.Core/">HCGStudio.DongBot.Core</a>的引用。</p>
-<h2 id="api保证">API保证</h2>
-<p>我们保证，在所有的次要版本中的更新中，如<code>v1.1.0.0</code>-&gt;<code>v1.1.1.0</code>，不会减少API，仅会增加必要的API。在所有的修补版本中，如<code>v1.1.0.0</code>-&gt;<code>v1.1.0.1</code>，API不会有任何变化，仅会有安全性修补。在主要版本更新中，如<code>v1.1.0.0</code>-&gt;<code>v1.2.0.0</code>，肯能会减少API，但是插件的加载方式不会发生变化，删去减少的API插件理论上仍然会继续工作。在大版本更新中，如<code>v1.1.0.0</code>-&gt;<code>v2.0.0.0</code>，插件的加载方式及定义可能会发生改变，原有的插件可能需要重新编写才能继续使用。</p>
+<h2 id="abi稳定性">ABI稳定性</h2>
+<p>我们保证，在所有的次要版本中的更新中，如<code>v1.1.0.0</code>-&gt;<code>v1.1.1.0</code>，不会减少API，仅会增加必要的API。在所有的修补版本中，如<code>v1.1.0.0</code>-&gt;<code>v1.1.0.1</code>，API不会有任何变化，仅会有安全性修补。在主要版本更新中，如<code>v1.1.0.0</code>-&gt;<code>v1.2.0.0</code>，可能会减少API，但是插件的加载方式不会发生变化，删去减少的API插件理论上仍然会继续工作。在大版本更新中，如<code>v1.1.0.0</code>-&gt;<code>v2.0.0.0</code>，插件的加载方式及定义可能会发生改变，原有的插件可能需要重新编写才能继续使用。</p>
 <h2 id="定义插件类">定义插件类</h2>
 <p>所有的插件，都是由服务进行控制，插件选择的服务名需要使用注解的形式在编译时进行指定。注意：服务控制只在群组中可用，即一个插件的私聊应对不会受群组中服务启用的是否控制。</p>
 <p>下面是插件类注解示例：</p>

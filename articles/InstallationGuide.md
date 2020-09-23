@@ -2,38 +2,40 @@
 
 ## 安装需求
 
-本框架默认使用酷Q作为聊天收发后端，请先下载并安装[酷Q Air](https://dlsec.cqp.me/cqa-full)、[酷QPro](https://dlsec.cqp.me/cqp-xiaoi)或者[mirai](https://github.com/mamoe/mirai)+[cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai)。
+> 本框架默认使用酷Q作为聊天收发后端，请先下载并安装[酷Q Air](https://dlsec.cqp.me/cqa-full)、[酷QPro](https://dlsec.cqp.me/cqp-xiaoi)或者[mirai](https://github.com/mamoe/mirai)+[cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai).
+>
+> 然后安装`CqHttp`插件，详细请参考[CqHttp文档](https://cqhttp.cc/docs/)。请在酷Q`data/app/io.github.richardchien.coolqhttpapi`目录中新建`config.ini`，输入以下内容
+>
+> ``` ini
+> [使用的QQ账号]
+> access_token = 你想设置的随机字符串
+> ws_port = 5800
+> use_ws = yes
+> serve_data_files = no
+> host = 0.0.0.0
+> ```
+>
+> 如果您觉得上述步骤过于繁琐，可以使用`CqHttp`的[docker镜像](https://cqhttp.cc/docs/#/Docker)（仅支持`Linux`容器），docker参考启动命令：
+>
+> ``` bash
+> sudo docker run -d --name=cqhttp \
+> -v $(pwd)/coolq:/home/user/coolq \
+> -p 9000:9000 \
+> -p 5800:5800 \
+> -e VNC_PASSWD=qwertyui \
+> -e COOLQ_ACCOUNT=000000 \
+> -e COOLQ_URL=https://dlsec.cqp.me/cqp-full \
+> -e CQHTTP_SERVE_DATA_FILES=no \
+> -e CQHTTP_USE_WS=yes \
+> -e CQHTTP_WS_PORT=5800 \
+> -e CQHTTP_HOST=0.0.0.0 \
+> -e CQHTTP_ACCESS_TOKEN=asdf \
+> richardchien/cqhttp:latest
+> ```
+>
+> 然后安装`dotnet`，请按照[这个页面](https://dotnet.microsoft.com/download/dotnet-core/current/runtime)的步骤进行安装。
 
-然后安装`CqHttp`插件，详细请参考[CqHttp文档](https://cqhttp.cc/docs/)。请在酷Q`data/app/io.github.richardchien.coolqhttpapi`目录中新建`config.ini`，输入以下内容
-
-``` ini
-[使用的QQ账号]
-access_token = 你想设置的随机字符串
-ws_port = 5800
-use_ws = yes
-serve_data_files = no
-host = 0.0.0.0
-```
-
-如果您觉得上述步骤过于繁琐，可以使用`CqHttp`的[docker镜像](https://cqhttp.cc/docs/#/Docker)（仅支持`Linux`容器），docker参考启动命令：
-
-``` bash
-sudo docker run -d --name=cqhttp \
--v $(pwd)/coolq:/home/user/coolq \
--p 9000:9000 \
--p 5800:5800 \
--e VNC_PASSWD=qwertyui \
--e COOLQ_ACCOUNT=000000 \
--e COOLQ_URL=https://dlsec.cqp.me/cqp-full \
--e CQHTTP_SERVE_DATA_FILES=no \
--e CQHTTP_USE_WS=yes \
--e CQHTTP_WS_PORT=5800 \
--e CQHTTP_HOST=0.0.0.0 \
--e CQHTTP_ACCESS_TOKEN=asdf \
-richardchien/cqhttp:latest
-```
-
-然后安装`dotnet`，请按照[这个页面](https://dotnet.microsoft.com/download/dotnet-core/current/runtime)的步骤进行安装。
+由于现在酷Q已死，请考虑使用[go-cqhttp](https://github.com/Mrs4s/go-cqhttp)做代替，配置较为简单，配置请注意端口和使用WebSocket。
 
 ## 下载程序
 

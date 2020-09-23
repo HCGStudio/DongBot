@@ -719,57 +719,6 @@ references:
   isSpec: "True"
   fullName: HCGStudio.DongBot.Core.Messages.AtMessage.Content
   nameWithType: AtMessage.Content
-- uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage
-  name: Base64PictureMessage
-  href: api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html
-  commentId: T:HCGStudio.DongBot.Core.Messages.Base64PictureMessage
-  fullName: HCGStudio.DongBot.Core.Messages.Base64PictureMessage
-  nameWithType: Base64PictureMessage
-- uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.#ctor(System.String)
-  name: Base64PictureMessage(String)
-  href: api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html#HCGStudio_DongBot_Core_Messages_Base64PictureMessage__ctor_System_String_
-  commentId: M:HCGStudio.DongBot.Core.Messages.Base64PictureMessage.#ctor(System.String)
-  fullName: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.Base64PictureMessage(System.String)
-  nameWithType: Base64PictureMessage.Base64PictureMessage(String)
-- uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.#ctor(System.Uri)
-  name: Base64PictureMessage(Uri)
-  href: api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html#HCGStudio_DongBot_Core_Messages_Base64PictureMessage__ctor_System_Uri_
-  commentId: M:HCGStudio.DongBot.Core.Messages.Base64PictureMessage.#ctor(System.Uri)
-  fullName: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.Base64PictureMessage(System.Uri)
-  nameWithType: Base64PictureMessage.Base64PictureMessage(Uri)
-- uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.#ctor*
-  name: Base64PictureMessage
-  href: api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html#HCGStudio_DongBot_Core_Messages_Base64PictureMessage__ctor_
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.Base64PictureMessage.#ctor
-  isSpec: "True"
-  fullName: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.Base64PictureMessage
-  nameWithType: Base64PictureMessage.Base64PictureMessage
-- uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.ToBase64StringAsync
-  name: ToBase64StringAsync()
-  href: api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html#HCGStudio_DongBot_Core_Messages_Base64PictureMessage_ToBase64StringAsync
-  commentId: M:HCGStudio.DongBot.Core.Messages.Base64PictureMessage.ToBase64StringAsync
-  fullName: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.ToBase64StringAsync()
-  nameWithType: Base64PictureMessage.ToBase64StringAsync()
-- uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.ToBase64StringAsync*
-  name: ToBase64StringAsync
-  href: api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html#HCGStudio_DongBot_Core_Messages_Base64PictureMessage_ToBase64StringAsync_
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.Base64PictureMessage.ToBase64StringAsync
-  isSpec: "True"
-  fullName: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.ToBase64StringAsync
-  nameWithType: Base64PictureMessage.ToBase64StringAsync
-- uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.Url
-  name: Url
-  href: api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html#HCGStudio_DongBot_Core_Messages_Base64PictureMessage_Url
-  commentId: P:HCGStudio.DongBot.Core.Messages.Base64PictureMessage.Url
-  fullName: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.Url
-  nameWithType: Base64PictureMessage.Url
-- uid: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.Url*
-  name: Url
-  href: api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html#HCGStudio_DongBot_Core_Messages_Base64PictureMessage_Url_
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.Base64PictureMessage.Url
-  isSpec: "True"
-  fullName: HCGStudio.DongBot.Core.Messages.Base64PictureMessage.Url
-  nameWithType: Base64PictureMessage.Url
 - uid: HCGStudio.DongBot.Core.Messages.IAtMessage
   name: IAtMessage
   href: api/HCGStudio.DongBot.Core.Messages.IAtMessage.html
@@ -802,38 +751,132 @@ references:
   isSpec: "True"
   fullName: HCGStudio.DongBot.Core.Messages.IAtMessage.Content
   nameWithType: IAtMessage.Content
-- uid: HCGStudio.DongBot.Core.Messages.IPictureMessage
-  name: IPictureMessage
-  href: api/HCGStudio.DongBot.Core.Messages.IPictureMessage.html
-  commentId: T:HCGStudio.DongBot.Core.Messages.IPictureMessage
-  fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage
-  nameWithType: IPictureMessage
-- uid: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
-  name: ToBase64StringAsync()
-  href: api/HCGStudio.DongBot.Core.Messages.IPictureMessage.html#HCGStudio_DongBot_Core_Messages_IPictureMessage_ToBase64StringAsync
-  commentId: M:HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
-  fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync()
-  nameWithType: IPictureMessage.ToBase64StringAsync()
-- uid: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync*
-  name: ToBase64StringAsync
-  href: api/HCGStudio.DongBot.Core.Messages.IPictureMessage.html#HCGStudio_DongBot_Core_Messages_IPictureMessage_ToBase64StringAsync_
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1
+  name: IAtMessage<TAccount>
+  href: api/HCGStudio.DongBot.Core.Messages.IAtMessage-1.html
+  commentId: T:HCGStudio.DongBot.Core.Messages.IAtMessage`1
+  name.vb: IAtMessage(Of TAccount)
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount)
+  nameWithType: IAtMessage<TAccount>
+  nameWithType.vb: IAtMessage(Of TAccount)
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll
+  name: AtAll
+  href: api/HCGStudio.DongBot.Core.Messages.IAtMessage-1.html#HCGStudio_DongBot_Core_Messages_IAtMessage_1_AtAll
+  commentId: P:HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>.AtAll
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount).AtAll
+  nameWithType: IAtMessage<TAccount>.AtAll
+  nameWithType.vb: IAtMessage(Of TAccount).AtAll
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll*
+  name: AtAll
+  href: api/HCGStudio.DongBot.Core.Messages.IAtMessage-1.html#HCGStudio_DongBot_Core_Messages_IAtMessage_1_AtAll_
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.IAtMessage`1.AtAll
   isSpec: "True"
-  fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
-  nameWithType: IPictureMessage.ToBase64StringAsync
-- uid: HCGStudio.DongBot.Core.Messages.IPictureMessage.Url
-  name: Url
-  href: api/HCGStudio.DongBot.Core.Messages.IPictureMessage.html#HCGStudio_DongBot_Core_Messages_IPictureMessage_Url
-  commentId: P:HCGStudio.DongBot.Core.Messages.IPictureMessage.Url
-  fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage.Url
-  nameWithType: IPictureMessage.Url
-- uid: HCGStudio.DongBot.Core.Messages.IPictureMessage.Url*
-  name: Url
-  href: api/HCGStudio.DongBot.Core.Messages.IPictureMessage.html#HCGStudio_DongBot_Core_Messages_IPictureMessage_Url_
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.IPictureMessage.Url
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>.AtAll
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount).AtAll
+  nameWithType: IAtMessage<TAccount>.AtAll
+  nameWithType.vb: IAtMessage(Of TAccount).AtAll
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content
+  name: Content
+  href: api/HCGStudio.DongBot.Core.Messages.IAtMessage-1.html#HCGStudio_DongBot_Core_Messages_IAtMessage_1_Content
+  commentId: P:HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>.Content
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount).Content
+  nameWithType: IAtMessage<TAccount>.Content
+  nameWithType.vb: IAtMessage(Of TAccount).Content
+- uid: HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content*
+  name: Content
+  href: api/HCGStudio.DongBot.Core.Messages.IAtMessage-1.html#HCGStudio_DongBot_Core_Messages_IAtMessage_1_Content_
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.IAtMessage`1.Content
   isSpec: "True"
-  fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage.Url
-  nameWithType: IPictureMessage.Url
+  fullName: HCGStudio.DongBot.Core.Messages.IAtMessage<TAccount>.Content
+  fullName.vb: HCGStudio.DongBot.Core.Messages.IAtMessage(Of TAccount).Content
+  nameWithType: IAtMessage<TAccount>.Content
+  nameWithType.vb: IAtMessage(Of TAccount).Content
+- uid: HCGStudio.DongBot.Core.Messages.IImageMessage
+  name: IImageMessage
+  href: api/HCGStudio.DongBot.Core.Messages.IImageMessage.html
+  commentId: T:HCGStudio.DongBot.Core.Messages.IImageMessage
+  fullName: HCGStudio.DongBot.Core.Messages.IImageMessage
+  nameWithType: IImageMessage
+- uid: HCGStudio.DongBot.Core.Messages.IImageMessage.Content
+  name: Content
+  href: api/HCGStudio.DongBot.Core.Messages.IImageMessage.html#HCGStudio_DongBot_Core_Messages_IImageMessage_Content
+  commentId: P:HCGStudio.DongBot.Core.Messages.IImageMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.IImageMessage.Content
+  nameWithType: IImageMessage.Content
+- uid: HCGStudio.DongBot.Core.Messages.IImageMessage.Content*
+  name: Content
+  href: api/HCGStudio.DongBot.Core.Messages.IImageMessage.html#HCGStudio_DongBot_Core_Messages_IImageMessage_Content_
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.IImageMessage.Content
+  isSpec: "True"
+  fullName: HCGStudio.DongBot.Core.Messages.IImageMessage.Content
+  nameWithType: IImageMessage.Content
+- uid: HCGStudio.DongBot.Core.Messages.IImageMessage.Url
+  name: Url
+  href: api/HCGStudio.DongBot.Core.Messages.IImageMessage.html#HCGStudio_DongBot_Core_Messages_IImageMessage_Url
+  commentId: P:HCGStudio.DongBot.Core.Messages.IImageMessage.Url
+  fullName: HCGStudio.DongBot.Core.Messages.IImageMessage.Url
+  nameWithType: IImageMessage.Url
+- uid: HCGStudio.DongBot.Core.Messages.IImageMessage.Url*
+  name: Url
+  href: api/HCGStudio.DongBot.Core.Messages.IImageMessage.html#HCGStudio_DongBot_Core_Messages_IImageMessage_Url_
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.IImageMessage.Url
+  isSpec: "True"
+  fullName: HCGStudio.DongBot.Core.Messages.IImageMessage.Url
+  nameWithType: IImageMessage.Url
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage
+  name: ImageMessage
+  href: api/HCGStudio.DongBot.Core.Messages.ImageMessage.html
+  commentId: T:HCGStudio.DongBot.Core.Messages.ImageMessage
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage
+  nameWithType: ImageMessage
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.String)
+  name: ImageMessage(String)
+  href: api/HCGStudio.DongBot.Core.Messages.ImageMessage.html#HCGStudio_DongBot_Core_Messages_ImageMessage__ctor_System_String_
+  commentId: M:HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.String)
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.ImageMessage(System.String)
+  nameWithType: ImageMessage.ImageMessage(String)
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.Uri,System.Boolean)
+  name: ImageMessage(Uri, Boolean)
+  href: api/HCGStudio.DongBot.Core.Messages.ImageMessage.html#HCGStudio_DongBot_Core_Messages_ImageMessage__ctor_System_Uri_System_Boolean_
+  commentId: M:HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.Uri,System.Boolean)
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.ImageMessage(System.Uri, System.Boolean)
+  nameWithType: ImageMessage.ImageMessage(Uri, Boolean)
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor*
+  name: ImageMessage
+  href: api/HCGStudio.DongBot.Core.Messages.ImageMessage.html#HCGStudio_DongBot_Core_Messages_ImageMessage__ctor_
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor
+  isSpec: "True"
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.ImageMessage
+  nameWithType: ImageMessage.ImageMessage
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  name: Content
+  href: api/HCGStudio.DongBot.Core.Messages.ImageMessage.html#HCGStudio_DongBot_Core_Messages_ImageMessage_Content
+  commentId: P:HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  nameWithType: ImageMessage.Content
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.Content*
+  name: Content
+  href: api/HCGStudio.DongBot.Core.Messages.ImageMessage.html#HCGStudio_DongBot_Core_Messages_ImageMessage_Content_
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  isSpec: "True"
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  nameWithType: ImageMessage.Content
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.Url
+  name: Url
+  href: api/HCGStudio.DongBot.Core.Messages.ImageMessage.html#HCGStudio_DongBot_Core_Messages_ImageMessage_Url
+  commentId: P:HCGStudio.DongBot.Core.Messages.ImageMessage.Url
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.Url
+  nameWithType: ImageMessage.Url
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.Url*
+  name: Url
+  href: api/HCGStudio.DongBot.Core.Messages.ImageMessage.html#HCGStudio_DongBot_Core_Messages_ImageMessage_Url_
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.ImageMessage.Url
+  isSpec: "True"
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.Url
+  nameWithType: ImageMessage.Url
 - uid: HCGStudio.DongBot.Core.Messages.ISimpleMessage
   name: ISimpleMessage
   href: api/HCGStudio.DongBot.Core.Messages.ISimpleMessage.html
@@ -872,63 +915,38 @@ references:
   isSpec: "True"
   fullName: HCGStudio.DongBot.Core.Messages.IUnionMessage.Messages
   nameWithType: IUnionMessage.Messages
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
-  name: LocalPictureMessage
-  href: api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html
-  commentId: T:HCGStudio.DongBot.Core.Messages.LocalPictureMessage
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
-  nameWithType: LocalPictureMessage
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.String)
-  name: LocalPictureMessage(String)
-  href: api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html#HCGStudio_DongBot_Core_Messages_LocalPictureMessage__ctor_System_String_
-  commentId: M:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.String)
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.LocalPictureMessage(System.String)
-  nameWithType: LocalPictureMessage.LocalPictureMessage(String)
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.Uri)
-  name: LocalPictureMessage(Uri)
-  href: api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html#HCGStudio_DongBot_Core_Messages_LocalPictureMessage__ctor_System_Uri_
-  commentId: M:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.Uri)
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.LocalPictureMessage(System.Uri)
-  nameWithType: LocalPictureMessage.LocalPictureMessage(Uri)
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor*
-  name: LocalPictureMessage
-  href: api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html#HCGStudio_DongBot_Core_Messages_LocalPictureMessage__ctor_
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor
-  isSpec: "True"
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.LocalPictureMessage
-  nameWithType: LocalPictureMessage.LocalPictureMessage
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync
-  name: ToBase64StringAsync()
-  href: api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html#HCGStudio_DongBot_Core_Messages_LocalPictureMessage_ToBase64StringAsync
-  commentId: M:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync()
-  nameWithType: LocalPictureMessage.ToBase64StringAsync()
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync*
-  name: ToBase64StringAsync
-  href: api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html#HCGStudio_DongBot_Core_Messages_LocalPictureMessage_ToBase64StringAsync_
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync
-  isSpec: "True"
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync
-  nameWithType: LocalPictureMessage.ToBase64StringAsync
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
-  name: Url
-  href: api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html#HCGStudio_DongBot_Core_Messages_LocalPictureMessage_Url
-  commentId: P:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
-  nameWithType: LocalPictureMessage.Url
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url*
-  name: Url
-  href: api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html#HCGStudio_DongBot_Core_Messages_LocalPictureMessage_Url_
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
-  isSpec: "True"
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
-  nameWithType: LocalPictureMessage.Url
 - uid: HCGStudio.DongBot.Core.Messages.Message
   name: Message
   href: api/HCGStudio.DongBot.Core.Messages.Message.html
   commentId: T:HCGStudio.DongBot.Core.Messages.Message
   fullName: HCGStudio.DongBot.Core.Messages.Message
   nameWithType: Message
+- uid: HCGStudio.DongBot.Core.Messages.Message.#ctor
+  name: Message()
+  href: api/HCGStudio.DongBot.Core.Messages.Message.html#HCGStudio_DongBot_Core_Messages_Message__ctor
+  commentId: M:HCGStudio.DongBot.Core.Messages.Message.#ctor
+  fullName: HCGStudio.DongBot.Core.Messages.Message.Message()
+  nameWithType: Message.Message()
+- uid: HCGStudio.DongBot.Core.Messages.Message.#ctor*
+  name: Message
+  href: api/HCGStudio.DongBot.Core.Messages.Message.html#HCGStudio_DongBot_Core_Messages_Message__ctor_
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.Message.#ctor
+  isSpec: "True"
+  fullName: HCGStudio.DongBot.Core.Messages.Message.Message
+  nameWithType: Message.Message
+- uid: HCGStudio.DongBot.Core.Messages.Message.MessageType
+  name: MessageType
+  href: api/HCGStudio.DongBot.Core.Messages.Message.html#HCGStudio_DongBot_Core_Messages_Message_MessageType
+  commentId: P:HCGStudio.DongBot.Core.Messages.Message.MessageType
+  fullName: HCGStudio.DongBot.Core.Messages.Message.MessageType
+  nameWithType: Message.MessageType
+- uid: HCGStudio.DongBot.Core.Messages.Message.MessageType*
+  name: MessageType
+  href: api/HCGStudio.DongBot.Core.Messages.Message.html#HCGStudio_DongBot_Core_Messages_Message_MessageType_
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.Message.MessageType
+  isSpec: "True"
+  fullName: HCGStudio.DongBot.Core.Messages.Message.MessageType
+  nameWithType: Message.MessageType
 - uid: HCGStudio.DongBot.Core.Messages.Message.ToPureString
   name: ToPureString()
   href: api/HCGStudio.DongBot.Core.Messages.Message.html#HCGStudio_DongBot_Core_Messages_Message_ToPureString

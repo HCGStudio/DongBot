@@ -9,8 +9,8 @@
 		<PackageProjectUrl>https://github.com/HCGStudio/DongBot</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/HCGStudio/DongBot</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>1.1.0</Version>
-		<PackageReleaseNotes>Add help.</PackageReleaseNotes>
+		<Version>1.2.0-pre1</Version>
+		<PackageReleaseNotes>Make change to suit DongMsg.</PackageReleaseNotes>
 	</PropertyGroup>
 	<PropertyGroup>
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>

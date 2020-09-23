@@ -22,7 +22,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: KeywordPolicy
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 44
@@ -55,7 +55,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: AllMatch
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 49
@@ -89,7 +89,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Trim
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 54
@@ -123,7 +123,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Contains
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 59
@@ -157,7 +157,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Begin
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 64
@@ -191,7 +191,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: AcceptAll
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 69
@@ -225,7 +225,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Regex
     path: HCGStudio.DongBot.Core/Attributes/OnKeywordAttribute.cs
     startLine: 74

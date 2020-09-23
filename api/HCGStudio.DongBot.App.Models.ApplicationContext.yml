@@ -18,7 +18,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Models/Service.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ApplicationContext
     path: HCGStudio.DongBot.App/Models/Service.cs
     startLine: 15
@@ -29,7 +29,9 @@ items:
     content: 'public class ApplicationContext : DbContext, IDisposable, IAsyncDisposable, IInfrastructure<IServiceProvider>, IDbContextDependencies, IDbSetCache, IDbContextPoolable, IResettableService'
     content.vb: >-
       Public Class ApplicationContext
+
           Inherits DbContext
+
           Implements IDisposable, IAsyncDisposable, IInfrastructure(Of IServiceProvider), IDbContextDependencies, IDbSetCache, IDbContextPoolable, IResettableService
   inheritance:
   - System.Object
@@ -127,7 +129,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Models/Service.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ServiceRecords
     path: HCGStudio.DongBot.App/Models/Service.cs
     startLine: 17
@@ -162,7 +164,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/Models/Service.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: OnConfiguring
     path: HCGStudio.DongBot.App/Models/Service.cs
     startLine: 19

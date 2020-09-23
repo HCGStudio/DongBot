@@ -7,12 +7,12 @@ namespace HCGStudio.DongBot.Core.Messages
     /// </summary>
     public class UnionMessage : Message, IUnionMessage
     {
-        internal UnionMessage(IEnumerable<Message> messages)
+        internal UnionMessage(IReadOnlyList<Message> messages)
         {
             Messages = messages;
         }
 
         /// <inheritdoc />
-        public IEnumerable<Message> Messages { get; }
+        public IReadOnlyList<Message> Messages { get; }
     }
 }

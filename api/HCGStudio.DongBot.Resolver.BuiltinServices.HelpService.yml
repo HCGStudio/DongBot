@@ -18,7 +18,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Resolver/BuiltinServices/HelpService.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: HelpService
     path: HCGStudio.DongBot.Resolver/BuiltinServices/HelpService.cs
     startLine: 13
@@ -73,7 +73,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Resolver/BuiltinServices/HelpService.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: .ctor
     path: HCGStudio.DongBot.Resolver/BuiltinServices/HelpService.cs
     startLine: 23
@@ -109,7 +109,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Resolver/BuiltinServices/HelpService.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: GetHelpAsync
     path: HCGStudio.DongBot.Resolver/BuiltinServices/HelpService.cs
     startLine: 34

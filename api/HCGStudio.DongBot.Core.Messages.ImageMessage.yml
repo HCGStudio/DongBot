@@ -1,46 +1,49 @@
 ### YamlMime:ManagedReference
 items:
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
-  commentId: T:HCGStudio.DongBot.Core.Messages.LocalPictureMessage
-  id: LocalPictureMessage
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage
+  commentId: T:HCGStudio.DongBot.Core.Messages.ImageMessage
+  id: ImageMessage
   parent: HCGStudio.DongBot.Core.Messages
   children:
-  - HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.String)
-  - HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.Uri)
-  - HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync
-  - HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
+  - HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.String)
+  - HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.Uri,System.Boolean)
+  - HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  - HCGStudio.DongBot.Core.Messages.ImageMessage.Url
   langs:
   - csharp
   - vb
-  name: LocalPictureMessage
-  nameWithType: LocalPictureMessage
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
+  name: ImageMessage
+  nameWithType: ImageMessage
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage
   type: Class
   source:
     remote:
-      path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
+      path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
-    id: LocalPictureMessage
-    path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
-    startLine: 10
+      repo: https://github.com/HCGStudio/DongBot.git
+    id: ImageMessage
+    path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
+    startLine: 12
   assemblies:
   - HCGStudio.DongBot.Core
   namespace: HCGStudio.DongBot.Core.Messages
-  summary: "\n本地储存的图片\n"
+  summary: "\n图片消息\n"
   example: []
   syntax:
-    content: 'public class LocalPictureMessage : Message, IPictureMessage'
+    content: 'public class ImageMessage : Message, IImageMessage'
     content.vb: >-
-      Public Class LocalPictureMessage
+      Public Class ImageMessage
+
           Inherits Message
-          Implements IPictureMessage
+
+          Implements IImageMessage
   inheritance:
   - System.Object
   - HCGStudio.DongBot.Core.Messages.Message
   implements:
-  - HCGStudio.DongBot.Core.Messages.IPictureMessage
+  - HCGStudio.DongBot.Core.Messages.IImageMessage
   inheritedMembers:
+  - HCGStudio.DongBot.Core.Messages.Message.MessageType
   - HCGStudio.DongBot.Core.Messages.Message.ToPureString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -55,101 +58,28 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.String)
-  commentId: M:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.String)
-  id: '#ctor(System.String)'
-  parent: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
-  langs:
-  - csharp
-  - vb
-  name: LocalPictureMessage(String)
-  nameWithType: LocalPictureMessage.LocalPictureMessage(String)
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.LocalPictureMessage(System.String)
-  type: Constructor
-  source:
-    remote:
-      path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
-      branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
-    id: .ctor
-    path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
-    startLine: 16
-  assemblies:
-  - HCGStudio.DongBot.Core
-  namespace: HCGStudio.DongBot.Core.Messages
-  summary: "\n初始化本地储存图片\n"
-  example: []
-  syntax:
-    content: public LocalPictureMessage(string url)
-    parameters:
-    - id: url
-      type: System.String
-      description: 图片的地址
-    content.vb: Public Sub New(url As String)
-  overload: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.Uri)
-  commentId: M:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor(System.Uri)
-  id: '#ctor(System.Uri)'
-  parent: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
-  langs:
-  - csharp
-  - vb
-  name: LocalPictureMessage(Uri)
-  nameWithType: LocalPictureMessage.LocalPictureMessage(Uri)
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.LocalPictureMessage(System.Uri)
-  type: Constructor
-  source:
-    remote:
-      path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
-      branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
-    id: .ctor
-    path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
-    startLine: 25
-  assemblies:
-  - HCGStudio.DongBot.Core
-  namespace: HCGStudio.DongBot.Core.Messages
-  summary: "\n初始化本地储存的图片\n"
-  example: []
-  syntax:
-    content: public LocalPictureMessage(Uri url)
-    parameters:
-    - id: url
-      type: System.Uri
-      description: 图片的地址
-    content.vb: Public Sub New(url As Uri)
-  overload: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
-  commentId: P:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.Url
+  commentId: P:HCGStudio.DongBot.Core.Messages.ImageMessage.Url
   id: Url
-  parent: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
+  parent: HCGStudio.DongBot.Core.Messages.ImageMessage
   langs:
   - csharp
   - vb
   name: Url
-  nameWithType: LocalPictureMessage.Url
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
+  nameWithType: ImageMessage.Url
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.Url
   type: Property
   source:
     remote:
-      path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
+      path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: Url
-    path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
-    startLine: 32
+    path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
+    startLine: 15
   assemblies:
   - HCGStudio.DongBot.Core
   namespace: HCGStudio.DongBot.Core.Messages
-  summary: "\n图片在本地或者在远程储存的地址\n"
   example: []
   syntax:
     content: public Uri Url { get; }
@@ -157,48 +87,124 @@ items:
     return:
       type: System.Uri
     content.vb: Public ReadOnly Property Url As Uri
-  overload: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url*
+  overload: HCGStudio.DongBot.Core.Messages.ImageMessage.Url*
   implements:
-  - HCGStudio.DongBot.Core.Messages.IPictureMessage.Url
+  - HCGStudio.DongBot.Core.Messages.IImageMessage.Url
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync
-  commentId: M:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync
-  id: ToBase64StringAsync
-  parent: HCGStudio.DongBot.Core.Messages.LocalPictureMessage
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  commentId: P:HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  id: Content
+  parent: HCGStudio.DongBot.Core.Messages.ImageMessage
   langs:
   - csharp
   - vb
-  name: ToBase64StringAsync()
-  nameWithType: LocalPictureMessage.ToBase64StringAsync()
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync()
-  type: Method
+  name: Content
+  nameWithType: ImageMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  type: Property
   source:
     remote:
-      path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
+      path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
-    id: ToBase64StringAsync
-    path: HCGStudio.DongBot.Core/Messages/LocalPictureMessage.cs
-    startLine: 35
+      repo: https://github.com/HCGStudio/DongBot.git
+    id: Content
+    path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
+    startLine: 18
   assemblies:
   - HCGStudio.DongBot.Core
   namespace: HCGStudio.DongBot.Core.Messages
-  summary: "\n将图片转化为Base64字符串\n"
   example: []
   syntax:
-    content: public Task<string> ToBase64StringAsync()
+    content: public IReadOnlyList<byte> Content { get; }
+    parameters: []
     return:
-      type: System.Threading.Tasks.Task{System.String}
-      description: 转化的Base64字符串
-    content.vb: Public Function ToBase64StringAsync As Task(Of String)
-  overload: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync*
+      type: System.Collections.Generic.IReadOnlyList{System.Byte}
+    content.vb: Public ReadOnly Property Content As IReadOnlyList(Of Byte)
+  overload: HCGStudio.DongBot.Core.Messages.ImageMessage.Content*
   implements:
-  - HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
+  - HCGStudio.DongBot.Core.Messages.IImageMessage.Content
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.Uri,System.Boolean)
+  commentId: M:HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.Uri,System.Boolean)
+  id: '#ctor(System.Uri,System.Boolean)'
+  parent: HCGStudio.DongBot.Core.Messages.ImageMessage
+  langs:
+  - csharp
+  - vb
+  name: ImageMessage(Uri, Boolean)
+  nameWithType: ImageMessage.ImageMessage(Uri, Boolean)
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.ImageMessage(System.Uri, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
+      branch: master
+      repo: https://github.com/HCGStudio/DongBot.git
+    id: .ctor
+    path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
+    startLine: 54
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n从WebUrl中创建图片消息\n"
+  example: []
+  syntax:
+    content: public ImageMessage(Uri url, bool cacheNow = false)
+    parameters:
+    - id: url
+      type: System.Uri
+      description: 文件在远程服务器的位置
+    - id: cacheNow
+      type: System.Boolean
+      description: 是否立即从远程服务器中下载图片的缓存
+    content.vb: Public Sub New(url As Uri, cacheNow As Boolean = False)
+  overload: HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.String)
+  commentId: M:HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: HCGStudio.DongBot.Core.Messages.ImageMessage
+  langs:
+  - csharp
+  - vb
+  name: ImageMessage(String)
+  nameWithType: ImageMessage.ImageMessage(String)
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.ImageMessage(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
+      branch: master
+      repo: https://github.com/HCGStudio/DongBot.git
+    id: .ctor
+    path: HCGStudio.DongBot.Core/Messages/ImageMessage.cs
+    startLine: 65
+  assemblies:
+  - HCGStudio.DongBot.Core
+  namespace: HCGStudio.DongBot.Core.Messages
+  summary: "\n从本地文件中创建图像消息\n"
+  example: []
+  syntax:
+    content: public ImageMessage(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: 文件路径
+    content.vb: Public Sub New(path As String)
+  overload: HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -222,12 +228,18 @@ references:
   name: Message
   nameWithType: Message
   fullName: HCGStudio.DongBot.Core.Messages.Message
-- uid: HCGStudio.DongBot.Core.Messages.IPictureMessage
-  commentId: T:HCGStudio.DongBot.Core.Messages.IPictureMessage
+- uid: HCGStudio.DongBot.Core.Messages.IImageMessage
+  commentId: T:HCGStudio.DongBot.Core.Messages.IImageMessage
   parent: HCGStudio.DongBot.Core.Messages
-  name: IPictureMessage
-  nameWithType: IPictureMessage
-  fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage
+  name: IImageMessage
+  nameWithType: IImageMessage
+  fullName: HCGStudio.DongBot.Core.Messages.IImageMessage
+- uid: HCGStudio.DongBot.Core.Messages.Message.MessageType
+  commentId: P:HCGStudio.DongBot.Core.Messages.Message.MessageType
+  parent: HCGStudio.DongBot.Core.Messages.Message
+  name: MessageType
+  nameWithType: Message.MessageType
+  fullName: HCGStudio.DongBot.Core.Messages.Message.MessageType
 - uid: HCGStudio.DongBot.Core.Messages.Message.ToPureString
   commentId: M:HCGStudio.DongBot.Core.Messages.Message.ToPureString
   parent: HCGStudio.DongBot.Core.Messages.Message
@@ -541,18 +553,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor*
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.#ctor
-  name: LocalPictureMessage
-  nameWithType: LocalPictureMessage.LocalPictureMessage
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.LocalPictureMessage
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.Url*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.ImageMessage.Url
+  name: Url
+  nameWithType: ImageMessage.Url
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.Url
+- uid: HCGStudio.DongBot.Core.Messages.IImageMessage.Url
+  commentId: P:HCGStudio.DongBot.Core.Messages.IImageMessage.Url
+  parent: HCGStudio.DongBot.Core.Messages.IImageMessage
+  name: Url
+  nameWithType: IImageMessage.Url
+  fullName: HCGStudio.DongBot.Core.Messages.IImageMessage.Url
 - uid: System.Uri
   commentId: T:System.Uri
   parent: System
@@ -560,136 +571,122 @@ references:
   name: Uri
   nameWithType: Uri
   fullName: System.Uri
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url*
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
-  name: Url
-  nameWithType: LocalPictureMessage.Url
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.Url
-- uid: HCGStudio.DongBot.Core.Messages.IPictureMessage.Url
-  commentId: P:HCGStudio.DongBot.Core.Messages.IPictureMessage.Url
-  parent: HCGStudio.DongBot.Core.Messages.IPictureMessage
-  name: Url
-  nameWithType: IPictureMessage.Url
-  fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage.Url
-- uid: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync*
-  commentId: Overload:HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync
-  name: ToBase64StringAsync
-  nameWithType: LocalPictureMessage.ToBase64StringAsync
-  fullName: HCGStudio.DongBot.Core.Messages.LocalPictureMessage.ToBase64StringAsync
-- uid: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
-  commentId: M:HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
-  parent: HCGStudio.DongBot.Core.Messages.IPictureMessage
-  name: ToBase64StringAsync()
-  nameWithType: IPictureMessage.ToBase64StringAsync()
-  fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync()
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.Content*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+  name: Content
+  nameWithType: ImageMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.Content
+- uid: HCGStudio.DongBot.Core.Messages.IImageMessage.Content
+  commentId: P:HCGStudio.DongBot.Core.Messages.IImageMessage.Content
+  parent: HCGStudio.DongBot.Core.Messages.IImageMessage
+  name: Content
+  nameWithType: IImageMessage.Content
+  fullName: HCGStudio.DongBot.Core.Messages.IImageMessage.Content
+- uid: System.Collections.Generic.IReadOnlyList{System.Byte}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.Byte}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  name: IReadOnlyList<Byte>
+  nameWithType: IReadOnlyList<Byte>
+  fullName: System.Collections.Generic.IReadOnlyList<System.Byte>
+  nameWithType.vb: IReadOnlyList(Of Byte)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of System.Byte)
+  name.vb: IReadOnlyList(Of Byte)
   spec.csharp:
-  - uid: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
-    name: ToBase64StringAsync
-    nameWithType: IPictureMessage.ToBase64StringAsync
-    fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
-    name: ToBase64StringAsync
-    nameWithType: IPictureMessage.ToBase64StringAsync
-    fullName: HCGStudio.DongBot.Core.Messages.IPictureMessage.ToBase64StringAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Threading.Tasks.Task{System.String}
-  commentId: T:System.Threading.Tasks.Task{System.String}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
-  name: Task<String>
-  nameWithType: Task<String>
-  fullName: System.Threading.Tasks.Task<System.String>
-  nameWithType.vb: Task(Of String)
-  fullName.vb: System.Threading.Tasks.Task(Of System.String)
-  name.vb: Task(Of String)
-  spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    nameWithType: IReadOnlyList
+    fullName: System.Collections.Generic.IReadOnlyList
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    nameWithType: IReadOnlyList
+    fullName: System.Collections.Generic.IReadOnlyList
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
   isExternal: true
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
   spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    nameWithType: IReadOnlyList
+    fullName: System.Collections.Generic.IReadOnlyList
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    nameWithType: Task
-    fullName: System.Threading.Tasks.Task
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    nameWithType: IReadOnlyList
+    fullName: System.Collections.Generic.IReadOnlyList
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: true
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor*
+  commentId: Overload:HCGStudio.DongBot.Core.Messages.ImageMessage.#ctor
+  name: ImageMessage
+  nameWithType: ImageMessage.ImageMessage
+  fullName: HCGStudio.DongBot.Core.Messages.ImageMessage.ImageMessage
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

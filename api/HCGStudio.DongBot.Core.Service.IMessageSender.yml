@@ -18,7 +18,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: IMessageSender
     path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
     startLine: 8
@@ -51,7 +51,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: SendGroupAsync
     path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
     startLine: 16
@@ -89,7 +89,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: SendPrivateAsync
     path: HCGStudio.DongBot.Core/Service/IMessageSender.cs
     startLine: 24

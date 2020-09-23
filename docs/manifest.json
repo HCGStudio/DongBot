@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/94048/source/repos/DongBot",
+  "source_base_path": "C:/Users/mahoshojoHCG/DongBot",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "eNMLr9nQvt3l3/gxv17gNA=="
+          "hash": "pe6PkVwuFpaXrWGrT2DIHA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.Migrations.Application.html",
-          "hash": "eBz2JuAWxCem6Ngbi9nKXg=="
+          "hash": "XULEWYVo3NJ+bRChcNMk5A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.Migrations.html",
-          "hash": "d41boZ2fGd1Mu+W/IfdKnQ=="
+          "hash": "SZxRr10iWBN94M02zqfZXQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.Models.ApplicationContext.html",
-          "hash": "lbA5UeORsUzrQV7VnlDMmQ=="
+          "hash": "aUBwBIR7YB+k/zy79OrqWQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.Models.ServiceRecord.html",
-          "hash": "Zmd/y8Zk8WdrfNsLVYdaUw=="
+          "hash": "cwQX5bt1HRekk0JYTAGYMg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.Models.html",
-          "hash": "4NVvnwlbaVJZM0ZWeb2m8w=="
+          "hash": "WBABZl3+8qJ9Hl3oLUYUEQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.Program.html",
-          "hash": "WHlHNL8xhqPIdzX3kXmBnQ=="
+          "hash": "n8wetXmE6xxEL5bIo/XLXQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.Startup.html",
-          "hash": "ovbGJFRYfNbK9Yrjkmcvag=="
+          "hash": "ivalJhj1XNe23j/v/0qMBw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.SystemService.BroadcastMessageSender-1.html",
-          "hash": "WkZF7qIgaYtiz2YaZ5T5ZA=="
+          "hash": "YNoB9xZhuyxdNlZjJRxNLw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.SystemService.ServiceService.html",
-          "hash": "aZwem7Pu6WZdBr4UnzkBfA=="
+          "hash": "+GM3Wd/DVtTVdwotB0Dwtw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.SystemService.VersionService.html",
-          "hash": "aMbYo6Qc9NQgugxMvf2M1g=="
+          "hash": "rEQDfuOalJxDxE8NKakHCw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.SystemService.html",
-          "hash": "VroOAfC3Fh7iNamo5K9ywg=="
+          "hash": "JET60NLRknp2yZLPQRWqSA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.App.html",
-          "hash": "DOKVuhaFU5VGSslzQvkHGQ=="
+          "hash": "7VWKIKgdHaWYyO9cHXxkNA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Attributes.InformationAttribute.html",
-          "hash": "wJ0yayB/GanyMPA338r4Bg=="
+          "hash": "fqPRq/gR+RItECmfICbGTg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Attributes.InvokePolicies.html",
-          "hash": "h0Hrq8IieuwvYfx1TRMcKg=="
+          "hash": "RHbVN1Fcc+NW5TIOPUxY3A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Attributes.KeywordPolicy.html",
-          "hash": "jlFbMxOV0zu6/D8WsuvsLA=="
+          "hash": "kcAyziuxuQe6ZpEK5+4Y7g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Attributes.OnKeywordAttribute.html",
-          "hash": "fhNOulZO4copx3JiV+f1Rw=="
+          "hash": "Yw/JFN0Boa6QJ4tBC8SMpg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Attributes.ScheduleTaskAttribute.html",
-          "hash": "3GfXlOj67Jwbmi1ew+etiA=="
+          "hash": "nndLgyAoXq7QZ4RolcznOA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Attributes.ServiceAttribute.html",
-          "hash": "wTpimqoe1sLda4oiT88MUQ=="
+          "hash": "DWeRH1aAOmE/XzxORqzJuA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Attributes.html",
-          "hash": "KH1sasf1J5vnUwdu+N2KTQ=="
+          "hash": "Jfrq/N6SVrOyDTJ+msXKuw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,22 +249,22 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Messages.AtMessage.html",
-          "hash": "mJzB0fq4Q9FKmDAL/R2hKQ=="
+          "hash": "XX26SJgDsApH/v6GCeozIg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.yml",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.IAtMessage-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/HCGStudio.DongBot.Core.Messages.Base64PictureMessage.html",
-          "hash": "aSrGlidboXJvg6/0UuM3MA=="
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.IAtMessage-1.html",
+          "hash": "k1I3noUCiMnvNAxGM1s69A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,22 +273,22 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Messages.IAtMessage.html",
-          "hash": "VIOHh8yq3RpTSR+mOBZEAg=="
+          "hash": "hCdeRuT31XDMVC2jRPLx3Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.IPictureMessage.yml",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.IImageMessage.yml",
       "output": {
         ".html": {
-          "relative_path": "api/HCGStudio.DongBot.Core.Messages.IPictureMessage.html",
-          "hash": "oCmyxd8bWlObz+CwApcV7A=="
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.IImageMessage.html",
+          "hash": "okTNfhxuLOVK150JS0+VfA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Messages.ISimpleMessage.html",
-          "hash": "+C+Nd2bmkXKylduCNUusWA=="
+          "hash": "+GDE1zFW1qdRCWbMGUyQSw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -309,22 +309,22 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Messages.IUnionMessage.html",
-          "hash": "C1nWIuCceQzsneYZcOYqPw=="
+          "hash": "cF3snEA26gjuNgFyzfIe8w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.yml",
+      "source_relative_path": "api/HCGStudio.DongBot.Core.Messages.ImageMessage.yml",
       "output": {
         ".html": {
-          "relative_path": "api/HCGStudio.DongBot.Core.Messages.LocalPictureMessage.html",
-          "hash": "SqVIwT6uUq26VUgvBtVQnQ=="
+          "relative_path": "api/HCGStudio.DongBot.Core.Messages.ImageMessage.html",
+          "hash": "GrtBn2EIuBCQ7Mq42Otz/Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -333,10 +333,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Messages.Message.html",
-          "hash": "3JRrC26nfwJ9VNA5e716cQ=="
+          "hash": "Gw2Cbk7KgllazxFrS6jCjw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -345,10 +345,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Messages.MessageBuilder.html",
-          "hash": "Hb1kHhKxNNCcvOqNnGMO3g=="
+          "hash": "pZW/WJKyYTyykdzxLakrRw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -357,10 +357,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Messages.SimpleMessage.html",
-          "hash": "l7sWwbJf7zWzP0IeKP4GtQ=="
+          "hash": "VOqLUNSj2eaxepxjCegJpw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -369,10 +369,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Messages.UnionMessage.html",
-          "hash": "wcMgZw9SMuzo6mj6m5CwWQ=="
+          "hash": "1s3lRNAWA1wR7XR2ZLzV/A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -381,10 +381,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Messages.html",
-          "hash": "mriHj8/3Ig5NNP9whAdkRg=="
+          "hash": "+TC9mL+nwXETYKJbCo9k4A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -393,10 +393,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Service.IBroadcastMessageSender-1.html",
-          "hash": "1NLOFIty4taVx7PHgVZlZQ=="
+          "hash": "wT0cBsGdk702bTovQcq/Fw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -405,10 +405,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Service.IMessageProvider.html",
-          "hash": "Is+pKrvrMS4jE+AzBNP+3g=="
+          "hash": "weX5xbRp5Jcq4Y403+RcMg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -417,10 +417,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Service.IMessageSender.html",
-          "hash": "t+WW9eI0bYQuVrMITJ01MA=="
+          "hash": "SP5zIACl51lN32Wc6BSJeg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -429,10 +429,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Core.Service.html",
-          "hash": "Mcdzu87TEaRj1dq9NXbsuw=="
+          "hash": "GQYaJBAdgC1S+bejFlYv5g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -441,10 +441,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.CqHttp.CqConfig.html",
-          "hash": "rlrOcIq1BkqGqHaiSOyO6w=="
+          "hash": "BvqJUjQXR1qfEq1dcJZN6A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -453,10 +453,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.CqHttp.Extension.html",
-          "hash": "82Nw7FF1MotDEMZDboGepA=="
+          "hash": "5dQTKDguJSmUIWSkAVcejg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -465,10 +465,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.CqHttp.html",
-          "hash": "LCs91QiUIYe8t4IkN2HEHw=="
+          "hash": "gEMBsoArgxuCZFJDgrBuKA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -477,10 +477,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Resolver.BuiltinServices.HelpService.html",
-          "hash": "+7QWd4q6HD+5zav3octBkQ=="
+          "hash": "Ees7ooWvZm1XoT3yu+sUow=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -489,10 +489,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Resolver.BuiltinServices.html",
-          "hash": "4txY1ygUQSZD5xkTtR4ATg=="
+          "hash": "8WplMXLvEDdy3KeWhUF6ww=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -501,10 +501,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Resolver.PluginResolver.html",
-          "hash": "BBTVIOWeqZwsPrW11X1U0w=="
+          "hash": "GrERujSRRUTBrZ3Xvns5hw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -513,10 +513,10 @@
       "output": {
         ".html": {
           "relative_path": "api/HCGStudio.DongBot.Resolver.html",
-          "hash": "QCoyJTalqScFQC2Hg4k23Q=="
+          "hash": "ffsgeV41hsLvAhmiY9WSRw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -525,10 +525,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "exS6kQmpTfbu5oAocCFLhQ=="
+          "hash": "XpotsA2Y+uxDwLF0PTF/sA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "O6ZlByDRsEvH2B0xeaJrDQ=="
+          "hash": "aVCbqjExrj+C1lDgltwbyQ=="
         }
       },
       "is_incremental": false,
@@ -549,10 +549,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/InstallationGuide.html",
-          "hash": "fU3RL0QE1d1FgXiGs8E2aw=="
+          "hash": "CHTRPf6WLAUqjQNat6o3lg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -561,10 +561,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/PluginGuide.html",
-          "hash": "Ibr6Q1Zy71mNGGpqmjSg+w=="
+          "hash": "qQluhQeGOIadvjlupVOP6Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -585,10 +585,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "OlWcSMpV7wZOdMd5++hulQ=="
+          "hash": "pmj6MUQZAGvJiTBq1HGbpw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -623,7 +623,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 42,
-          "skipped_file_count": 42
+          "skipped_file_count": 31
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

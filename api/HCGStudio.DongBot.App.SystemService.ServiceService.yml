@@ -20,7 +20,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ServiceService
     path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
     startLine: 9
@@ -77,7 +77,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: .ctor
     path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
     startLine: 14
@@ -110,7 +110,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: ListServices
     path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
     startLine: 19
@@ -167,7 +167,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: EnableService
     path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
     startLine: 35
@@ -226,7 +226,7 @@ items:
     remote:
       path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: DisableService
     path: HCGStudio.DongBot.App/SystemService/ServiceService.cs
     startLine: 61

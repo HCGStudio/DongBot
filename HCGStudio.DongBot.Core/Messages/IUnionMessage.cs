@@ -10,6 +10,6 @@ namespace HCGStudio.DongBot.Core.Messages
         /// <summary>
         ///     复合消息内部组成消息
         /// </summary>
-        IEnumerable<Message> Messages { get; }
+        IReadOnlyList<Message> Messages { get; }
     }
 }

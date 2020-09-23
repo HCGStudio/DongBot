@@ -17,7 +17,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IBroadcastMessageSender.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: IBroadcastMessageSender
     path: HCGStudio.DongBot.Core/Service/IBroadcastMessageSender.cs
     startLine: 9
@@ -56,7 +56,7 @@ items:
     remote:
       path: HCGStudio.DongBot.Core/Service/IBroadcastMessageSender.cs
       branch: master
-      repo: git@github.com:HCGStudio/DongBot.git
+      repo: https://github.com/HCGStudio/DongBot.git
     id: BroadcastAllEnabled
     path: HCGStudio.DongBot.Core/Service/IBroadcastMessageSender.cs
     startLine: 17
