@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30204.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31815.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HCGStudio.DongBot.Core", "HCGStudio.DongBot.Core\HCGStudio.DongBot.Core.csproj", "{E41E045A-0165-4310-831D-530F4A457468}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HCGStudio.DongBot.CqHttp", "HCGStudio.DongBot.CqHttp\HCGStudio.DongBot.CqHttp.csproj", "{3ABF50D4-7DA3-4825-9B6C-BE2D1C29343E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HCGStudio.DongBot.App", "HCGStudio.DongBot.App\HCGStudio.DongBot.App.csproj", "{4DD2B4D2-9168-4016-A831-77A350D77D0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCGStudio.DongBot.Resolver", "HCGStudio.DongBot.Resolver\HCGStudio.DongBot.Resolver.csproj", "{155D2FFB-3E8A-432C-B058-7E4758A6F9F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HCGStudio.DongBot.Resolver", "HCGStudio.DongBot.Resolver\HCGStudio.DongBot.Resolver.csproj", "{155D2FFB-3E8A-432C-B058-7E4758A6F9F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCGStudio.DongBot", "HCGStudio.DongBot\HCGStudio.DongBot.csproj", "{3A3CEADF-EB71-4324-9822-8AD597D8CB03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HCGStudio.DongBot.Abstractions", "HCGStudio.DongBot.Abstractions\HCGStudio.DongBot.Abstractions.csproj", "{8B8F9283-C7BD-4C16-A042-C6E098622C2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +23,6 @@ Global
 		{E41E045A-0165-4310-831D-530F4A457468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E41E045A-0165-4310-831D-530F4A457468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E41E045A-0165-4310-831D-530F4A457468}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3ABF50D4-7DA3-4825-9B6C-BE2D1C29343E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3ABF50D4-7DA3-4825-9B6C-BE2D1C29343E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3ABF50D4-7DA3-4825-9B6C-BE2D1C29343E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3ABF50D4-7DA3-4825-9B6C-BE2D1C29343E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4DD2B4D2-9168-4016-A831-77A350D77D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4DD2B4D2-9168-4016-A831-77A350D77D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DD2B4D2-9168-4016-A831-77A350D77D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +31,14 @@ Global
 		{155D2FFB-3E8A-432C-B058-7E4758A6F9F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{155D2FFB-3E8A-432C-B058-7E4758A6F9F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{155D2FFB-3E8A-432C-B058-7E4758A6F9F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A3CEADF-EB71-4324-9822-8AD597D8CB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A3CEADF-EB71-4324-9822-8AD597D8CB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A3CEADF-EB71-4324-9822-8AD597D8CB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A3CEADF-EB71-4324-9822-8AD597D8CB03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B8F9283-C7BD-4C16-A042-C6E098622C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8F9283-C7BD-4C16-A042-C6E098622C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8F9283-C7BD-4C16-A042-C6E098622C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8F9283-C7BD-4C16-A042-C6E098622C2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

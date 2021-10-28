@@ -1,5 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using System.Text;
+﻿using System.Text;
 
 namespace HCGStudio.DongBot.Core.Messages
 {
@@ -9,17 +8,17 @@ namespace HCGStudio.DongBot.Core.Messages
     public abstract class Message
     {
         /// <summary>
-        /// 消息的类型
-        /// </summary>
-        public string MessageType { get; set; }
-
-        /// <summary>
-        /// 默认的初始化
+        ///     默认的初始化
         /// </summary>
         protected Message()
         {
             MessageType = GetType().Name;
         }
+
+        /// <summary>
+        ///     消息的类型
+        /// </summary>
+        public string MessageType { get; set; }
 
         /// <summary>
         ///     将消息转化为纯字符串，非文字类型转化为空格

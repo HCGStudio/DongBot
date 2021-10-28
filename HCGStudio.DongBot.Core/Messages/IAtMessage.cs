@@ -17,7 +17,7 @@
     }
 
     /// <summary>
-    /// At消息的接口
+    ///     At消息的接口
     /// </summary>
     /// <typeparam name="TAccount">用户ID类型</typeparam>
     public interface IAtMessage<out TAccount>

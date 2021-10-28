@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HCGStudio.DongBot.Core.Messages
 {
     /// <summary>
-    /// 图片消息的接口
+    ///     图片消息的接口
     /// </summary>
     public interface IImageMessage
     {
         /// <summary>
-        /// 图片的路径
+        ///     图片的路径
         /// </summary>
         public Uri? Url { get; }
 
         /// <summary>
-        /// 图片的内容
+        ///     图片的内容
         /// </summary>
         public IReadOnlyList<byte> Content { get; }
     }
